@@ -1,0 +1,126 @@
+{% extends 'software_training/training/account/base_accounts.html' %} {% block content %}{% load static %}
+
+<!-- Give task for trainees -->
+
+
+
+<div class="row mt-5">
+    <div class="col-12 col-sm-1 col-md-2 col-lg-2"></div>
+
+    <div class="col-12 col-sm-10 col-md-9 col-lg-9 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+                <form class="forms-sample" method="post" enctype="multipart/form-data" autocomplete="OFF" action="/softwareapp/accounts_add_bank_acnt/">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-8 col-sm-8 col-md-10 col-lg-10 mt-3">
+                            <h4 class="card-description"> Add Bank Account Details</h4>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-2 col-lg-2">
+
+                            <img src="{% static 'softwareapp/assets/images/faces/face5.jpg' %}" class="img-fluid rounded-circle mb-3 " alt="image" style="margin-right:20px">
+
+
+                        </div>
+                    </div>
+                    <p class="card-description"> Bank details </p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row"></div>
+
+                            <div class="form-group row">
+                                <label for="exampleInputEmail2" class="col-5 col-sm-3 col-md-3 col-lg-3 col-form-label">Account Number</label
+                >
+                <div class="col-7 col-sm-8 col-md-8 col-lg-8">
+                  <input
+                    type="text"
+                    class="form-control text-light"
+                    name="account_no"
+                    id=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row"></div>
+              <div class="form-group row">
+                <label
+                  for="exampleInputEmail2"
+                  class="col-5 col-sm-3 col-md-3 col-lg-3 col-form-label"
+                  >IFSC</label
+                >
+                <div class="col-7 col-sm-8 col-md-8 col-lg-8">
+                  <input
+                    type="text"
+                    class="form-control text-light"
+                    name="ifsc"
+                    id=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row"></div>
+              <div class="form-group row">
+                <label
+                  for="exampleInputEmail2"
+                  class="col-5 col-sm-3 col-md-3 col-lg-3 col-form-label"
+                  >Branch</label
+                >
+                <div class="col-7 col-sm-8 col-md-8 col-lg-8">
+                  <input
+                    type="text"
+                    class="form-control text-light"
+                    name="bank_branch"
+                    id=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row"></div>
+              <div class="form-group row">
+                <label
+                  for="exampleInputEmail2"
+                  class="col-5 col-sm-3 col-md-3 col-lg-3 col-form-label"
+                  >Bank Name</label
+                >
+                <div class="col-7 col-sm-8 col-md-8 col-lg-8">
+                  <input
+                    type="text"
+                    class="form-control text-light"
+                    name="bank_name"
+                    id=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 col-sm-5 col-md-5"></div>
+            <div class="col-7 col-sm-5 col-md-7">
+              <button
+                type="submit"
+                class="btn btn-outline-primary btn-icon-text mt-3"
+              >
+                <i class="mdi mdi-file-check btn-icon-prepend"></i> Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

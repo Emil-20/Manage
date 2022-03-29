@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    #one{
+        position: relative;
+        background-image: url({% static 'servicestations/carousel.png' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+        color: white;
+        z-index: -1;
+    }
+    #two{
+        position: relative;
+        padding-top: 15%;
+        margin-left: 7%;
+        color: white;
+        z-index: -1;
+    }
+    #three{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        padding-top: 10%;
+        text-align: left;
+    }
+    #four{
+       background-image: url({% static 'software/img.png' %});
+        padding-top: 5%;
+    }
+    #five{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        text-align: left;
+    }
+    #six{
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        text-align: left;
+    }
+    #seven{
+        font-family: Roboto, sans-serif;
+        text-align: center;
+    }
+
+
+</style>
+<body>
+
+    <div class="container-fluid" id="one">
+        <div id="two">
+            <h3>
+                Facilezone for Service station
+            </h3>
+            <p>
+                This Facilezone software make the service station to work efficiently and provide
+                multiple <br>working techniques and payment methods to attract the customers and thereby<br> increase the
+                profit of the owner.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <p id="three">
+                    Enhanced Professionalism
+                </p>
+                <p id="six">
+                    Facilezone is developed withhighly professional features by monitoring master data’s and
+                    generating reports. The manager can check the transaction details and daily activities in the service
+                    stations remotely
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <img loading="lazy" style="width: 100%; position:relative;z-index: -1" alt="Error 404!!!" src= {% static  'servicestations/img2.jpg' %}>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-image: url({% static 'servicestations/img3.jpg' %});background-size: cover;background-repeat: no-repeat;
+            width: 100%;height: 100%;padding-bottom: 120px">
+        <div class="row">
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6">
+                <p id="three">
+                    Improved Customer satisfaction
+                </p>
+                <p id="six">
+                    Facilezone has the ability to respond faster to the customer requests
+                    and replying, Identify the customer problems and provide up to date solutions, time management etc.
+                    It will give more importance to the customer requirements and opinions.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="container-fluid" id="four">
+        <div class="row">
+             <div class="col-sm-6 col-md-6 col-lg-6">
+                <img loading="lazy" style="width: 100%" alt="Error404!!!" src="{% static 'software/mac.png' %}">
+            </div>
+            <div class="col-sm-6">
+                <p id="five">
+                    Loaded with interesting features
+                </p>
+                <p id="six">
+                    Facilezone incorporated complete features and tools to manage the
+                    entire business operations of your company. It’s simple and comprehensive to use. We will
+                    make it as in the form that appropriate to your business requirements.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Main Features
+                    </b>
+                </h4>
+                <p>
+                    This management software provide the features like the service station employees
+                    work time scheduling,<br> making customer appointments,service agreement managing,invoices etc.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left; margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Higher accuracy
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    Facilezone has the capability of producing accuracy in work scheduling, customer
+                    management, vehicle information, equipment details, fuel management, pump management, suppliers
+                    information, invoice management. By providing accurate data will help the smooth and fast
+                    functioning of the service stations. Also Facilezone reducing the fraud activities in the service
+                    stations. It will increase the customer experience and customer satisfaction.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'servicestations/managers.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'servicestations/account.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Increased efficency of employees
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     With the help of this management software employees can do their works efficiently
+                     and timely manner. So no work delays are happened.Because it allots automatic work schedules
+                     and checking the employees performance.This software allots the works that matches the skills
+                     of the employees. And the manager can check every employee’s performance, so thereby the manager
+                     can find out the best employee.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Real time visibility
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    It enables to track the client history, service records and payment details at anytime
+                    and anywhere. Moreover the owner can check the employee’s details like their arrival time,
+                    attendance details, track job status and time taken to finish a work and their performances.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'servicestations/img.png'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'servicestations/manageemp.jpg'%}" style="margin-left: 7%;height: 70%;width: 90%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Flexible adjustment of the way of Service station operation
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     The Facilezone software supports different ways of operations which are flexible to
+                     the employees and customer convenience. This will increase the customers and also employee’s
+                     satisfaction. Give freedom to the employees to check their performance status through this
+                     software. So they can understand their faults and work perfectly in next time
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Flexible price management
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The different services in the service station have different prices in a day.
+                    Managing those prices is very complex and long process. A human employee cannot manage the
+                    price in efficiently and fast. But Facilezone has the capability of managing the pricing very
+                    faster and accurately.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'servicestations/client.jpg'%}" style="margin-left: 15%;height: 70%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'servicestations/attendancemanage.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Getting rid of paper works
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     This software eliminates the paper works and save the employees working hours. And also
+                     it can identify the duplicate entries, Payment mistakes and prevent data loss. So it can save the
+                     time and work load of the employees. Using this Facilezone it will increase the security of your
+                     organizations data from unauthorized access.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Simple & Easy
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    To using this management software you have no computer skills required. It is very
+                    simple to identify and understand all the reports generated data and information. The customer
+                    can very quickly use this software without any delays and confusion.It is very accurate,
+                    intelligent, auto complete, auto suggest and fast to understand.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'servicestations/img6.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'servicestations/reports.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Inventory management
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     This Facilezone efficiently work in inventory management. It helps to identify the
+                     fuel and equipment stock details like the stock in products, details of stock out products,
+                     providing the stock reports, category of stock report, purchasing reports, payments reports,
+                     low inventory alerts etc. These reports are helps in future references and activities.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Planning & task scheduling
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    Facilezone is a great software for team work. It helps to create a plan of tasks
+                    completing in a day and scheduling the work of next day. This will provide the quick overview
+                    of the tasks completing in a day and the employees task details and performance. If an employee
+                    finishes their task ahead of the planned schedule we can assign them another if they are willing to work.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'servicestations/dailywork.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'servicestations/img_1.png'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Time tracking
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     Time tracking feature is a great benefit of using Facilezone software.
+                     Time tracking is highly important in service stations. Becauseevery work has a deadline
+                     and managing the time is a complex task. So the manager can track thatemployees are completing
+                     their assigned work with in the deadline. This will helps to deliver the work on time by gain
+                     the customer satisfaction and also increase the organization goodwill.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Contact Us
+                    </b>
+                </h4>
+                <p>
+                   Do you need software to manage complete business operations of your company?
+                    <br>Then Facilezone is right choice for you. Sent an Enquiry now,
+                    we will get back to you as soon as possible.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+</body>
+{% endblock %}

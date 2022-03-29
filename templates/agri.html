@@ -1,0 +1,100 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/agri.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="font-size: 40px;font-family: Roboto, sans-serif;color: white;text-align: left">
+                    Agribusiness
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Thrive in the digital economy by creating <br>transparent and sustainable food
+                    supply chains <br>and increasing farming efficiencies with agribusiness <br>solutions from Facilezone.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Transform and grow to sustainably feed the world
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Manage food from farm to fork by running core business processes along the entire agribusiness
+                value chain more efficiently with Facilezone.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3">
+                    <h4>
+                        Crop Management
+                    </h4>
+                    <ul>
+                        <li>
+                            Provides machinery management
+                        </li>
+                        <li>
+                            Records data related to crop study
+                        </li>
+                        <li>
+                            Monitoring and water supply of crops
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Post delivery operations
+                    </h4>
+                    <ul>
+                        <li>
+                            Monitors farmers payment,contractor payment etc
+                        </li>
+                        <li>
+                            Tracks the output produced
+                        </li>
+                        <li>
+                            Monitors the input billing
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Dispatch management
+                    </h4>
+                    <ul>
+                        <li>
+                            Handles vehicle management
+                        </li>
+                        <li>
+                            Vehicle tracking
+                        </li>
+                        <li>
+                            Quality inspections,weight etc.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

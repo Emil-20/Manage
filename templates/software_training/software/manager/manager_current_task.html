@@ -1,0 +1,71 @@
+{% extends 'software_training\software/manager\base_manager.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    
+      <div class="row">   
+        <div class="col-12 grid-margin">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Current Tasks</h4>  
+              <div class="form-group">
+                <input type="text" class="form-control"id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="color:white;">
+                 </div>
+              <div class="table-responsive">
+                <table class="table">
+                
+                  <thead>
+                    <tr>
+                      <th> Task name </th>
+                      <th> Start Date </th>
+                      <th> End Date </th>
+                      <th> Response </th>
+                      <th> Status </th>
+                    </tr>
+                  </thead>
+                  <tbody id="myTable">
+                    
+                    <tr>
+                      <td>Frontend project</td>
+                      <td>06-03-2022</td>
+                      <td>09-03-2022</td>
+                      <td>done</td>
+                      <td><div class="badge badge-outline-warning">Progressing</div></td>                     
+                    </tr>
+
+                    <tr>
+                        <td>Backend project</td>
+                        <td>06-03-2022</td>
+                        <td>09-03-2022</td>
+                        <td>done</td>
+                        <td><div class="badge badge-outline-warning">Progressing</div></td>                     
+                      </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+{% endblock%}

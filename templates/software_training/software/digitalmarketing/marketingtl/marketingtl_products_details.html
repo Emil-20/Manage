@@ -1,0 +1,145 @@
+{%extends 'software_training/software/digitalmarketing/marketingtl/base_digitalmarketing.html'%} {%load static%} {%block content%}
+
+<style>
+    #choose::file-selector-button {
+        background-color: rgb(37, 125, 207);
+        padding: 12px;
+        color: white;
+        width: 100px;
+    }
+</style>
+<!-- Give task for trainees -->
+<div class="row" style="padding-top: 20px;">
+    <!-- <div class="col-md-2"></div> -->
+    <div class="col-12 col-sm-12 col-md-7 col-lg-7 grid-margin stretch-card mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title"></h4>
+                <form class="forms-sample"  method="post" autocomplete="off" enctype="multipart/form-data">
+                  {% csrf_token %}
+                    <div class="row mt-3">
+                        <div class="col-6 col-sm-3 col-md-3 col-lg-3">
+                            <label>Product Name</label>
+                        </div>
+                        <div class="col-6 col-sm-3 col-md-3 col-lg-3">
+                            <label>britania</label>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6 col-sm-3 col-md-3 col-lg-3">
+                            <label>Posted Date</label>
+                        </div>
+                        <div class="col-6 col-sm-3 col-md-6 col-lg-6">
+                            <label>3/3/2022</label>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6 col-sm-3 col-md-3 col-lg-3">
+                            <label>Target</label>
+                        </div>
+                        <div class="col-6 col-sm-3 col-md-6 col-lg-6">
+                            <label>20000</label>
+                        </div>
+
+                    </div>
+                    <div class="form-group row mt-5">
+                        <label for="exampleInputEmail2" class="col-6 col-sm-3 col-md-3 col-lg-3 col-form-label">Description</label
+            >
+            <div class="col-12 col-sm-8 col-md-8 col-lg-8">
+              <textarea
+                class="form-control text-light"
+                rows="30"
+                id=""
+                style="height: 140px" name="description"
+                Required
+              >nice product</textarea>
+            </div>
+          </div>
+          
+          <div class="row mt-5 mb-2">
+            <center>
+              <button type="button"
+                class="btn btn-outline-primary btn-icon-text"
+                data-toggle="modal" data-target="#myModal">
+                <i class="mdi mdi-file-check btn-icon-prepend"></i> Share
+              </button>
+            </center>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="col-12 grid-margin stretch-card bg-dark text-light modal-content">
+            <!-- Modal Header -->
+            <!--<form action="coursefeeupdate?tid=1" method="post" enctype="multipart/form-data" autocomplete="off">-->
+            <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
+                {% csrf_token %}
+                <div class="modal-header">
+                    <h4 class="modal-title">SHARE</h4>
+                    <button type="submit" style="color: white" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="row">
+                    <div class="col-12 grid-margin stretch-card">
+                        <div class="card" style="height: 220px">
+                            <div class="card-body">
+
+                                <!--<div class="form-group row pt-2">
+                                        <label for="exampleInputUsername2" class="col-sm-4 col-md-4 col-lg-4 col-12 col-form-label">Data Collector</label>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-12">
+                                            <input type="number" class="form-control text-light" name="totalfee"value=20000 required /></div>
+                                        </div>
+                                        <br />-->
+
+                                <form class="form-sample" method="post">
+                                    {% csrf_token %}
+                                    <div class="form-group row">
+                                        <label for="exampleInputEmail2" class="col-sm-5 col-md-5 col-lg-5 col-12 col-form-label">Select Data Collector</label>
+                                        <div class="col-sm-7 col-md-7 col-lg-7 col-12">
+                                            <div class="dropdown">
+                                                <select name="sele" id="" class=" badge  badge-outline bg-dark text-light" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();' required>
+                                                         <option style="display: none; " value="">Select datacollector</option>
+                                                          
+                                                         <option value="ajay">ajay</option>
+                                                         <option value="ajay1">ajay1</option>
+                                                         <option value="ajay2">ajay2</option>
+                                                         
+                                                          
+                                                          
+                                                      </select>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row pt-2">
+
+                                        <div class="col-sm-4 col-md-4 col-lg-4 col-4"></div>
+                                        <div class="col-sm-8 col-md-8 col-lg-4 col-8">
+                                            <button type="submit" class="btn btn-outline-warning btn-icon-text"><i class="mdi mdi-refresh btn-icon-prepend"></i>Share</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+</div>
+
+
+
+
+
+{% endblock %}

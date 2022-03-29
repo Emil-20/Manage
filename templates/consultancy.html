@@ -1,0 +1,355 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    #one{
+        position: relative;
+        background-image: url({% static 'consultancies/img2.png' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+        color: white;
+        z-index: -1;
+    }
+    #two{
+        position: relative;
+        padding-top: 15%;
+        margin-left: 7%;
+        color: white;
+        z-index: -1;
+    }
+    #three{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        padding-top: 10%;
+        text-align: left;
+    }
+    #four{
+       background-image: url({% static 'software/img.png' %});
+        padding-top: 5%;
+    }
+    #five{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        text-align: left;
+    }
+    #six{
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        text-align: left;
+    }
+    #seven{
+        font-family: Roboto, sans-serif;
+        text-align: center;
+    }
+
+
+</style>
+<body>
+
+    <div class="container-fluid" id="one">
+        <div id="two">
+            <h3>
+                Facilezone for Consultancies
+            </h3>
+            <p>
+                If you are handling multiples clients at the same time then you need strong management
+                software.<br> Then Facilezone software is the best tool for keeping the clients records and for the
+                easy access.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <p id="three">
+                    Task management
+                </p>
+                <p id="six">
+                    Using the Facilezone it will helps to collaborate on the task with<br> your teams and
+                    clients.It helps to visualize and filter the task<br> matching to the employee skills. This software
+                    helps to <br>create tasks in seconds, set the priorities,deadlines <br>and assign to the employees.
+                    And also it follows the tasks in every stage
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <img style="width: 100%; position:relative;z-index: -1" alt="Error 404!!!" loading="lazy" src= {% static  'consultancies/img1.jpg' %}>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-image: url({% static 'consultancies/carousel.jpg' %});background-size: cover;background-repeat: no-repeat;
+            width: 100%;height: 100%;padding-bottom: 120px">
+        <div class="row">
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6">
+                <p id="three">
+                    Time and Expense Tracking
+                </p>
+                <p id="six">
+                    Time tracking is very simple using the Facilezone. It has a feature to start and stop the timer to
+                    record the activity duration .After every task completion you can check the time with the estimated time.
+                    Also you can back up the timesheets of previous day and week.You can add expenses with just few clicks.Upload
+                    a receipt,find out a client, amount, tax etc you can track and create reports in seconds.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="container-fluid" id="four">
+        <div class="row">
+             <div class="col-sm-6 col-md-6 col-lg-6">
+                <img style="width: 100%" alt="Error404!!!" loading="lazy" src="{% static 'software/mac.png' %}">
+            </div>
+            <div class="col-sm-6">
+                <p id="five">
+                    Loaded with interesting features
+                </p>
+                <p id="six">
+                    Facilezone incorporated complete features and tools to manage the
+                    entire business operations of your company. It’s simple and comprehensive to use. We will
+                    make it as in the form that appropriate to your business requirements.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Main Features
+                    </b>
+                </h4>
+                <p>
+                    Facilezone is the best, all in one platform to collaborate on tasks, <br>identify customers,
+                    manage employees, schedule resources,<br> track time and expenses.it is a time to think differently.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left; margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Customization
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    As a consulting firm you have to create custom view to your work attract more clients.
+                    Facilezone is helps to the employees to customize their work by adding the clients requirements
+                    only. Firstly they collect and store the client needs in the Facilezone. After that it analysis
+                    the requirements and organization resources and find the perfect match. This will definitely
+                    improves the company’s service offering and the profitability.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'consultancies/manager.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'consultancies/accounts.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Team collaboration
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     Behind of every successful project there is team collaboration. The company is
+                     also collaborating with the employees and their customers. Using this management software
+                     the company can easily manage and run the team collaboration efficiently. The employees can
+                     upload their ideas in the Facilezone. By tracking the discussions company can make the best
+                     decision. Facilezone is very much useful to create, store and organize documents.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Automation of work
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    By automating the work in the consulting firms, a strong management software is
+                    needed. At automation of consultancies they provide high quality services as per the customer
+                    needs. Facilezone is effective to build a set of rules to support the employees, reduce the
+                    work load, improve their performances, reduce time delays, increase the standard of works
+                    by digitalize the overall activities in the organization.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'consultancies/assets.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'consultancies/mangemp.jpg'%}" style="margin-left: 7%;height: 70%;width: 90%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Time management
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     To manage your time efficiently is very important in your works. Managing time
+                     can improve efficiency and productivity. To manage time accurately we need a strong
+                     management software. Facilezone is one of the best management software for time management.
+                     By using Facilezone it firstly set up the goals and next set the time to complete the task.
+                     We just need to do one thing follow the instructions.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Reports generation
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    After completing every task a report is generated to understand the task details and
+                    task. Using this Facilezone we can easily create reports with in less time. The reports are
+                    generated by analyzing the employees skill level, task complexity, priority,budget,resources,
+                    tools,issues faced,timesheet details,estimated time,planned and estimated cost, task parameters
+                    etc. The task reports will help you to develop a better project in the next time.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'consultancies/client.jpg'%}" style="margin-left: 15%;height: 70%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'consultancies/attendancemanage.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    User administration
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     MAdd clients to your project so they can understand what the tasks are and issues
+                     happening in the projects and see how the work is progressing. If the user raises any complaint
+                     about the work the manager will reassign the work to other employees. All these commands are
+                     entered through the Facilezone. So we can track the up to date status of the work.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Focus on client relationship
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    As a consulting firm the success of the company is based on the client relationship.
+                    Create a long lasting client relationship will only improve the companies productivity.
+                    To maintain a client relationship firstly need a strong communication. Facilezone has the
+                    ability to accept request and respond to the client queries. It provides a 24/7 expertise services.
+                    And also the software accepts only valid clients and learns their needs.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'consultancies/events.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'consultancies/paste.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Utilize resource efficently
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     Using this Facilezone you can utilize every resource more effectively and efficiently.
+                     Firstly identify which resources are suitable for our task. We can easily get this information
+                     from Facilezone. Practicing to use common resources to two similar tasks. You can get all the
+                     information about resources and tasks from Facilezone. Ensure that your resource management usage
+                     techniques are benefitable to the tasks.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Email tracking and notifications
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    Consulting firms are intimately worked with clients. So they have a continuous communication
+                    with the clients.The better method of communication through emails.Following and overseeing messages
+                    and notices is a tremendous assignment. The Facilezone handles it in straightforward ways like
+                    following the messages, open it, follow up and send answer messages. This will further develop the
+                    consumer loyalty
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'consultancies/dailywork.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'consultancies/accnt.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Security and privacy
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     If the consulting companies are work closely with the customers, then there is huge
+                     amount of customer details are stored. So keeping the customer information securely is a serious
+                     responsibility. Using Facilezone you can easily manage customer information from unauthorized access.
+                     It provide security factors like two factor authentication, data encryption, data security training,
+                     regular user management, technical controls to keep your customers data as private.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Contact Us
+                    </b>
+                </h4>
+                <p>
+                   Do you need software to manage complete business operations of your company?
+                    <br>Then Facilezone is right choice for you. Sent an Enquiry now,
+                    we will get back to you as soon as possible.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+</body>
+{% endblock %}

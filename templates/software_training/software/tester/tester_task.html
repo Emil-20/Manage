@@ -1,0 +1,119 @@
+{%extends 'software_training/software/tester/base_tester.html' %} {%load static%} {%block content%}
+
+<!-- task details starts here -->
+<div class="row mt-5">
+    <div class="col-12 col-sm-2 col-md-2 col-lg-1"></div>
+    <div class="col-12 col-sm-8 col-md-8 col-lg-10 grid-margin ">
+        <div class="card">
+            <div class="card-body" style="height:auto">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h4>Tasks</h4>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <form>
+                            <div class="input-group input-group-sm ">
+                                <input type="text" class="form-control  text-light" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>SNo</th>
+                                <th>Task Name</th>
+                                <th>Date</th>
+                                <th>Assigned by</th>
+                                <th>Submission Date</th>
+                                <th>Action</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <br>
+                            <tr>
+                                <td>
+                                    1
+                                </td>
+                                <td>
+                                    core new project 1
+                                </td>
+                                <td>17-03-2022</td>
+                                <td>
+                                    Anandhu S
+                                </td>
+                                <td>
+                                    09-03-2022
+                                </td>
+                                <td><a href="/softwareapp/tester_taskassigned/" class="btn btn-outline-primary btn-icon-text" style="width: 130px;"><i class="mdi mdi-file-check btn-icon-prepend"></i>
+                                        Submitted </a> </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    2
+                                </td>
+                                <td>
+                                    core new project 2
+                                </td>
+                                <td>18-03-2022</td>
+                                <td>
+                                    Anandhu S
+                                </td>
+                                <td>
+                                    10-03-2022
+                                </td>
+                                <td><a href="/softwareapp/tester_taskpending/" class="btn btn-outline-warning btn-icon-text" style="width: 130px;"><i class="mdi mdi-file-check btn-icon-prepend"></i>
+                                        Pending </a> </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    3
+                                </td>
+                                <td>
+                                    core new project 3
+                                </td>
+                                <td>13-03-2022</td>
+                                <td>
+                                    Anandhu S
+                                </td>
+                                <td>
+                                    12-03-2022
+                                </td>
+                                <td><a href="{% url 'tester_taskpending' %}" class="btn btn-outline-warning btn-icon-text" style="width: 130px;"><i class="mdi mdi-file-check btn-icon-prepend"></i>
+                                        Pending </a> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- ends here -->
+
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+{%endblock%}

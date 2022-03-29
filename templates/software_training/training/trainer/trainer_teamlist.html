@@ -1,0 +1,313 @@
+{%extends 'software_training/training/trainer/base_trainer.html'%}
+{% load static %}
+{% block content %}
+
+<style>
+    table tr[data-href] {
+        cursor: pointer;
+    }
+</style>
+<!-- teamlist starts here -->
+<div class="row mt-5">
+    <div class="col-12 col-sm-2 col-md-2 col-lg-2"></div>
+    <div class="col-12 col-sm-8 col-md-8 col-lg-8 grid-margin ">
+        <div class="card">
+            <div class="card-body" style="height:auto">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h4>Trainee Team List</h4>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <form>
+                            <div class="input-group input-group-sm ">
+                                <input type="text" class="form-control  text-light" id="myInput" onkeyup="myFunction()"
+                                    placeholder="Search for names..">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr data-href="">
+                                <th class="text-white ">SNo</th>
+                                <th class="text-white">Teams</th>
+                                <th class="text-white">Members</th>
+                                <th class="text-white">Progress</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <br>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    1
+                                </td>
+                                <td>
+                                    Team 1
+                                </td>
+                                <td style="padding-left:40px;">6</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 67%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    2
+                                </td>
+                                <td>
+                                    Team 2
+                                </td>
+                                <td style="padding-left:40px;">10</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 79%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    3
+                                </td>
+                                <td>
+                                    Team 3
+                                </td>
+                                <td style="padding-left:40px;">10</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 15%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    4
+                                </td>
+                                <td>
+                                    Team 4
+                                </td>
+                                <td style="padding-left:40px;">9</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 85%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    5
+                                </td>
+                                <td>
+                                    Team 5
+                                </td>
+                                <td style="padding-left:40px;">15</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 45%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    6
+                                </td>
+                                <td>
+                                    Team 6
+                                </td>
+                                <td style="padding-left:40px;">12</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    7
+                                </td>
+                                <td>
+                                    Team 7
+                                </td>
+                                <td style="padding-left:40px;">16</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width:34%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    8
+                                </td>
+                                <td>
+                                    Team 8
+                                </td>
+                                <td style="padding-left:40px;">12</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 55%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    9
+                                </td>
+                                <td>
+                                    Team 9
+                                </td>
+                                <td style="padding-left:40px;">12</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 87%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    10
+                                </td>
+                                <td>
+                                    Team 10
+                                </td>
+                                <td style="padding-left:40px;">10</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    11
+                                </td>
+                                <td>
+                                    Team 11
+                                </td>
+                                <td style="padding-left:40px;">12</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 95%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    12
+                                </td>
+                                <td>
+                                    Team 12
+                                </td>
+                                <td style="padding-left:40px;">14</td>
+                                <td style="padding-left:40px;" >
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 15%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    13
+                                </td>
+                                <td>
+                                    Team 13
+                                </td>
+                                <td style="padding-left:40px;">12</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 25%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    14
+                                </td>
+                                <td>
+                                    Team 14
+                                </td>
+                                <td style="padding-left:40px;">12</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 85%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-href="/softwareapp/trainer_taskfor/">
+                                <td>
+                                    15
+                                </td>
+                                <td>
+                                    Team 15
+                                </td>
+                                <td style="padding-left:40px;">12</td>
+                                <td style="padding-left:40px;">
+                                    <div class="progress" style="margin-left: -25px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- ends here -->
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+<script>
+
+    $(document).ready(function () {
+        $('table tr').click(function () {
+            window.location = $(this).data('href');
+            return false;
+        });
+    });
+
+</script>
+
+
+{%endblock%}

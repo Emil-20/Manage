@@ -1,0 +1,102 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/customer.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        color: white;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                  Customer Data
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Climb to new levels of customer centricity, boost revenue,<br> and
+                    lower costs with customer data solutions <br>from Facilezone.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Grow your business by unlocking the power of customer data
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Use data-driven insights to understand your customers, engage with them confidently,
+                and deliver on your brand promises.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Organized customer data management
+                    </h4>
+                    <ul>
+                        <li>
+                            Organizes customer data efficiently
+                        </li>
+                        <li>
+                            Requires very little maintenance
+                        </li>
+                        <li>
+                            Provides good data governance strategy
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3">
+                    <h4>
+                        Data protection and privacy
+                    </h4>
+                    <ul>
+                        <li>
+                            Protect your customer data
+                        </li>
+                        <li>
+                            Ensures that you’re only collecting data that’s vital to your marketing efforts
+                        </li>
+                        <li>
+                            Monitoring data collection
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>
+                        Data activation
+                    </h4>
+                    <ul>
+                        <li>
+                            Accounts the data required for marketing
+                        </li>
+                        <li>
+                            Performance tracking and analytics systems to optimize campaigns in real-time
+                        </li>
+                        <li>
+                            Data-driven marketing campaign
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

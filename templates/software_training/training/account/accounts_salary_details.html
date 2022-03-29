@@ -1,0 +1,72 @@
+{%extends 'software_training/training/account/base_accounts.html'%} {% load static %} {% block content %}
+
+<div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 grid-margin">
+        <div class="card mt-3 mb-5">
+            <div class="card-body">
+                <form>
+                    <div class="input-group input-group-sm mb-3">
+                        <input type="text" class="form-control text-white" id="myInput" onkeyup="myFunction()" placeholder="Search" />
+                    </div>
+                </form>
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th class="text-white ">Name</th>
+                                <th class="text-white ">Account Number</th>
+                                <th class="text-white ">Basic Salary</th>
+                                <th class="text-white ">HRA</th>
+                                <th class="text-white ">Conveyns</th>
+                                <th class="text-white ">Professional Tax</th>
+                                <th class="text-white ">Incentives</th>
+                                <th class="text-white ">Delay</th>
+                                <th class="text-white ">Leave</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <br>
+                            <tr>
+                                <td>
+                                    <img src="{% static 'softwareapp/assets/images/faces/face5.jpg' %}" class="img-fluid rounded-circle mb-4 " alt="image" style="margin-right:10px">
+                                    <span class="ps-2">John Smith</span>
+                                </td>
+                                <td>SBI4568000</td>
+                                <td> 15000</td>
+                                <td> 1520</td>
+                                <td> 3500</td>
+                                <td>5000</td>
+                                <td>2000</td>
+                                <td> 0</td>
+                                <td> 4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+{% endblock %}

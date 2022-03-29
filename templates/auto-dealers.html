@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    #one{
+        position: relative;
+        background-image: url({% static 'autodealers/carousel.png' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+        color: white;
+        z-index: -1;
+    }
+    #two{
+        position: relative;
+        padding-top: 15%;
+        margin-left: 7%;
+        color: white;
+        z-index: -1;
+    }
+    #three{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        padding-top: 10%;
+        text-align: left;
+    }
+    #four{
+       background-image: url({% static 'software/img.png' %});
+        padding-top: 5%;
+    }
+    #five{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        text-align: left;
+    }
+    #six{
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        text-align: left;
+    }
+    #seven{
+        font-family: Roboto, sans-serif;
+        text-align: center;
+    }
+
+
+
+</style>
+<body>
+
+    <div class="container-fluid" id="one">
+        <div id="two">
+            <h3>
+                Facilezone for Auto Dealer Showroom
+            </h3>
+            <p>
+                Facilezone that assists proficient auto specialists with distinguishing and fix issues quicker
+                than production line flowcharts.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <p id="three">
+                    Easy accounts management
+                </p>
+                <p id="six">
+                    The software is completely created to store and record the financial transactions in
+                    your showroom. It provides a clear idea about the profit and loss in your firm. The proper asset
+                    and liability checking is helps to maintain a flexibility in your business. Facilezone enables easy
+                    maintenance of financial statements.
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <img style="width: 100%; position:relative;z-index: -1"  loading="lazy" alt="Error 404!!!" src= {% static  'autodealers/img1.jpg' %}>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-image: url({% static 'autodealers/features1.jpg' %});background-size: cover;background-repeat: no-repeat;
+            width: 100%;height: 70vh;padding-bottom: 120px">
+        <div class="row">
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6">
+                <p id="three">
+                    Manage contact database
+                </p>
+                <p id="six">
+                    Facilezone enables the dealers to manage contact data base in an orderly manner.
+                    Data simplification and analysis provides a better solution by providing increased visibility and more
+                    accuracy of customer information.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="container-fluid" id="four">
+        <div class="row">
+             <div class="col-sm-6 col-md-6 col-lg-6">
+                <img style="width: 100%" loading="lazy" alt="Error404!!!" src="{% static 'software/mac.png' %}">
+            </div>
+            <div class="col-sm-6">
+                <p id="five">
+                    Loaded with interesting features
+                </p>
+                <p id="six">
+                    Facilezone incorporated complete features and tools to manage the
+                    entire business operations of your company. It’s simple and comprehensive to use. We will
+                    make it as in the form that appropriate to your business requirements.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Main Features
+                    </b>
+                </h4>
+                <p>
+                    Facilezone helps to deal with both the new dealer and used car dealer. <br>This will help to the showroom
+                    to maintain both the dealers.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left; margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Document management
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    Now a A best software to maintain all the documents in your showroom. This enables a strong and
+                    true legal security in your showroom.Facilezone offers better business reports and genuine execution
+                    anticipating of your association. This proper management of document provides a clear idea about the
+                    current functioning of the showroom.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'autodealers/img.png'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'autodealers/img_1.png'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    New car dealer management
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     A best platform to deal with new dealers and retain them for long period of time.
+                     A friendly and caring sales process help to retain the new dealers. The dealer retention increases
+                     the reputation of your showroom. This will lead your business success and expansion in the future.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Manage inventory
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    At any time, its very easy to know about the availability of the inventory with the help
+                    of Facilezone. So that the auto dealers are always known about the availability of parts and tools.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'autodealers/assets.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'autodealers/mangemp.jpg'%}" style="margin-left: 7%;height: 70%;width: 90%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Digital agreement management
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     With the increasing demand for new technology, best methods for entering into binding
+                     transactions, electronic agreements and electronic signature have gained a lot of importance in
+                     recent years. Facilezone enables the digital agreement and it’s really helps to save the time
+                     and cost.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Sales and profit analytics
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    sales and profit examination give your showroom a total thought regarding the benefit
+                    procured in a particular timeframe and assists with recognizing the drawbacks. Facilezone is the
+                    best platform to identify and integrate all the issues in sales and profit management.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'autodealers/clientmanage.jpg'%}" style="margin-left: 15%;height: 70%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'autodealers/img_2.png'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Manage used car dealer
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     Software simplifies showrooms management and maximize profitability. Helps to manage
+                     your showrooms core processes more effectively. Improve showrooms operations and increases customer
+                     satisfaction through simplifies the process. The main advantage through Facilezone all the dealing
+                     are simple and less time-consuming process.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Manage customer information
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    This framework empowers stockpiling and access of all data about customers, brings better
+                    equilibrium on your customer relations.it gives live following of correspondence between your workers
+                    and clients.so you find out with regards to customer requests and market trends.it helps the promoting
+                    group and business advancement group to convey a drawing in assistance by examining reaction of
+                    past customers. It furnishes coordinate with all specialized gadgets and go about as a concentrated
+                    framework. Our product will give a smooth stream in customer enquiry.it will naturally move the
+                    enquiries to concerned division right away. Make an interruptive correspondence network for your
+                    organization.it just permits move of legitimate calls and certified customers with the goal that
+                    you could use the total business time to develop new relations.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'autodealers/events.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'autodealers/reports.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Performance appraisal
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     You can understand genuine execution of your showroom anyway examine the performance chart.
+                     It is delivered by constant seeing of staffs and work interaction of your association.
+                     Mange zone give the money related data which in coherent association. This software will help
+                     chiefs and dynamic wing to characterize future goals of the association. From this data they
+                     get a brief idea that if the showroom achieved before year's goals.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Free from paper works
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                   Facilezone software completely helps free from paper works. The software enables all
+                    employees and customers data’s record in a quick and easy ways and helps find out the repeated
+                    entries and provide accurate documents and avoid missing of documents or other valuable papers
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'autodealers/dailywork.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!"  loading="lazy" src="{% static 'autodealers/img_3.png'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Simple and easy to handle
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     The management of Facilezone is very simple and quick the software is created in
+                     a very basic manner and the users can use the software without and demonstration or any
+                     training because the process is simply understandable.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Contact Us
+                    </b>
+                </h4>
+                <p>
+                   Do you need software to manage complete business operations of your company?
+                    <br>Then Facilezone is right choice for you. Sent an Enquiry now,
+                    we will get back to you as soon as possible.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+</body>
+{% endblock %}

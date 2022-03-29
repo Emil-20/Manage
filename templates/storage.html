@@ -1,0 +1,338 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    #one{
+        position: relative;
+        background-image: url({% static 'storage/1.png' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+        color: white;
+        z-index: -1;
+    }
+    #two{
+        position: relative;
+        padding-top: 15%;
+        margin-left: 7%;
+        color: white;
+        z-index: -1;
+    }
+    #three{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        padding-top: 10%;
+        text-align: left;
+    }
+    #four{
+       background-image: url({% static 'software/img.png' %});
+        padding-top: 5%;
+    }
+    #five{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        text-align: left;
+    }
+    #six{
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        text-align: left;
+    }
+    #seven{
+        font-family: Roboto, sans-serif;
+        text-align: center;
+    }
+
+
+</style>
+<body>
+
+    <div class="container-fluid" id="one">
+        <div id="two">
+            <h3>
+                Facilezone for Storage shops
+            </h3>
+            <p>
+                Mange Zones highly applicable for warehouse and packing industries.it provides a detail
+                about the complete storage spaces with includes the item names. The order details and status of delivery can be
+                store and track automatically. This software will improve your quality of service and also enhance the customer
+                satisfaction.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <p id="three">
+                    Easily manage your employees with<br>Facilezone
+                </p>
+                <p id="six">
+                    Facilezone is the best option for powers your company’s growth by managing the end to end
+                    transportation process, manage domestic transport complexities, automate tracking and payments and
+                    provide 24/7 customer support.
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <img loading="lazy" style="width: 100%; position:relative;z-index: -1" alt="Error 404!!!" src= {% static  'Transport/tc2.jpg' %}>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" id="four">
+        <div class="row">
+             <div class="col-sm-6 col-md-6 col-lg-6">
+                <img loading="lazy" style="width: 100%" alt="Error404!!!" src="{% static 'software/mac.png' %}">
+            </div>
+            <div class="col-sm-6">
+                <p id="five">
+                    Loaded with interesting features
+                </p>
+                <p id="six">
+                    Facilezone incorporated complete features and tools to manage the entire
+                    business operations of your company. It’s simple and comprehensive to use. We will make it as in
+                    the form that appropriate to your business requirements.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Main Features
+                    </b>
+                </h4>
+                <p>
+                   The system has full range features to automate the packing, invoice generation, order scheduling and
+                    delivery. Facilezone will help to find the real working time of your employees. The live tracking of products
+                    will ensure the successful delivery of your product at destination.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left; margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                   Order processing
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The software will reduce effort for coordinating an order process manually. The order
+                    process processing steps such as product availability check, customer location reachability,
+                    confirmation of validity of order all can be processed automatically with our software. For conducting
+                    these steps on manual basis it takes several days. The customer data verification will conducted based
+                    on accuracy of contact deatails.so the delay or unreachability of customers on delivery stage can be avoid.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'storage/4.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'storage/5.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Item tracking
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     The tracking system can use to find the exact locations of your product with in a map.it
+                     will help to help to coordinate the delivery more collaborative way.it also provides the exact location
+                     of your product.so that the mangers can understands that whether the product at customers or not. If
+                     there is delay or confusion on the root the mangers can direct them to reach on the destination. The
+                     tracking facility also improves the reliance of the business transactions.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Packing and warehouse management
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The tool is an efficient solution for ordered packing. The complete product list can be
+                    automatically updated to the database. It will help to arrange your workflow in a smooth flow.
+                    You can categorize your product with based on the type or name of goods.it supports the customization
+                    according to your industry.it will allow you to pack with the product with based on the item numbers.
+                    so that the product information can be view even after the packing.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'storage/55.jpg' %}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'storage/7.jpg'%}" style="margin-left: 7%;height: 70%;width: 90%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Employee work monitoring
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     It provides real-time work tracking of the delivery person. This system will show the
+                     real working time of your employees. The payment of packing and delivery works are based the
+                     completion of daily tasks, timing is very flexible. Facilezone supports automatic payroll based
+                     the predefined salary criterias. It can be link with bank accounts and online payment methods.
+                     The performance chart will help to analyse the task status of each day that includes pending ones.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Customer relationship management
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    Facilezone will help the manufacturers to share latest product launch details and offers.
+                    The software will help you maintain better relationship between your past customers and targeted audience.
+                    The details of new product and offer details can be shared directly in most effective way. The customer
+                    relationship management is inevitable factor to grow your business to the fullest range. The software
+                    can use to analyse the interest of your customer with pattern of their purchase details.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'storage/8.jpg'%}" style="margin-left: 15%;height: 70%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'storage/9.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Call centre support
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     With this single tool you can build a call centre management system.it will help to manage
+                     your inbound and outbound call without any network collision. The software have feature to record the
+                     customer complaints and concerns automatically.it will support the integration of communication network
+                     of your multiple braches. The automatic redirection feature will help to transfer the call to concerned
+                     department. An active technical support will enhance the loyalty and retention of customers.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                   Delivery scheduling
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The software offers automatic delivery planning and scheduling. The daily works can be
+                    assigning in an automated way .The number of employees in the logistics and packing are very high
+                    compare to any other industries. This system will simplify the task assignment and delivery
+                    scheduling without the any human interventions. The information related for completion of a
+                    successful delivery such as root map, time and resource allocation all the information will be
+                    transfer to your employees in automatically.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'storage/10.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'storage/111.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Risk management
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     Provides the identification of risk on early stages.it can minimize the loss of
+                     money. The risk such as damage of item and the customer location un-reachability,
+                     this information can be track with this system. The risk analysis is very helpful for
+                     set industrial goals and ensures the safety of your employees. Cases such as delay in
+                     delivery can be managed with rescheduling of dispatch or replacement of the product by identifies the risk.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                  Billing and invoicing
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The tool supports automatic billing and invoices of your product and services. This is
+                    one of the wide acclaimed feature in the Facilezone.it will help you to launch a systematic method
+                    to billing and invoicing. Facilezone provides a secure platform to improves the customer satisfaction.
+                    When the product delivery finished it will share the invoice through email or direct message.
+                    Its allows the customization of invoice based on the product and services.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'storage/13.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'storage/31.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Alert and notification
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                    From the product ordering to deliver a live information update will communicate to the customers.
+                    It can send through both emails and messaging. The notification feature is help you solve issues
+                    such as customer unreachability and delay in delivery. The delivery will only proceeds only if
+                    got a confirmation reply from customer about their availability. The software provides complete
+                    information about the delivery that includes the product tracking facility.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Contact Us
+                    </b>
+                </h4>
+                <p>
+                   Do you need software to manage complete business operations of your company?
+                    <br>Then Facilezone is right choice for you. Sent an Enquiry now,
+                    we will get back to you as soon as possible.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+</body>
+{% endblock %}

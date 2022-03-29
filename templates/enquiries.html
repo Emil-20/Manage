@@ -1,0 +1,499 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body{
+
+    background-image: url({% static "contact&enq/unsplash_VBLHICVh-lIcontctbg.png" %});
+    background-repeat: no-repeat;
+    background-size: 2000px 900px;
+
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 166px;
+    height: 67px;
+}
+
+.test {
+    position: absolute;
+    left: 600px;
+}
+
+.searchbtn{
+    color: white;
+    background: #0076A4 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    opacity: 1;
+}
+
+.navbg1 {
+    border-radius: 42px;
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.search {
+    /* width: 300px;
+    height: 36px; */
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-width: 1px;
+    border-top-color: black;
+    border-left-color: black;
+    border-bottom-color: black;
+    border-radius: 24px;
+    opacity: 1;
+}
+
+/* #searchbtn {
+    /* position: relative;
+    top: 35px;
+    left: 468px;
+    width: 113px;
+    height: 36px;
+
+    color: white;
+    background: #0076A4 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF;
+    border-radius: 24px;
+    opacity: 1;
+} */
+
+#bell {
+    position: absolute;
+    top: 39px;
+    left: 1600px;
+    width: 40px;
+    height: 45px;
+
+}
+
+#usrimg {
+    /* position: absolute;
+    top: 33px;
+    left: 829px; */
+    width: 56px;
+    height: 56px;
+
+    background: transparent 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #0076A485;
+    border-radius: 63px;
+    border: 3px solid #FFFFFF;
+    opacity: 1;
+}
+
+#imglink {
+    position: absolute;
+    top: 0;
+    left: 900px;
+}
+
+#dashlab {
+    font: normal normal normal 30px/40px Segoe UI;
+    letter-spacing: 0px;
+    color: hsl(0, 5%, 17%);
+    opacity: 1;
+    color: white;
+}
+
+#msglab {
+    font: normal normal normal 30px/40px Segoe UI;
+    letter-spacing: 0px;
+    color: #2D2929;
+    opacity: 1;
+    color: white;
+}
+
+#enqlab {
+    font: normal normal normal 30px/40px Segoe UI;
+    letter-spacing: 0px;
+    color: #2D2929;
+    opacity: 1;
+}
+
+#dashlab , #msglab, #enqlab {
+    cursor: pointer;
+}
+
+/* #innerdiv1 {
+    margin-left: 500px;
+} */
+
+#enqlab2 {
+    width: 126px;
+    height: 40px;
+
+    text-align: left;
+    font: normal normal normal 30px/40px Segoe UI;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+#two {
+    position: relative;
+    width: 142px;
+    height: 69px;
+    /* margin-left: 140px; */
+
+    text-align: right;
+    font: normal normal 600 52px/69px Segoe UI;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+/*
+@media screen and (max-width: 360px) {
+   .test1 {
+       margin-left: 15px;
+   }
+  } */
+
+/* .search123 {
+    width: 80px;
+} */
+
+.innerdiv2 {
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 34px;
+    opacity: 1;
+}
+
+.c1 {
+    position: relative;
+    margin-left: 20px;
+}
+
+.innerdiv3 {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 18px #00000029;
+    border-radius: 29px;
+    opacity: 1;
+    overflow: auto;
+}
+
+.auto1 {
+     overflow: auto;
+}
+
+.card2 {
+    height: 500px;
+}
+
+.finame {
+    font-weight: bold;
+}
+
+
+.tclick {
+    cursor: pointer;
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+    overflow: auto;
+}
+
+th,td {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #BCBCBC;
+    word-wrap: break-word;
+}
+
+#tdata {
+    /* position: relative;
+    margin-left: 20px; */
+    width: 507px;
+    height: 57px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 8px;
+opacity: 1;
+}
+
+
+.hoverlabel, .hoverlabel1, .hoverlabel2 {
+    position: absolute;
+    margin-top: 15px;
+    cursor: pointer;
+    overflow: auto;
+
+    font: normal normal normal 15px/20px Segoe UI;
+letter-spacing: 0px;
+
+opacity: 1;
+}
+
+.hoverlabel {
+    left: 30px;
+    width: 100px;
+    height: 40px;
+}
+
+.hoverlabel1 {
+    height: 40px;
+    left: 180px;
+}
+
+.hoverlabel2{
+    left: 350px;
+    width: 130px;
+    height: 40px;
+
+}
+#c2{
+    width: 500px;
+    height: 250px;
+    left: 100px;
+    top: -30px;
+    background: transparent;
+}
+
+.old {
+    text-align: left;
+font: normal normal normal 15px/20px Segoe UI;
+letter-spacing: 0px;
+color: #808282;
+opacity: 1;
+    margin-left: 32px;
+}
+
+
+
+
+
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Facilezone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+<body>
+{%  load static %}
+        {% block body %}
+ <link rel="stylesheet" type="text/css" href="{% static 'css/enquiries.css' %}">
+
+
+     <!-- Navbar -->
+
+     <nav class="nav navbar navbar-expand-lg navbar-dark py-3 d-lg-none">
+        <div class="container">
+            <a href="/" class="navbar-brand Display-1"><h1 class="logo" style="color: #c4f1ff; font-weight: bold;">Manage <span style="color: white;">zone</span> </h1></a>
+
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+
+                <div class="col-auto pt-2 mx-md-5 px-md-5 sea">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control search"  aria-label="" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                        <span class="input-group-text searchbtn" id="basic-addon2">search</span>
+                        </div>
+                    </div>
+                </div>
+                <img class="bel"  src="{% static 'images/bell.png' %}">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Log out</a>
+                    </li>
+                </ul>
+            </div>
+
+
+    </div>
+    </nav>
+
+
+    <div class="mynav d-none d-lg-block">
+        <div class="container-fluid">
+            <div class="row pt-3">
+        <!-- <div class="col-lg-1"></div> -->
+        <div class="col mx-5">
+        <a href="/" class="navbar-brand Display-1"><h1 class="logo" style="color: #c4f1ff; font-weight: bold;">Manage <span style="color: white;">zone</span> </h1></a>
+        </div>
+        <div class="col-3 col-xl-4"></div>
+            <div class="col-3 pt-2">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control  search"  aria-label="" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                    <span class="input-group-text searchbtn" id="basic-addon2">search</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <div style="display: block; float: right;">
+            <img class="bel"  src="{% static 'images/bell.png' %}">
+            </div>
+            </div>
+            <div class="col-1">
+                <div style="float: right;">
+                <a type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div id="usrimg" style="margin-left: 50px; ">
+                        <img  src="{% static 'images/Male.png' %}" style=" margin-top: 2px; margin-left: 5px; width: 40px; height: 40px;">
+                    </div>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item bg-transparent links1" href="/">Log out</a></li>
+          </ul>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+    <section>
+    <div class="cover">
+
+    </div>
+    </section>
+
+    <!-- tabs -->
+    <section class="px-0 px-md-5 px-lg-0 pt-5 pb-3 pb-lg-5">
+        <div class="container tabscont">
+            <div class="row">
+                <div class="col-6 col-md-6 col-lg-12 pt-3 px-md-5 px-lg-0 pb-lg-3 dc tabs1">
+                   <a href="dashboard/"><label id="dashlab">Dashboard</label></a>
+                </div>
+                <div class="col-6 col-md-6 col-lg-12  pt-3 pb-3 pb-lg-3 gx-0 mc tabs1">
+                  <a href="messages/"><label id="msglab">Messages</label></a>
+                </div>
+                <div class="col-6 col-md-6 col-lg-12  pt-3 px-md-5 px-lg-0 pb-3 pb-lg-3 navbg1 ec">
+                    <a href="#"><label id="enqlab">Enquiries</label></a>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-5">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-0 col-md-3"></div> -->
+                <div class="col-12 col-md-12 col-lg-6 px-md-5 enqdiv ">
+                    <div class="card card1 innerdiv3" style="width: 700px;top: -30px; height: 250px;position: relative;left: -100px">
+                        <div class="card-body ">
+                             <form method="post" action="senq/">
+                                {% csrf_token %}
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control  search" name="search2" aria-label="" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                <input class="input-group-text searchbtn" type="submit" value="Search" name="search">
+                                </div>
+                            </div>
+                            </form>
+                            <br><br>
+                            <div class="table-responsive auto1">
+                                <table class="table">
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                        <th>Designation</th>
+                                        <th>Country</th>
+                                        <th>City</th>
+                                        <th>State</th>
+                                        <th>Pin</th>
+                                        <th>Phone</th>
+                                        <th>Email</th>
+                                        <th>Messages</th>
+                                    </tr>
+
+                                    {% for i in member1 %}
+                                        <tr>
+                                            <td>{{ i.id }}</td>
+                                            <td>{{ i.Name }}</td>
+                                            <td>{{ i.Designation }}</td>
+                                            <td>{{ i.Country }}</td>
+                                            <td>{{ i.City }}</td>
+                                            <td>{{ i.State }}</td>
+                                            <td>{{ i.Pin }}</td>
+                                            <td>{{ i.Phone }}</td>
+                                            <td>{{ i.Email }}</td>
+                                            <td>{{ i.Messages }}</td>
+                                        </tr>
+                                    {% endfor %}
+
+
+                                </table>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-12 col-md-12 col-lg-1 py-5 py-lg-0 px-md-5 msgdiv1 ">
+                    <div class="card innerdiv3 card2" id="c2">
+                        <div class="card-body">
+                            {% for i in srch1 %}
+                                <table>
+                            <tr>
+                                <td><label style="color: white" id="rname"><b>Name :</b></label></td>
+                            <td><label style="color: white" id="iname">{{ i.Name }} </label></td>
+                                </tr>
+                                    <tr>
+                                <td><label style="color: white" id="rname"><b>Designation :</b></label></td>
+                            <td><label style="color: white" id="iname">{{ i.Designation }} </label></td>
+                                </tr>
+                                    <tr>
+                                <td><label style="color: white" id="rname"><b>Country :</b></label></td>
+                            <td><label style="color: white" id="iname">{{ i.Country }} </label></td>
+                                </tr>
+                                    <tr>
+                                <td><label style="color: white" id="rname"><b>State :</b></label></td>
+                            <td><label style="color: white" id="iname">{{ i.State }} </label></td>
+                                </tr>
+                                    <tr>
+                                <td><label style="color: white" id="rname"><b>City :</b></label></td>
+                            <td><label style="color: white" id="iname">{{ i.City }} </label></td>
+                                </tr>
+                                    <tr>
+                                <td><label style="color: white" id="rname"><b>Pin :</b></label></td>
+                            <td><label style="color: white" id="iname">{{ i.Pin }} </label></td>
+                                </tr>
+                                <tr>
+                                <td><label style="color: white" id="rphone"><b>Phone :</b></label></td>
+                                <td><label style="color: white" id="iphone">{{ i.Phone }}</label></td>
+                                </tr>
+                                <tr>
+                                <td> <label style="color: white" id="remail"><b>Email :</b></label></td>
+                                <td><label style="color: white" id="iemail">{{ i.Email }}</label></td>
+                                </tr>
+                                <tr>
+                                <td><label style="color: white" id="rmsg"><b>Message :</b></label></td>
+                                <td><p style="color: white" id="imsg">{{ i.Messages }}</p></td>
+                                </tr>
+
+
+                                </table>
+
+
+
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+        {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

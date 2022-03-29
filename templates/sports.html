@@ -1,0 +1,125 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/sports.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                   Sports & Entertainment
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Optimise sports and entertainment experiences<br> by using real-time insights
+                    to personalise<br> customer engagements.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div >
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+              Engage athletes, teams, and fans with innovative technologies
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Win on the field, on the screen, and on the world stage when you gain a deeper understanding
+                of players, patrons, visitors, fans, and customers.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Marketing automation
+                    </h4>
+                    <ul>
+                        <li>
+                            Collect essential statistics about your fans
+                        </li>
+                        <li>
+                            Engaging your users with interactive features
+                        </li>
+                        <li>
+                            Actionable analytics and tracking user behavior
+                        </li>
+                        <li>
+                            Top Fan based Marketing
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Advanced coordination
+                    </h4>
+                    <ul>
+                        <li>
+                           Management software makes it easier to arrange various processes
+                        </li>
+                        <li>
+                            Features to arrange things to a single click
+                        </li>
+                        <li>
+                            Maximum level of management co-ordination
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Fast registration
+                    </h4>
+                    <ul>
+                        <li>
+                            Automates the user registration
+                        </li>
+                        <li>
+                            Increases the organization level  and increased planning
+                        </li>
+                        <li>
+                            Instant notifications and changes  involved
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class=" col-lg-3  ">
+                    <h4>
+                        Scheduling
+                    </h4>
+                    <ul>
+                        <li>
+                            Scheduling events efficiently
+                        </li>
+                        <li>
+                            Effective communication via email,messages etc
+                        </li>
+                        <li>
+                            Manage your database quickly and efficiently
+                        </li>
+                        <li>
+                            Top Fan based Marketing
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/talent.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                 Talent Management
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Hire the best candidates, connect and guide new<br> hires and optimise workforce performance,<br>
+                    engagement, and productivity.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div >
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Attract, develop, and retain top talent with our intelligent talent management solutions
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Our cloud-based talent management software gives your employees, managers, and HR professionals
+                the tools and guidance they need to succeed – regardless of where or when they are working. With Facilezone
+                SuccessFactors solutions, you can adopt a comprehensive and data-driven talent management strategy
+                that spans the entire employee lifecycle. Hire the best candidates, engage employees, develop the skills
+                of today and tomorrow, and ensure every employee is rewarded and valued.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Recruiting
+                    </h4>
+                    <ul>
+                        <li>
+                           Ensure most skilled and Experienced Employees are hired
+                        </li>
+                        <li>
+                            improved effiency
+                        </li>
+                        <li>
+                           Including Soliciting, Evaluating, selection and on-boarding candidates
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3">
+                    <h4>
+                        Retention
+                    </h4>
+                    <ul>
+                        <li>
+                            Employee attrition is an all-time high
+                        </li>
+                        <li>
+                            Developing and implementing various activities
+                        </li>
+                        <li>
+                            Easily identify top performer
+                        </li>
+                        <li>
+                            Maximize loyalty and retention between employees
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                       Performance management
+                    </h4>
+                    <ul>
+                        <li>
+                            Enhancement and refinement of skills
+                        </li>
+                        <li>
+                            leverage a broad portfolio
+                        </li>
+                        <li>
+                            Identifies areas of improvement
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

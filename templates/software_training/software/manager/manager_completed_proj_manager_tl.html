@@ -1,0 +1,70 @@
+{% extends 'software_training\software/manager\base_manager.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    
+      <div class="row">   
+        <div class="col-12 grid-margin">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title"> Team Leaders </h4>  
+              <div class="form-group">
+                <input type="text" class="form-control"id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="color:white;">
+                 </div>
+              <div class="table-responsive">
+                <table class="table">
+                
+                  <thead>
+                    <tr>
+                      <th> Name </th>
+                      <th> Employee ID </th>
+                      <th> Mail </th>
+                      <th> Contact Number </th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody id="myTable">
+                    
+                    <tr>
+                      <td>Amal</td>
+                      <td>em123</td>
+                      <td>amal@asdfghdsad</td>
+                      <td>7418529637</td>
+                                           
+                    </tr>
+
+                    <tr>
+                      <td>Emil</td>
+                      <td>em343</td>
+                      <td>emil@asdfghdsad</td>
+                      <td>9818529637</td>              
+                      </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+{% endblock%}

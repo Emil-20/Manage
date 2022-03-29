@@ -1,0 +1,62 @@
+{%extends 'software_training/software/developer/base_developer.html'%}  {%block content%}
+{% load static %}
+
+
+<form action="/softwareapp/developer_attendance_list/" method="post">
+{% csrf_token %}
+    <div class="row" style="padding-top:50px; ">
+        <div class="col-sm-2"></div>
+            <div class="col-sm-8 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body" style="height:auto;padding-top:30px; ">
+                        <br>
+                        <center>
+                            <h3 class="card-title">View Attendance</h3>
+                        </center>
+                        <br><br>
+                        <div class="form-group row">
+                                <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Start Date</label>
+                                <div class="col-sm-9">
+                                    <input type="Date"  id="txtDate" class="form-control text-light" id="exampleInputStartdate" required>
+                                </div>
+                        </div>
+                        <div class="form-group row">
+                                <label for="exampleInputMobile" class="col-sm-3 col-form-label">End Date</label>
+                                <div class="col-sm-9">
+                                    <input type="Date" id="txtDate1" class="form-control text-light" id="exampleInputEnddate" required>
+                                </div>
+                        </div><br><br>
+
+
+                        <div class="row mb-5">
+                                <center>
+                                    <button type="Submit" class="btn btn-outline-primary btn-icon-text"><i class="mdi mdi-file-check btn-icon-prepend"></i> Submit </button>
+                                </center>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+  
+<script>
+    var dtToday = new Date();
+    var dtToday = new Date();
+     var month = dtToday.getMonth() + 1;
+     var day = dtToday.getDate();
+     var year = dtToday.getFullYear();
+     if (month < 10)
+          month = '0' + month.toString();
+      if (day < 10)
+          day = '0' + day.toString();
+      var maxDate = year + '-' + month + '-' + day;
+      document.getElementById("txtDate").setAttribute("max", maxDate);
+      document.getElementById("txtDate1").setAttribute("max", maxDate);
+      
+              
+              
+  </script>
+{% endblock %}

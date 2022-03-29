@@ -1,0 +1,147 @@
+{%extends 'software_training/software/tl/tlDashboard.html'%} {%load static%} {%block content%}
+
+<style>
+    .Search {
+        width: 100px;
+        margin-top: 4%;
+        float: right;
+        margin-right: 5%;
+        padding-left: 3%;
+        padding-right: 3%;
+        line-height: 2;
+        border: 1px solid #6c7293;
+        color: #fff;
+        background: #0090e7;
+    }
+    /* #tble {
+        display: none;
+    } */
+    
+    label {
+        color: white;
+    }
+    
+    .card {
+        float: center;
+    }
+    
+    .table1 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5vh;
+    }
+    
+    .tble {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5vh;
+    }
+    
+    @media (max-width:767px) {
+        .Search {
+            margin-top: -2%;
+            float: right;
+            margin-right: 0%;
+            padding-left: 3%;
+            padding-right: 3%;
+            line-height: 2;
+        }
+    }
+</style>
+<form action="/softwareapp/tl_attendance_sort/" method="post">
+    {% csrf_token %}
+    <h2 style="color: white;">Attendance</h2>
+    <div class="col-12 grid-margin table1 pt-3">
+        <div class="card text-center">
+            <div class="card-body  pt-5">
+                <form class="forms-sample">
+                    <div class="form-group row">
+                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color: #6c7293 ;">Start Date</label>
+                        <div class="col-sm-9">
+                            <input type="date" name="fromdate" class="form-control" id="exampleInputUsername2" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label" style="color: #6c7293 ;">End Date</label>
+                        <div class="col-sm-9">
+                            <input type="date" name="todate" class="form-control" id="exampleInputEmail2" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div for="exampleInputEmail2" class="col-md-11 col-form-label"></div>
+                        <div class="col-md-12">
+                            <button type="submit" style="float: right;" id="btnSearch" class="btn btn-outline-primary btn-icon-text">
+                            <i class="mdi mdi-file-check btn-icon-prepend"></i> Search </button>
+
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="col-12 grid-margin stretch-card tble" id="tble">
+    <div class="card">
+        <div class="card-body">
+            <label style="color: #6c7293 ;">Attendance List</label><br><br>
+            <input type="text" id="search" class="form-control" placeholder="search..." onkeyup="myFunction()" style="color: white !important;">
+            <div class="table-responsive">
+                <table class="table" id="myTable">
+                    <thead>
+                        <tr>
+                            <th> Date </th>
+                            <th> Login Time </th>
+                            <th> Logout Time </th>
+                            <th> Status </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="color:white ;">15/03/2022</td>
+                            <td style="color:white ;">7.35</td>
+                            <td style="color:white ;"> 7.40 </td>
+
+                            <td>
+                                <div class="badge badge-outline-success">status</div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td style="color:white ;">14/03/2022</td>
+                            <td style="color:white ;">7.35</td>
+                            <td style="color:white ;"> 7.40 </td>
+                            <td>
+                                <div class="badge badge-outline-danger">status</div>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+{% endblock %}

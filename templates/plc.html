@@ -1,0 +1,102 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/plc.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                   Product Lifecycle Management (PLM) software
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Design quality products faster and improve<br> profit margins –
+                    with on-premise and cloud-based <br>product lifecycle management (PLM) software <br>from Facilezone.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Design to customer demand and product individualisation with PLM software
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Enable faster and better decisions on product design to meet highly variable and
+                individualised customer requirements with  Product Lifecycle Management (PLM) solutions.
+
+
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Project planning
+                    </h4>
+                    <ul>
+                        <li>
+                            Support for duration, deadlines, date constraints
+                        </li>
+                        <li>
+                            Update project plans
+                        </li>
+                        <li>
+                            Full precedence relationships
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Project collaboration
+                    </h4>
+                    <ul>
+                        <li>
+                            Virtual space to share design updates
+                        </li>
+                        <li>
+                            Provides collaboration with the team
+                        </li>
+                        <li>
+                            Data can be shared to multiple projects
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Project execution
+                    </h4>
+                    <ul>
+                        <li>
+                            Provides automation of products
+                        </li>
+                        <li>
+                            Advanced product quality planning
+                        </li>
+                        <li>
+                            Automated execution of the project plan with email notifications
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

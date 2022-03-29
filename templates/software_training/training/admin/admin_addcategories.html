@@ -1,0 +1,143 @@
+{% extends 'software_training/training/admin/base_admin.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    #choose::file-selector-button {
+        background-color: rgb(37, 125, 207);
+        padding: 12px;
+        color: white;
+        width: 100px;
+    }
+</style>
+<div class="row">
+    <div class="col-12 col-sm-2 col-md-2 col-lg-2"></div>
+    <div class="col-12 col-sm-8 col-md-8 col-lg-8 grid-margin">
+
+        <div class="card">
+            <div class="card-body" style="height:auto">
+                <h4 class="card-title " style="float:left;">Categories</h4>
+
+                <button type="button" class="btn btn-outline-info pull-right mr-3" style="float:right;" onclick="location.href='/softwareapp/Admin_addnewcategories/'">
+                    <i class="mdi mdi-equal-box">Add New</i></button>
+
+                <div>
+
+                    <form>
+                        <div class="input-group input-group-sm mb-3 mt-5">
+
+                            <input type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 form-control text-white " id="myInput" onkeyup="myFunction()" placeholder="Search . . ." style="border: green" />
+                        </div>
+                    </form>
+                </div>
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th class="text-white">SNo.</th>
+                                <th class="text-white">Category</th>
+                                <th class="text-white">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            <tr>
+                                <td>1</td>
+                                <td>Computer Programining</td>
+                                <form action="#" method="post">
+                                    {% csrf_token %}
+                                    <td>
+                                        <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-social-icon-text btn-outline-primary"><i class="mdi mdi-tooltip-edit"></i>Update</button>
+                                        <button type="submit" class="btn btn-social-icon-text btn-outline-danger" onclick="confirmation()"><i class="mdi mdi-delete-forever"></i>Delete</button>
+
+                                    </td>
+                                </form>
+
+                            </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="col-12 grid-margin stretch-card bg-dark text-light modal-content">
+            <!-- Modal Header -->
+
+            <form action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+                {%csrf_token%}
+                <div class="modal-header">
+                    <h4 class="modal-title">UPDATE</h4>
+                    <button type="button" style="color: white;" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="row">
+                    <div class="col-12 grid-margin stretch-card">
+                        <div class="card" style="height: 300px">
+                            <div class="card-body">
+
+                                <div class="form-group row">
+                                    <label class="col-3 col-sm-3 col md-3 col-lg-3 ">Category</label>
+                                    <div class="col-9 col-sm-9 col md-9 col-lg-9">
+                                        <input type="text" class="form-control text-light" name="name" value="computer Programining" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <center>
+                                        <button type="submit" class="btn btn-outline-warning btn-icon-text"><i class="mdi mdi-refresh btn-icon-prepend"></i>Update</button>
+                                    </center>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- modal end -->
+
+<script>
+    // js for delete button in new_team1.html page
+    function confirmation() {
+        var result = confirm("Are you sure...?");
+        if (result) {
+            // Delete logic goes here
+        }
+    }
+
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+{% endblock %}

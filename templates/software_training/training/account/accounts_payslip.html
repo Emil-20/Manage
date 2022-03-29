@@ -1,0 +1,107 @@
+{%extends 'software_training/training/account/base_accounts.html'%} {%load static%} {%block content%}
+
+<div class="row">
+    <div class="col-12 col-sm-1 col-md-1 col-lg-1"></div>
+    <div class="col-12 col-sm-10 col-md-10 col-lg-12 grid-margin">
+        <div class="card mt-3 mb-5">
+            <div class="card-body">
+                <div class="card-body" id="personForm">
+                    <div class="row mt-5 ">
+                        <div class="col-12 col-sm-12 col-md-5 col-lg-5 ">
+                            <div class="form-group row ">
+                                <label class="col-6 col-sm-6 col-md-6 col-lg-5 col-form-label">Department </label>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 ">
+                                    <select class="badge badge-outline-primary bg-dark text-light" id="depmt" name="dep "><option style="display: none ">Department</option>                                     
+                                        <option value="{{i.id}}">Training</option>
+                                        <option value="{{i.id}}">Account</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                            <div class="form-group row">
+                                <label class="col-6 col-sm-6 col-md-6 col-lg-5 col-form-label ">Designation</label>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                    <select class="badge badge-outline-primary bg-dark text-light" id="desi" name="desig"><option style="display: none ">Designation</option>                        
+                                        <option value="{{t.id}}">Account</option>  
+                                        <option value="{{t.id}}">Trainer</option>
+                                        <option value="{{t.id}}">Manager</option>    
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5 ">
+                        <div class="col-12 col-sm-12 col-md-5 col-lg-5 ">
+                            <div class="form-group row ">
+                                <label class="col-6 col-sm-6 col-md-6 col-lg-5 col-form-label ">FROM</label>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                    <input type="Date" class="form-control text-light" name="start" id="txtDate">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                            <div class="form-group row">
+                                <label class="col-6 col-sm-6 col-md-6 col-lg-5 col-form-label">TO</label>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                    <input type="Date" class="form-control text-light" name="start" id="txtDate1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt-4">
+                            <center>
+                                <button type="button" class="btn btn-primary btn-icon-text" onclick="show()" id="btnSearch" style="width: 100px;">Search</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div id="hiddendiv" style="display: none">
+                    <div class="row">
+                        <div class="col-12 col-sm-2 col-md-2 col-lg-2"></div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered mt-4 text-light col-sm-12 col-md-8 col-lg-8 " style=" width: 1200px;">
+                                <tr>
+                                    <th>PARTICULARS</th>
+                                    <th>EMPLOYEE NUMBER</th>
+                                    <th>ACCOUNT NUMBER</th>
+                                    <th>BANK NAME</th>
+                                    <th>BRANCH</th>
+                                    <th>EMAIL-ID </th>
+                                    <th>VIEW SLIP</th>
+                                </tr>
+                                <tbody>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>143
+                                        </td>
+                                        <td>
+                                            SBI456820000</td>
+                                        <td>
+                                            SBI</td>
+                                        <td>
+                                            kakkand</td>
+                                        <td>
+                                            john@gmail.com</td>
+                                        <td style="text-decoration: none;">
+                                            <a href="/softwareapp/accounts_paydetails/">View slip</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript ">
+    function show() {
+        document.getElementById('hiddendiv').style.display = "block ";
+    }
+</script>
+
+
+{% endblock %}

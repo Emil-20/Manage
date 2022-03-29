@@ -1,0 +1,343 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    #one{
+        position: relative;
+        background-image: url({% static 'Event/c1.png' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+        color: white;
+        z-index: -1;
+    }
+    #two{
+        position: relative;
+        padding-top: 15%;
+        margin-left: 7%;
+        color: white;
+        z-index: -1;
+    }
+    #three{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        padding-top: 10%;
+        text-align: left;
+    }
+    #four{
+       background-image: url({% static 'software/img.png' %});
+        padding-top: 5%;
+    }
+    #five{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        text-align: left;
+    }
+    #six{
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        text-align: left;
+    }
+    #seven{
+        font-family: Roboto, sans-serif;
+        text-align: center;
+    }
+
+</style>
+<body>
+
+    <div class="container-fluid" id="one">
+        <div id="two">
+            <h3>
+                Faacilezone for Event planning
+            </h3>
+            <p>
+                Use mange Zone creates a successful event.<br> Whether your event a large or small, it can
+                organize with this single tool.Try a free trail now.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <p id="three">
+                    Easily manage your employees with Facilezone
+                </p>
+                <p id="six">
+                    Facilezone is only tool that need you to coordinate a complete events. It has complete
+                    features to simplify the event registration process, program planning, and attendance record in
+                    autonomous way. Execute you events more organized form with less time.it can avoid the last minute
+                    rush and communication problems with your team members.
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <img style="width: 100%; position:relative;z-index: -1" alt="Error 404!!!" loading="lazy" src= {% static  'Event/em10.jpg' %}>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" id="four">
+        <div class="row">
+             <div class="col-sm-6 col-md-6 col-lg-6">
+                <img style="width: 100%" alt="Error404!!!" loading="lazy" src="{% static 'software/mac.png' %}">
+            </div>
+            <div class="col-sm-6">
+                <p id="five">
+                    Loaded with interesting features
+                </p>
+                <p id="six">
+                    It provides transparent flow of communication between the team members.
+                    it prevents the risk factor in the event with easy detection. Facilezone improves your quality
+                    of your events by analysing the past events and on-going similar events. It’s a great tool to
+                    support multiple events at same time.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Main Features
+                    </b>
+                </h4>
+                <p>
+                    Facilezone has wide of features to setup an extensive business events.it helps the organizers to plan
+                    and schedule the events in automatic way. The software handles the complete events that beyond the registration
+                    and planning. It provides live tracking of main functionality of complete departments that conduct the event operations.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left; margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Event analysis
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The complete event can be analysed with this tool. If you are such a company or agency which
+                is conduct regular events or functions. This tool is really helpful to you analyse the pros and cons of
+                each events.it also can use to predict the outcome of your future events before conducting. Our event
+                analysis tool is different from others, it can prediction the accurate results of your events other than
+                probability.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'Event/em4.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'Event/em20.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Budgeting and fund collection
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     Provides support for make a clear budget that covers the complete expenses of the event.
+                     An accurate budget will eliminate the confusion on your event planning process. This software will
+                     assist you to make a complete budget without any expert advice. The event team can calculate the total
+                     expense just insert a rough estimation report, Facilezone can transform it to a practical solution
+                     without a loop hole.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Automated registration process
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                   Registration most complicated task in any events, especially if you are tries to
+                    conduct a large event. Our software can ease the hectic registration process though the automatic
+                    functions. It provides easy platform to register though online with fewer steps. Some cases candidates
+                    will skip registration process without complete the full steps. This tool can find identify those
+                    unfinished registration attempts, it will automatically initiate the retargeting for encourage them
+                    to finish the registration process. This tool allows facilities such as modification of seats cancel
+                    reservation, postpone etc. attendees.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'Event/30.jpg' %}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'Event/em7.jpg'%}" style="margin-left: 7%;height: 70%;width: 90%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Chat and discussion
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     It provides a platform for organize an events with through a group discussion.it support
+                     multiple user access and meeting hosting.it provides wide range of interactive to coordinate multiple
+                     events at same time. Live video conference, text chat, screen sharing are some of the import features
+                     of Facilezone .it allow file sharing without any violation privacy and confidentiality of your information
+                     .you could limit the viewers of data that you share by modify the permissions.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Ticket selling
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    We Provides proper tool to sell your tickets online. It can overcome the difficulty to
+                    reach audience out of your locality. The online ticket selling will helps to attain the maximum publicity.
+                    Its allows you to sell the maximum tickets within a seconds of time. You can the travelling cost and
+                    promotion cost with the online ticket selling.it can generate the maximum revenue with less promotion
+                    cost.it can utilize to sell tickets of multiple events concurrently as a parallel activity.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'Event/22.jpg'%}" style="margin-left: 15%;height: 70%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'Event/em9.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Program planning and scheduling
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     This tool will help you to plan and schedule the events with utilizing the minimum expenses.
+                     it will help you to manage your all events in one place. Facilezone has a versatile features to support
+                     every types of events. If you are planning to conduct a corporate event or promotional events all you
+                     need is efficient software to coordinate each distinct task. You can create customized event scheduling
+                     plans with participation of wide audience. This software will help you to plan large and events with
+                     less time and efforts.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                   Events Survey
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    To make an event successful audience we should make audience engaging from beginning to end.
+                    The audience survey will provide the complete list of total audience that attend the event till the end.
+                    it will help you to reconstruct a better event on future. The survey details provide complete details
+                    such a total audience attend the event, number of attendee that spend the occasion till the end etc.
+                    This intelligent statistical report will help to find the coordination issues and make a better solution
+                    for it.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'Event/em13.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'Event/em12.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Emergency situation notification
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     The emergency notification feature will help to face the challenges in event conduction.an
+                     estimation for conducting a successful event can be created with this software. The system will monitor
+                     the monitor event from the starting stage. If there are found any less in the estimated components
+                     the will automatically provide an early warning signal. . The message will automatically transfer to
+                     the coordinators and event managers. This detection of risks in early stage can save huge money loss
+                     and chance to occur an event failure.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                  Sent invitation  for audience and sponsorship
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    Facilezone has unique client invitation feature. Its help to promote your event to a wide
+                    audience. It supports your unlimited number contacts lists.so you can invited all of the peoples to your
+                    visit without forget anyone. We used smart algorithm to collect the data’s of your target audience and
+                    peoples with similar interests.it will replace traditional notice distribution method. Online invitation
+                    is can covers the target audience more fast .it also helps to get international attention to your events.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'Event/21.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'Event/em20.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Easy Payments
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                    The payment can be fully transformed to digital form. It increases the flexibility of fund transfer.
+                    Track all the fund transfer and ensure that total event expense is under the estimated budget. The
+                    registration and the invoice can be digitally transferred in the automatic way.so that the people can
+                    enter the event without any paper documents. This platform supports all mode of transaction such as
+                    credit card, smart card, UPI and net-banking etc.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Contact Us
+                    </b>
+                </h4>
+                <p>
+                   Do you need software to manage complete business operations of your company?
+                    <br>Then Facilezone is right choice for you. Sent an Enquiry now,
+                    we will get back to you as soon as possible.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+
+</body>
+{% endblock %}

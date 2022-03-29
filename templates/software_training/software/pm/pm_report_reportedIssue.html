@@ -1,0 +1,97 @@
+{% extends 'software_training/software/pm/base_pm.html'%} {% load static %} {% block content %}
+
+<style>
+    
+    td,
+    th {
+        text-align: center;
+    }
+</style>
+
+
+<div class="row">
+    
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Issues</h4>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <form>
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" class="form-control text-white" id="myInput" onkeyup="myFunction()" placeholder="Search . . ." style="border: green" />
+                        </div>
+                    </form>
+                </div>
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th class="text-white" style="padding-left:20px;">SNo</th>
+                                <th class="text-white">Name</th>
+                                <th class="text-white">Issue</th>
+                                <th class="text-white">Date</th>
+                                <th class="text-white">	Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>anandhu</td>
+                                <td>net issue</td>
+                                <td>09/03/2022</td>
+                                <td>
+                                    <a href="/softwareapp/pm_reportedIssue_action/"><button type="button"  class="btn btn-social-icon-text btn-outline-success">Submitted</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>anagha</td>
+                                <td>health issue</td>
+                                <td>10/03/2022</td>
+                                <td>
+                                    <a href="/softwareapp/pm_reportedIssue_action/"><button type="button"  class="btn btn-social-icon-text btn-outline-success">Submitted</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>amal</td>
+                                <td>net issue</td>
+                                <td>12/03/2022</td>
+                                <td>
+                                    <button type="button"  class="btn btn-social-icon-text btn-outline-warning"><i class="mdi mdi-send"></i>Pending</button>
+                                    
+                                </td>
+                            </tr>
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+    {% endblock %}

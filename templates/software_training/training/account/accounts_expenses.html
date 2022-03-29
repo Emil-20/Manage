@@ -1,0 +1,169 @@
+{%extends 'software_training/training/account/base_accounts.html'%} {% load static %} {% block content %}
+
+<style>
+    table tr {
+        cursor: pointer;
+    }
+</style>
+<div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 grid-margin">
+        <div class="card mt-3 mb-5">
+            <div class="card-body">
+                <form class="form-sample">
+                    <div class="row">
+                        <div class="col-6 col-sm-8 col-md-9 col-lg-10">
+                            <h4 class="page-title"> EXPENSES </h4>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                            <a href="/softwareapp/accounts_expense_newTransaction/" class="btn btn-outline-primary btn-icon-text" style="height: 50px;width: 110px;">New Transaction</a>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table  table-bordered w-80">
+                            <thead>
+                                <tr>
+                                    <th class="text-white ">
+                                        Date
+                                    </th>
+                                    <th class="text-white">
+                                        Payee
+                                    </th>
+                                    <th class="text-white">
+                                        Category
+                                    </th>
+                                    <th class="text-white">
+                                        Total Before Tax
+                                    </th>
+                                    <th class="text-white">
+                                        Tax
+                                    </th>
+                                    <th class="text-white">
+                                        Total
+                                    </th>
+                                    <th class="text-white">
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <br>
+                                <tr>
+                                    <td>
+                                        15/03/2022
+                                    </td>
+                                    <td>
+                                        John
+                                    </td>
+                                    <td>Developer</td>
+                                    <td>
+                                        15000
+                                    </td>
+                                    <td>
+                                        2500
+                                    </td>
+                                    <td>
+                                        20000
+                                    </td>
+                                    <td>
+                                        <a href="/softwareapp/accounts_expenses_viewEdit/" class="btn btn-outline-primary btn-icon-text">View/Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        15/03/2022
+                                    </td>
+                                    <td>
+                                        John
+                                    </td>
+                                    <td>Developer</td>
+                                    <td>
+                                        15000
+                                    </td>
+                                    <td>
+                                        2500
+                                    </td>
+                                    <td>
+                                        20000
+                                    </td>
+                                    <td>
+                                        <a href="/softwareapp/accounts_expenses_viewEdit/" class="btn btn-outline-primary btn-icon-text">View/Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        15/03/2022
+                                    </td>
+                                    <td>
+                                        John
+                                    </td>
+                                    <td>Developer</td>
+                                    <td>
+                                        15000
+                                    </td>
+                                    <td>
+                                        2500
+                                    </td>
+                                    <td>
+                                        20000
+                                    </td>
+                                    <td>
+                                        <a href="/softwareapp/accounts_expenses_viewEdit/" class="btn btn-outline-primary btn-icon-text">View/Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        15/03/2022
+                                    </td>
+                                    <td>
+                                        John
+                                    </td>
+                                    <td>Developer</td>
+                                    <td>
+                                        15000
+                                    </td>
+                                    <td>
+                                        2500
+                                    </td>
+                                    <td>
+                                        20000
+                                    </td>
+                                    <td>
+                                        <a href="/softwareapp/accounts_expenses_viewEdit/" class="btn btn-outline-primary btn-icon-text">View/Edit</a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                            <tr>
+                                <td colspan="5" class="text-white" style="text-align: center;">
+                                    Total
+                                </td>
+                                <td id="totalsalary" colspan="2" class="text-white" style="padding-right: 20px;">50000</td>
+                            </tr>
+                        </table>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var empsalary;
+            var totalsalary = 0;
+
+            $('td:nth-child(6)').each(function() {
+                empsalary = $(this).html();
+                console.log(typeof(empsalary));
+                a = parseInt(empsalary)
+                totalsalary += a;
+                console.log(a);
+                console.log(totalsalary);
+
+                $('#totalsalary').text(totalsalary);
+
+            });
+        });
+    </script>
+
+
+    {% endblock %}

@@ -1,0 +1,104 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/workforce.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                 HR Analytics and Workforce Planning
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Drive performance and results with data-driven insights <br>across all your HR processes in the cloud.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Tap into the power of people analytics
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Gain data-driven insight into all HR processes with people analytics. Facilezone
+                SuccessFactors solutions, combined with the SAP Analytics Cloud solution, use data and
+                analytics to help you increase the effectiveness and visibility of HR while improving
+                business decisions.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Workforce analytics
+                    </h4>
+                    <ul>
+                        <li>
+                            Standardised HR metrics
+                        </li>
+                        <li>
+                            Data trending
+                        </li>
+                        <li>
+                            Intelligent meetings
+                        </li>
+                        <li>
+                            Instant data-driven insights
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Workforce planning
+                    </h4>
+                    <ul>
+                        <li>
+                            Strategic workforce planning
+                        </li>
+                        <li>
+                            Operational headcount planning
+                        </li>
+                        <li>
+                            Financial modelling and impact analysis
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Enterprise analytics
+                    </h4>
+                    <ul>
+                        <li>
+                            Enterprise analytics
+                        </li>
+                        <li>
+                            Business intelligence
+                        </li>
+                        <li>
+                            End-to-end experience
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

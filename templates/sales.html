@@ -1,0 +1,124 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/sales.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                  Sales
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Deliver connected sales experiences that accelerate<br> the buying process
+                    and turn customers into advocates.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Connect with every customer
+            </p>
+            <p style="color: black;font-size: 20px;">
+               Engage customers through connected, customer-centric processes that improve experiences and
+                maximise sales.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Organized Database
+                    </h4>
+                    <ul>
+                        <li>
+                            complete view of your customers
+                        </li>
+                        <li>
+                            Provides accurate sales, marketing and customer service
+                        </li>
+                        <li>
+                            Effective interaction with customers
+                        </li>
+                        <li>
+                            Real-time and up-to-date information
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                       Accurate Sales Forecasts
+                    </h4>
+                    <ul>
+                        <li>
+                            Records data efficiently
+                        </li>
+                        <li>
+                            provides important information to sales people
+                        </li>
+                        <li>
+                            Makes accurate forecasts
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                         Enhanced Internal Collaboration
+                    </h4>
+                    <ul>
+                        <li>
+                            Reduces the need for time-consuming meetings
+                        </li>
+                        <li>
+                            Effective management of the team
+                        </li>
+                        <li>
+                            Reduces work pressure
+                        </li>
+                        <li>
+                            Provides motivation to the employees
+                        </li>
+                    </ul>
+                </div>
+            </div>
+             <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                         Structured Sales Cycle
+                    </h4>
+                    <ul>
+                        <li>
+                            Identifies qualified lead
+                        </li>
+                        <li>
+                            Seamlessly monitor leads
+                        </li>
+                        <li>
+                            Management to  the stages of sales
+                        </li>
+                    </ul>
+                </div>
+             </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

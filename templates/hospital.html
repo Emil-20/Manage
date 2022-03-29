@@ -1,0 +1,341 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    #one{
+        position: relative;
+        background-image: url({% static 'hospital/hc1.png' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+        color: white;
+        z-index: -1;
+    }
+    #two{
+        position: relative;
+        padding-top: 15%;
+        margin-left: 7%;
+        color: white;
+        z-index: -1;
+    }
+    #three{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        padding-top: 10%;
+        text-align: left;
+    }
+    #four{
+       background-image: url({% static 'software/img.png' %});
+        padding-top: 5%;
+    }
+    #five{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        text-align: left;
+    }
+    #six{
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        text-align: left;
+    }
+    #seven{
+        font-family: Roboto, sans-serif;
+        text-align: center;
+    }
+
+
+</style>
+<body>
+
+    <div class="container-fluid" id="one">
+        <div id="two">
+            <h3>
+                Facilezone for Hospitals and clinic
+            </h3>
+            <p>
+                Use mange Zone to handle the administrative financial and tasks of hospitals.
+                it will enhance the security and improve flexibility of daily operations.<br>
+                Works well on both multi-speciality hospital and clinics.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <p id="three">
+                    Easily manage your employees with Facilezone
+                </p>
+                <p id="six">
+                  A software system to manage all departments and functioning of hospital within a framework.
+                    Maintain all information such as patient registration <br>and discharge, staffs working hours,
+                    financial transaction details, and visitor’s list etc.it helps to prioritize the consultation
+                    and handle the emergencies cases through advance notifications
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <img style="width: 100%; position:relative;z-index: -1" alt="Error 404!!!" loading="lazy" src= {% static  'hospital/hc2.jpg' %}>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" id="four">
+        <div class="row">
+             <div class="col-sm-6 col-md-6 col-lg-6">
+                <img style="width: 100%" alt="Error404!!!" loading="lazy" src="{% static 'software/mac.png' %}">
+            </div>
+            <div class="col-sm-6">
+                <p id="five">
+                    Loaded with interesting features
+                </p>
+                <p id="six">
+                    Facilezone incorporated complete features and tools to manage the
+                    entire business operations of your company. It’s simple and comprehensive to use. We will
+                    make it as in the form that appropriate to your business requirements.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Main Features
+                    </b>
+                </h4>
+                <p>
+                    Facilezone provides features such as online appointment, staff and patient management and medical
+                    record maintain etc. The manage has an alert mechanism <br>which will notifies any urgency such as lack of staffs or medicine
+                    requirement. The system will make your organization <br>capable to face any emergency situation without a delay.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left; margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Management functions
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The authorities can manage multiple branches as an organized system. They could monitor the total
+                    hospital functions on real-time.it includes the staffs, patients, medicine availability etc. This
+                    system will ease the decision making efforts of the managers and administrative members. They could
+                    identify the lack of human resources and medicine availability details through this software.it
+                    shows the performance chart of hospital and the rate of patient’s arrival in a monthly basis.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'hospital/hc4.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'hospital/hc5.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Accounts and billing
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     Store the account and billing information’s in an electronic format.so you can access,
+                     retrieve and modify more easily.it supports automatic invoice generation so that you could minimize
+                     the manual errors in financial transactions. The organization growth depends on the better financial
+                     managements, if its week you could manage the expenses. This software will notify the due clearance
+                     and stock purchase on the date. This delay less dealings will increase the trust and satisfaction of
+                     your employees and customers.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Booking and bed availability
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The user experienced can be improved with online appointments or booking
+                    facilities. Mange Zone has very use friendly graphical interface. It can use anyone
+                    without any technical knowledge. Its platform independent software, it can use on both
+                    mobiles and computers. This tool can abandon the patient’s long wait to get an appointment.
+                    Its shows the available doctors and their appoint time. Provides the bed vacant details
+                    and support the bookings.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'hospital/hc6.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'hospital/hc7.jpg'%}" style="margin-left: 7%;height: 70%;width: 90%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Integration of departments and branches
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     This can integrate the complete departments and various branches with in framework.
+                     You can add your multiple branches with this single account. You could access data of multiple
+                     branches in a collective format. It will help to share the consultation details between the
+                     branches.so the patient can access services from any of your branch with a single registration
+                     process.it will simplify the administrators job and improves the functionality of hospital.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Patient monitoring and Emergency alert
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The system will make capable to respond the emergency situations.it provides constant
+                    monitoring of patients and your staffs.if there is an emergency occurs the staff can report it
+                    the senior doctor or administrative members with our software.it can integrate with the multiple
+                    braches of system. It can also use to updates the medicine and requirements to avoid an urgency
+                    crisis. The alert system could improve the total performance of hospital.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'hospital/hc8.jpg'%}" style="margin-left: 15%;height: 70%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'hospital/hc9.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Staff management
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     The system will monitor employees of various branches.it will provides the real working
+                     hours details of your employees. This software tool is every effective to find the cumulative
+                     working hours if there are various shifts on employees. It also provides the automatic task
+                     assignment property. This software will solve the staff availability issue to all patients.it
+                     has a dedicated area for staffs to report the queries and problems in work life.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Laboratory test report
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The diagnosis and test report is long process it can deprive the patient time and money.
+                    Facilezone is great remedy for that issue.it will automate test report delivery though utilize the
+                    electronic message delivery service. The patients can avoid the extra travel to get the report. This
+                    system could eliminate the confusion in report delivery.  It improves the satisfaction of your
+                    customers and transforms the routine process of hospital more systematic.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'hospital/pexels-pixabay-247786.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'hospital/35.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Data recording
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     The hospitals data can be store in complete safety with Facilezone storage.
+                     It maintains the data of patient appointments, visitors list, nurses and doctors work details
+                     with in electronic form.it will help to find the roots of performance issues.it provide fast
+                     and reliable access of data that in a comprehensible form. Mange zone facilitate unlimited
+                     cloud so you can store the information without worrying the limitation of storage space.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Enquiry and emergency handling
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The telephone enquiry handling can be automated with Facilezone software system.
+                    It can act as a central system that mange all external enquires. Facilezone provide redirect
+                    of voice calls to concerned departments.it helps to save the value time of your organization
+                    from spam calls, so that  you could attend the emergency calls of patients at the moment. This
+                    can be Integrate with the ambulance services and appointment bookings to deal the emergencies.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img alt="Error404!!!" loading="lazy" src="{% static 'hospital/hc11.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img alt="Error404!!!" loading="lazy" src="{% static 'hospital/hc20.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Online consultation
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     The patient consultation can be handled fully through online. Test result and publish through this
+                     website without a delay. It is best way to treat the patients in a pandemic situation. We believe
+                     the life of doctor is important similar to a patient through with way the intimate contacts can be
+                     avoided. This online consultation provides various features such as patient doctor live chat,
+                     prescription and test result sharingetc.it also help doctors to practice independently with a clinical
+                     space.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Contact Us
+                    </b>
+                </h4>
+                <p>
+                   Do you need software to manage complete business operations of your company?
+                    <br>Then Facilezone is right choice for you. Sent an Enquiry now,
+                    we will get back to you as soon as possible.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+</body>
+{% endblock %}

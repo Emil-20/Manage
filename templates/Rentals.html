@@ -1,0 +1,364 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    #one{
+        position: relative;
+        background-image: url({% static 'rental/carousel.png' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+        color: white;
+        z-index: -1;
+    }
+    #two{
+        position: relative;
+        padding-top: 15%;
+        margin-left: 7%;
+        color: white;
+        z-index: -1;
+    }
+    #three{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        padding-top: 10%;
+        text-align: left;
+    }
+    #four{
+       background-image: url({% static 'software/img.png' %});
+        padding-top: 5%;
+    }
+    #five{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        text-align: left;
+    }
+    #six{
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        text-align: left;
+    }
+    #seven{
+        font-family: Roboto, sans-serif;
+        text-align: center;
+    }
+
+</style>
+<body>
+
+    <div class="container-fluid" id="one">
+        <div id="two">
+            <h3>
+                Facilezone for Rental & leashing
+            </h3>
+            <p>
+                Selecting of effective rental and lease management software is very important.
+                Facilezone is one of the effective software for your real estate leases.
+                The software helps to remove the complexities involved in your business.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <p id="three">
+                    Keeps a Tab of All Critical Lease Reports
+                </p>
+                <p id="six">
+                    Facilezone is has an excellent feature for keeping rental and leasing report
+                    up to date. It has an option for automated notification generation. So you won’t miss any
+                    latest trends and updates. It helps you to record and remember start and end dates,
+                    surveys, review, new plans, and new lease accounting standards. Facilezone assists
+                    you with placing all of your renting documentation into a database where you would then
+                    be able to run daily reports to produce information for end-of-quarter and recognize
+                    leases reaching end of term.
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <img loading="lazy" style="width: 100%; position:relative;z-index: -1" alt="Error 404!!!" src= {% static  'rental/img1.jpg' %}>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-image: url({% static 'rental/features.jpg' %});background-size: cover;background-repeat: no-repeat;
+            width: 100%;height: 100%;padding-bottom: 120px">
+        <div class="row">
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6">
+                <p id="three">
+                    Enhanced Functionalities
+                </p>
+                <p id="six">
+                    This management software has diminish the time taken from the underlying
+                    conception of the rent and lease agreement to the genuine property use. It has filled all the
+                    enhanced functionalities like setting expiry date for lease agreements through messages and calls,
+                    monitoring the lease agreement status, setting reminders for the rental collection dates and
+                    accessing the customer’s information all the time.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="container-fluid" id="four">
+        <div class="row">
+             <div class="col-sm-6 col-md-6 col-lg-6">
+                <img loading="lazy" style="width: 100%" alt="Error404!!!" src="{% static 'software/mac.png' %}">
+            </div>
+            <div class="col-sm-6">
+                <p id="five">
+                    Loaded with interesting features
+                </p>
+                <p id="six">
+                    Facilezone incorporated complete features and tools to manage the
+                    entire business operations of your company. It’s simple and comprehensive to use. We will
+                    make it as in the form that appropriate to your business requirements.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Main Features
+                    </b>
+                </h4>
+                <p>
+                    Rental and leasing software accompany different significant features that might be vital
+                    for you relying upon the size of your activities.<br> The fundamental features of the product include:
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left; margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Advanced Reports
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    You can simply and automatically create property management reports through the Facilezone
+                    software. Through the program's high level detailing abilities, you can create information,
+                    for example, the number and area of properties accessible, pay produced over explicit timetables,
+                    rundown of at various times inhabitants, impending lease lapse dates, late or forthcoming lease
+                    instalments, among others.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'rental/manager.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'rental/accounts.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Easy mapping
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     The software has the ability to identify the location of specific properties.
+                     In case you are dealing with a couple of properties, you might know their areas on top of
+                     your head. Nonetheless, when you are running a major activity with hundreds or thousands
+                     of properties under your administration, realizing their accurate areas might be incomprehensible.
+                     The planning component of rent the executives programming will prove to be useful in such a case.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Data protection
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The main feature of Facilezone s data protection. The software application is
+                    strong data encryption technique and it keeps your data safer. the software can routinely
+                    back up your renting information for wellbeing. you can generally make certain of getting to
+                    your renting information through the projects from anyplace you are, the length of you has
+                    an internet connection.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'rental/asset.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'rental/managemp.jpg'%}" style="margin-left: 7%;height: 70%;width: 90%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Document storage
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     Facilezone programming can assist you with getting sorted out your advanced reports
+                     and digitize your current paper records effortlessly. At the point when reports are managed
+                     electronically and work processes are apparent at each progression to individuals engaged
+                     with them, work is quicker and all the more effectively.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Electronic signatures
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    A digital signature can catch the date, time, IP address, and other fundamental
+                    subtleties to affirm the legitimacy of an electronic mark. It will likewise record the historical
+                    backdrop of the archive, keeping records on any progressions that were made after the report was
+                    agreed upon. Facilezone is one of the highly recommended software for electronic signatures.
+                    The importance of signature is very important in any of agreement procedure. The process is very
+                    simple with our smart software.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'rental/clientmanage.jpg'%}" style="margin-left: 15%;height: 70%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'rental/attendance.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Data Management
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     This Facilezone software makes it simple to manage different significant
+                     property information like you can track significant information based on property specialities,
+                     property maintenance, rent reestablishment, and expiry dates. Monitoring this information
+                     is significant for the productive management of your rent properties. Facilezone has the
+                     capacity of dealing with various sorts of queries is critical to its role in providing the
+                     accumulated information when it's required.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                   Operational Features
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The operational features of Facilezone empower the smooth management of the
+                    activities identified with your properties. You can do the things with this Facilezone software
+                    are accompany a web-based gateway or site where you can advance your organization and postings on
+                    the web, Set up limitless client represents your team to remotely access the software, Get
+                    important property information, Track issues and support of the properties you are managing,
+                    Share and store significant information about proprietors through a document library.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'rental/event.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'rental/reports.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Accounting Features
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     You can integrate this Facilezone with your current accounting software
+                     for easier financial management. Different things you can do with the Facilezone are
+                     following payables and receivables money, bank compromise, tax documenting, electronic
+                     fund transfer, and compliance. The accounting information entered through this software
+                     can be managed with best accounting standards. When utilizing Facilezone software, you
+                     will at this point don't require any other accounting software to deal with the financial
+                     aspects of property management.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Data Customization
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    Using this Facilezone you can easily customize property information’s and track important
+                    datas of lease management. When entering information, you should give essential data that the system
+                    will process and decide the significant details that you ought to keep in mind. Any data that you
+                    enter will be updated in all important fields, guaranteeing that you generally have the latest and
+                    most precise information. You can likewise alter the information that will be shown dependent on your
+                    requirements.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'rental/dailywork.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'rental/am.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Management and Leasing
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     The essential capacity of the Facilezone is to effectively assist you with knowing
+                     the condition of your rental properties at any time. This software has many more features
+                     to simplify the lease management such as document storage and management, electronic signatures,
+                     property advertising and rental applications.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Contact Us
+                    </b>
+                </h4>
+                <p>
+                   Do you need software to manage complete business operations of your company?
+                    <br>Then Facilezone is right choice for you. Sent an Enquiry now,
+                    we will get back to you as soon as possible.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+</body>
+{% endblock %}

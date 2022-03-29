@@ -1,0 +1,90 @@
+{%extends 'software_training/software/developer/base_developer.html'%}
+{%load static%}
+{%block content%}
+
+  
+  <div class="row">
+    <div class="col-12 col-sm-1 col-md-1 col-lg-1"></div>
+    <div class="col-12 col-sm-10 col-md-10 col-lg-10 ">
+      <div class="text-light pt-4  " style="font-size: 20px;font-weight: 600;opacity: 0.9;">REPORTED ISSUES</div>
+        <div class="card pt-2">
+          <div class="card-body">
+    
+            <input type="text" class="form-control text-light" onkeyup="myFunction()" id="search" name="search" autocomplete="off" placeholder="Search...">
+            <br>
+            <div class="table-responsive">
+              <table class="table" id="myTable">
+                <thead>
+                  <tr>
+                  
+                    <th> Sl.No </th>
+                    <th> Name </th>
+                    <th> Issue</th>
+                    <th>  Date </th>
+                    <th> Action</th>
+    
+    
+                  </tr>
+                </thead>
+                
+                <tbody>
+    
+                  <tr>
+                      <td>1</td>
+                      <td>Developer</td>
+                      <td>network error</td>
+                      <td>20-03-2022</td>
+                      <td><div class="badge badge-outline-success">Submitted</div></td>
+                  </tr>
+                  <tr>
+                      <td>1</td>
+                      <td>Developer</td>
+                      <td>network error</td>
+                      <td>20-03-2022</td>
+                      <td><div class="badge badge-outline-success">Submitted</div></td>
+                  </tr>
+                  <tr>
+                      <td>1</td>
+                      <td>Developer</td>
+                      <td>network error</td>
+                      <td>20-03-2022</td>
+                      <td><div class="badge badge-outline-success">Submitted</div></td>
+                  </tr> 
+                  
+                </tbody>
+                
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+  </div>
+  
+  
+  <script>
+    function myFunction() {
+     var input, filter, table, tr, td, i, txtValue;
+     input = document.getElementById("search");
+     filter = input.value.toUpperCase();
+     table = document.getElementById("myTable");
+     tr = table.getElementsByTagName("tr");
+     for (i = 0; i < tr.length; i++) {
+       td = tr[i].getElementsByTagName("td")[1];
+       if (td) {
+         txtValue = td.textContent || td.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+           tr[i].style.display = "";
+         } else {
+           tr[i].style.display = "none";
+         }
+       }
+     }
+   }
+   </script>
+  
+  
+
+
+{%endblock%}

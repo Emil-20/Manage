@@ -1,0 +1,100 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/life.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                    Life Sciences
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Improve patient outcomes, safety, and<br> quality of care by collaborating<br>
+                    across the digital health sciences network.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Global supply chains require full, real-time visibility into demand
+            </p>
+            <p style="color: black;font-size: 20px;">
+                The scaled deployment of our personalised patient solutions helps create more flexible, agile,
+                and transparent supply and logistic networks that can address challenging consumer demands.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3">
+                    <h4>
+                        Better Control
+                    </h4>
+                    <ul>
+                        <li>
+                            Provides high regulation
+                        </li>
+                        <li>
+                            Maintaining a balance of metrics
+                        </li>
+                        <li>
+                            Manage the operational risks, internal and external processes
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3">
+                    <h4>
+                        Internal Communication
+                    </h4>
+                    <ul>
+                        <li>
+                            Boosts internal communication in an organization
+                        </li>
+                        <li>
+                            Eliminates miss-communication
+                        </li>
+                        <li>
+                            Provides smooth and transparent communication
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Document Management
+                    </h4>
+                    <ul>
+                        <li>
+                            Document management and control processes
+                        </li>
+                        <li>
+                            Accessed by everyone from the desired location
+                        </li>
+                        <li>
+                            Easier to operate
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

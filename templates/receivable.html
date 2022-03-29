@@ -1,0 +1,131 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/receivable.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                   Accounts Receivable, Billing and <br>Revenue Management
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Enhance the payment experience with innovative <br>subscription-based billing,
+                    revenue, and accounts receivables management.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Automate receivable management and monetize service-driven business models
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Simplify and automate your receivables processes, while integrating with your customers,
+                to enable a close collaboration with real-time access. Benefit from transforming or extending
+                your business models toward subscription and usage-based models.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3  ">
+                    <h4>
+                        Documents
+                    </h4>
+                    <ul>
+                        <li>
+                            General ledger account distribution
+                        </li>
+                        <li>
+                            Currencies with exchange rate
+                        </li>
+                        <li>
+                            Currency rate freeze
+                        </li>
+                        <li>
+                            Revalue documents for currency exchange rate changes with variances
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Cash Receipts
+                    </h4>
+                    <ul>
+                        <li>
+                            Miscellaneous cash receipt
+                        </li>
+                        <li>
+                            Reversal of non-sufficient funds checks
+                        </li>
+                        <li>
+                            Cash receipts by invoice number, customer number or location code
+                        </li>
+                        <li>
+                            Direct Debit processing
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Statements Generation
+                    </h4>
+                    <ul>
+                        <li>
+                            Cycle billing
+                        </li>
+                        <li>
+                            By range of customers
+                        </li>
+                        <li>
+                            Limit by credit balance or minimum balance
+                        </li>
+                        <li>
+                            Consolidate by paying location
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Customer Information
+                    </h4>
+                    <ul>
+                        <li>
+                            Customer text and notepad
+                        </li>
+                        <li>
+                            Cycle code for statements, billing, and sorting
+                        </li>
+                        <li>
+                            Paying location for consolidating statements
+                        </li>
+                        <li>
+                           Customer remit-to location
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

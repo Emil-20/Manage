@@ -1,0 +1,364 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>INFOX CORE</title>
+        <!--searchbar link-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <!-- plugins:css -->
+        <link rel="stylesheet" href="{% static '/softwareapp/assets/vendors/mdi/css/materialdesignicons.min.css' %}">
+        <link rel="stylesheet" href="{% static '/softwareapp/assets/vendors/css/vendor.bundle.base.css' %}">
+        <!-- endinject -->
+        <!-- Plugin css for this page -->
+        <link rel="stylesheet" href="{% static '/softwareapp/assets/vendors/jvectormap/jquery-jvectormap.css' %}">
+        <link rel="stylesheet" href="{% static '/softwareapp/assets/vendors/flag-icon-css/css/flag-icon.min.css' %}">
+        <link rel="stylesheet" href="{% static '/softwareapp/assets/vendors/owl-carousel-2/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static '/softwareapp/assets/vendors/owl-carousel-2/owl.theme.default.min.css' %}">
+        <!-- End plugin css for this page -->
+        <!-- inject:css -->
+        <!-- endinject -->
+        <!-- Layout styles -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static '/softwareapp/assets/css/style.css' %}">
+        <!-- End layout styles -->
+        <link rel="shortcut icon" href="{% static '/softwareapp/assets/images/favicon.png' %}" />
+        <script src="{% static '/softwareapp/assets/vendors/js/vendor.bundle.base.js'%}"></script>
+        <script src="{% static '/softwareapp/assets/vendors/chart.js/Chart.min.js'%}"></script>
+        <script src="{% static '/softwareapp/assets/vendors/chart.js/Chart.min.js'%}"></script>
+    </head>
+<style>
+    @media (max-width:992px) {
+        #log {
+            max-width: 100px;
+            margin-top: 12px;
+            margin-left: 25px;
+            margin-right: 15px;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="col-12 grid-margin">
+                <div class="card mt-3 mb-5">
+                    <div class="card-body bg-light text-dark">
+                        <form class="form-sample">
+                            <div class="row">
+                                <center>
+                                    <div class="col-8 col-md-10 mt-3">
+                                        <h4 class="card-title " style="text-align:center; font-weight: 500;"> PAYSLIP FOR &nbsp; 20/01/2022</h4>
+                                        <h6 class="card-description" style="text-align:center; font-weight: 600;"> John Smith</h6>
+                                    </div>
+                                </center>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-8 col-sm-6 col-md-4 col-lg-4 col-form-label">Employee number</label>
+                                        <div class="col-4 col-sm-6 col-md-4 col-lg-4">
+                                            <p class="mt-2">146</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-7 col-sm-6 col-md-4 col-lg-4 col-form-label">Tax engine: </label>
+                                        <div class="col-5 col-sm-6 col-md-4 col-lg-4">
+                                            <p class="mt-2">6455623</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-6 col-sm-6 col-md-4 col-lg-4 col-form-label">Department</label>
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+                                            <p class="mt-2">Python</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-8 col-sm-6 col-md-4 col-lg-4 col-form-label">Income tax number: </label>
+                                        <div class="col-4 col-sm-6 col-md-4 col-lg-4">
+                                            <p class="mt-2">SBI4652</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-7 col-sm-6 col-md-4 col-lg-4 col-form-label">Designation</label>
+                                        <div class="col-5 col-sm-6 col-md-4 col-lg-4">
+                                            <p class="mt-2">Developer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-7 col-sm-6 col-md-4 col-lg-4 col-form-label">Universal account number: </label>
+                                        <div class="col-5 col-sm-6 col-md-8 col-lg-8">
+                                            <p class="mt-2">8465132</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-7 col-sm-6 col-md-4 col-lg-4 col-form-label">Location</label>
+                                        <div class="col-5 col-sm-6 col-md-8 col-lg-8">
+                                            <p class="mt-2">ALAPPUZHA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-7 col-sm-6 col-md-4 col-lg-4 col-form-label">PF account number: </label>
+                                        <div class="col-5 col-sm-6 col-md-8 col-lg-8">
+                                            <p class="mt-2">456521000000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-7 col-sm-6 col-md-4 col-lg-4 col-form-label">Bank details</label>
+                                        <div class="col-5 col-sm-6 col-md-8 col-lg-8">
+                                            <p class="mt-2">SBI</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-7 col-sm-6 col-md-4 col-lg-4 col-form-label">ESI Number </label>
+                                        <div class="col-5 col-sm-6 col-md-8 col-lg-8">
+                                            <p class="mt-2">46598</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-7 col-sm-6 col-md-4 col-lg-4 col-form-label">Date Of Joining </label>
+                                        <div class="col-5 col-sm-6 col-md-8 col-lg-8">
+                                            <p class="mt-2">25/03/2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-7 col-sm-6 col-md-4 col-lg-4 col-form-label">PR account number</label>
+                                        <div class="col-5 col-sm-6 col-md-8 col-lg-8">
+                                            <p class="mt-2">25846698</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive ">
+                                <table class="table table-bordered mt-4 text-dark ">
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th colspan="2 ">Earnings</th>
+                                        <th colspan="2 ">Deductions </th>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th>Gross</th>
+                                        <th>Payable</th>
+                                        <th>Gross</th>
+                                        <th>payable</th>
+                                    </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td>Basic salary</td>
+                                            <td>
+                                                15000</td>
+                                            <td>
+                                                0000</td>
+                                            <td>
+                                                0000</td>
+                                            <td>
+                                                0000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hra</td>
+                                            <td>
+                                                0000</td>
+                                            <td>
+                                                0000</td>
+                                            <td>
+                                                0000</td>
+                                            <td>
+                                                0000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Conveyence allowance</td>
+                                            <td>0000</td>
+                                            <td>
+                                                000</td>
+                                            <td>
+                                                000</td>
+                                            <td>
+                                                000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Profesional tax</td>
+                                            <td>000</td>
+                                            <td>
+                                                000</td>
+                                            <td>
+                                                000</td>
+                                            <td>
+                                                0000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Delay</td>
+                                            <td>000
+                                            </td>
+                                            <td>
+                                                000</td>
+                                            <td>
+                                                000</td>
+                                            <td>
+                                                000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>leave</td>
+                                            <td>0000
+                                            </td>
+                                            <td>
+                                                000</td>
+                                            <td>
+                                                000</td>
+                                            <td>
+                                                000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Incentives</td>
+                                            <td>000
+                                            </td>
+                                            <td>000</td>
+                                            <td>
+                                                000</td>
+                                            <td>
+                                                000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total</th>
+                                            <th id="totalsalary7" colspan="2"></th>
+                                            <th id="totalsalary8" colspan="2"></th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="4 ">Net Amount</th>
+                                            <th id="totalsalary" class="subjects" hidden></th>
+                                            <th id="totalsalary5" class="subjects" hidden></th>
+                                            <th id="TotMarks" class="subjects" name="netamt">0000</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row mt-4 ">
+                                <div class="col-12 col-sm-5 col-md-5 col-lg-8 "></div>
+                                <div class="col-12 col-sm-7 col-md- 7 col-lg-4 ">
+                                    <button type="submit " class="btn btn-outline-primary btn-icon-text" onclick="window.print()" style="width: 100px; margin-left: 50px; ">           
+                        Print
+                           </button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var empsalary;
+            var totalsalary = 0;
+            $('td:nth-child(2)').each(function() {
+                empsalary = $(this).html();
+                totalsalary += parseInt(empsalary);
+                $('#totalsalary').text(totalsalary);
+            });
+        });
+        $(document).ready(function() {
+            var empsalary3;
+            var totalsalary3 = 0;
+            $('td:nth-child(3)').each(function() {
+                empsalary3 = $(this).html();
+                totalsalary3 += parseInt(empsalary3);
+                $('#totalsalary3').text(totalsalary3);
+            });
+        });
+        $(document).ready(function() {
+            var empsalary4;
+            var totalsalary4 = 0;
+            $('td:nth-child(4)').each(function() {
+                empsalary4 = $(this).html();
+                totalsalary4 += parseInt(empsalary4);
+                $('#totalsalary4').text(totalsalary4);
+            });
+        });
+        $(document).ready(function() {
+            var empsalary5;
+            var totalsalary5 = 0;
+            $('td:nth-child(5)').each(function() {
+                empsalary5 = $(this).html();
+                totalsalary5 += parseInt(empsalary5);
+                $('#totalsalary5').text(totalsalary5);
+            });
+        });
+        $('#A, #B').on('input', function(e) {
+            $('#C').val(parseInt($('#A').val()) * parseInt($('#B').val()));
+        });
+        $(document).ready(function() {
+            $('tr').each(function() {
+                var totmarks = 0;
+                $(this).find('.subjects').each(function() {
+                    var marks = $(this).text();
+                    if (marks.length !== 0) {
+                        totmarks = -parseFloat(marks) - totmarks;
+                    }
+                });
+                $(this).find('#TotMarks').html(totmarks);
+            });
+        });
+        $(document).ready(function() {
+            var empsalary7;
+            var totalsalary7 = 0;
+            $('td:nth-child(3)').each(function() {
+                empsalary7 = $(this).html();
+                totalsalary7 += parseInt(empsalary7);
+                $('#totalsalary7').text(totalsalary7);
+            });
+        });
+        $(document).ready(function() {
+            var empsalary8;
+            var totalsalary8 = 0;
+            $('td:nth-child(4)').each(function() {
+                empsalary8 = $(this).html();
+                totalsalary8 += parseInt(empsalary8);
+                $('#totalsalary8').text(totalsalary8);
+            });
+        });
+    </script>
+
+    <script src="{% static 'softwareapp/assets/js/off-canvas.js' %} "></script>
+    <script src="{% static 'softwareapp/assets/js/hoverable-collapse.js' %} "></script>
+    <script src="{% static 'softwareapp/assets/js/misc.js' %} "></script>
+    <script src="{% static 'softwareapp/assets/js/settings.js' %} "></script>
+    <script src="{% static 'softwareapp/assets/js/todolist.js' %} "></script>
+
+    <script src="{% static 'softwareapp/assets/js/dashboard.js' %} "></script>
+    <script src="{% static 'softwareapp/assets/vendors/js/vendor.bundle.base.js'%} "></script>
+
+    <script src="{% static 'softwareapp/assets/js/chart.js'%} "></script>
+
+</body>
+
+</html>

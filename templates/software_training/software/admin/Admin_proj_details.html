@@ -1,0 +1,167 @@
+{% extends 'software_training/software/admin/Base_admin.html' %} {% load static %} {% block content %}
+
+<style>
+    @media (max-width:992px) {
+        #log {
+            max-width: 100px;
+            margin-top: 12px;
+            margin-left: 25px;
+            margin-right: 15px;
+        }
+    }
+</style>
+
+
+
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title text-muted">Project Details</h3>
+                <div class="row">
+
+                    <div class="col-md-6 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <center>
+                                    <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+
+                                        <div class="align-self-center flex-grow  text-md-center text-xl-right py-md-2 py-xl-0">
+                                            <h6 class="mb-0">Project :</h6>
+
+                                        </div>
+                                        <div class=" align-self-center flex-grow  text-md-center text-xl-right py-md-2 py-xl-0">
+                                            <h6 class="font-weight-bold mb-0">first project</h6>
+                                        </div>
+
+                                    </div>
+                                    <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+
+                                        <div class="align-self-center flex-grow  text-md-center text-xl-right py-md-2 py-xl-0">
+                                            <h6 class="mb-0">Start Date :</h6>
+
+                                        </div>
+                                        <div class="align-self-center flex-grow  text-md-center text-xl-right py-md-2 py-xl-0">
+                                            <h6 class="font-weight-bold mb-0">01/03/2022</h6>
+                                        </div>
+
+                                    </div>
+                                    <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+
+                                        <div class="align-self-center flex-grow  text-md-center text-xl-right py-md-2 py-xl-0">
+                                            <h6 class="mb-0">Due Date :</h6>
+
+                                        </div>
+                                        <div class="align-self-center flex-grow  text-md-center text-xl-right py-md-2 py-xl-0">
+                                            <h6 class="font-weight-bold mb-0">03/03/2022</h6>
+                                        </div>
+
+                                    </div>
+                                </center>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+                                    <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+                                        <center>
+                                            <h4 class="mb-0">Description</h4>
+                                        </center>
+                                    </div>
+
+                                </div>
+                                <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum enim quisquam quia nam, voluptatem earum nulla, obcaecati suscipit delectus quod tempore exercitationem quas modi saepe officiis consectetur soluta iste
+                                    incidunt?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row " style="margin-top: 20px;">
+    <div class="col-sm-6 col-lg-6 grid-margin">
+        <div class="card">
+            <a href="/admin_proj_manager/" style="text-decoration: none; color: white;">
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-8 col-sm-12 col-lg-8 my-auto">
+                            <div class="d-flex d-sm-block d-md-flex align-items-center">
+                                <h4 class="mb-0">Project Team</h4>
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-12 col-lg-4 text-center text-xl-right">
+                            <i class="icon-lg mdi mdi-account-group text-primary ms-auto"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-6 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                        <div class="d-flex d-sm-block d-md-flex align-items-center">
+                            <h4 class="mb-0">Status</h4>
+                        </div><br>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </td>
+                    </div>
+
+                    <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                        <i class="icon-lg mdi mdi-timer-sand text-primary ms-auto"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        const show_percent = true;
+        var progressBars = $(".progress-bar");
+        for (i = 0; i < progressBars.length; i++) {
+            var progress = $(progressBars[i]).attr("aria-valuenow");
+            $(progressBars[i]).width(progress + "%");
+            if (show_percent) {
+                $(progressBars[i]).text(progress + "%");
+            }
+            if (progress >= "75") {
+                //90 and above
+                $(progressBars[i]).addClass("bg-success");
+            } else if (progress >= "25" && progress < "75") {
+                $(progressBars[i]).addClass("bg-warning"); //From 30 to 44
+            } else if (progress == "100") {
+                $(progressBars[i]).addClass("bg-success");
+            } else {
+                //29 and under
+                $(progressBars[i]).addClass("bg-danger");
+            }
+        }
+    });
+</script>
+
+{% endblock %}

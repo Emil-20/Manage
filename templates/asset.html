@@ -1,0 +1,128 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/asset.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        color: white;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                   Enterprise Asset Management
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                   Manage the entire lifecycle of your physical<br> assets with enterprise asset management<br>
+                    (EAM) software systems from Facilezone.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Maximise asset health and performance with Facilezone Intelligent Asset Management software
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Maintain and service the performance of physical assets with real-time insights, the IoT, machine
+                learning, mobility and advanced and predictive analytics.
+
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3">
+                    <h4>
+                        Asset Lifecycle Management
+                    </h4>
+                    <ul>
+                        <li>
+                            Designed to help maximise the lifecycle of an organisation’s fixed assets
+                        </li>
+                        <li>
+                           Understand an asset’s total cost of ownership
+                        </li>
+                        <li>
+                            Understand asset costs to maintain or be replace
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Tracking Technologies
+                    </h4>
+                    <ul>
+                        <li>
+                            Assets  tracking efficiently
+                        </li>
+                        <li>
+                            software in conjunction with scanning devices.
+                        </li>
+                        <li>
+                            Ideal for warehouse operations,vehicle tracking etc
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Maintenance Management
+                    </h4>
+                    <ul>
+                        <li>
+                            Plan preventive work and routine inspections
+                        </li>
+                        <li>
+                            Avoid costly unplanned downtime
+                        </li>
+                        <li>
+                            Avoid reactive maintenance.
+                        </li>
+                        <li>
+                            Significant cost savings
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class=" col-lg-3">
+                    <h4>
+                        Work Order Management
+                    </h4>
+                    <ul>
+                        <li>
+                            Helps to centralise work requests
+                        </li>
+                        <li>
+                           Providing visibility to the entire maintenance team
+                        </li>
+                        <li>
+                            Improves response times
+                        </li>
+                        <li>
+                            Makes jobs more labour-efficient
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

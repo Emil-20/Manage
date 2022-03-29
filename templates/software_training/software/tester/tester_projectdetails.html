@@ -1,0 +1,378 @@
+{%extends 'software_training/software/tester/base_tester.html' %} {%load static%} {%block content%}
+
+<style>
+    #choose::file-selector-button {
+        background-color: rgb(37, 125, 207);
+        padding: 12px;
+        color: white;
+        width: 100px;
+    }
+</style>
+<div class="row mt-5">
+    <div class="col-12 col-sm-2 col-md-2 col-lg-1"></div>
+    <div class="col-12 col-sm-8 col-md-8 col-lg-10 grid-margin ">
+        <div class="card">
+            <div class="card-body" style="height:auto">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h4>Projects</h4>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <form>
+                            <div class="input-group input-group-sm ">
+                                <input type="text" class="form-control  text-light" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>Task Name</th>
+                                <th>AssignedTo</th>
+                                <th>Test Status</th>
+                                <th>Report Status</th>
+                                <th>Project Details</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <br>
+                            <tr>
+                                <td>
+                                    New task
+                                </td>
+                                <td>
+                                    Anandhu SS
+                                </td>
+                                <td><button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">
+                                        Test Status</button></td>
+                                <td>
+                                    <button class="btn btn-outline-danger" data-toggle="modal" data-target="#reported">
+                                        Report Status</button>
+                                </td>
+                                <td>
+                                    <div class="progress" style="margin-left: 15px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" data-toggle="modal" data-target="#details" style="width: 57%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td>17-03-2022</td>
+
+                            </tr>
+                            <td>
+                                Core task
+                            </td>
+                            <td>
+                                Anandhu s
+                            </td>
+                            <td><button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">
+                                    Test Status</button></td>
+                            <td>
+                                <button class="btn btn-outline-danger" data-toggle="modal" data-target="#reported">
+                                    Report Status</button>
+                            </td>
+                            <td>
+                                <div class="progress" style="margin-left: 15px;">
+                                    <div class="progress-bar bg-danger" role="progressbar" data-toggle="modal" data-target="#details" style="width: 37%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </td>
+                            <td>18-03-2022</td>
+                            </tr>
+                            <td>
+                                Core Frontend
+                            </td>
+                            <td>
+                                Henry
+                            </td>
+                            <td><button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">
+                                    Test Status</button></td>
+                            <td>
+                                <button class="btn btn-outline-danger" data-toggle="modal" data-target="#reported">
+                                    Report Status</button>
+                            </td>
+                            <td>
+                                <div class="progress" style="margin-left: 15px;">
+                                    <div class="progress-bar bg-success" role="progressbar" data-toggle="modal" data-target="#details" style="width: 97%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </td>
+                            <td>17-03-2022</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--          Modal starts here Test status       -->
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content modal-xl" style="background-color: #191c24;">
+
+            <div class="modal-header">
+                <h5 class="modal-title text-light">Daily Work Report</h5>
+                <button type="button" class="close text-light" data-dismiss="modal" aria-label="" style="background-color: #191c24;border:none;font-size: 20px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="table-responsive mt-3 mb-3 container">
+                <form action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="hidden" name="csrfmiddlewaretoken" value="Xwf1FRLfbdhVayLy9TC4sV0gy0qJsS6qHcL2xZ88klHDQXmPJXR87efU2UrZ3iVk">
+                    <table class="table table-bordered" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Task</th>
+                                <th>Sub Task</th>
+                                <th>Work Done</th>
+                                <th>Files</th>
+                                <th>Action</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>08-03-2022 </td>
+                                <td><label name="task">None</label>
+                                </td>
+                                <td><label name="subtask">python django</label>
+                                </td>
+                                <td><label name="workdone">khjk</label></td>
+                                <td><a href="/static/assets/images/dashboard/Rectangle.jpg" class="btn btn-outline-primary btn-icon-text" style="font-size: 15px; font-weight: 100;" download><i
+                                            class="mdi mdi-arrow-collapse-down"></i>Download</a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+
+                                <td>16-03-2022 </td>
+                                <td><label name="task">None</label>
+                                </td>
+                                <td><label name="subtask">python django</label>
+                                </td>
+                                <td><label name="workdone">new task</label></td>
+                                <td><a href="/static/assets/images/dashboard/Rectangle.jpg" class="btn btn-outline-primary btn-icon-text" style="font-size: 15px; font-weight: 100;" download><i
+                                            class="mdi mdi-arrow-collapse-down"></i>Download</a></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td>15-03-2022 </td>
+                                <td><label name="task">new task</label></td>
+                                <td><label name="subtask">gfh</label></td>
+                                <td><textarea class="form-control text-light " rows="30" id="" style="height: 140px;width:300px"></textarea></td>
+                                <td class="text-info"><input type="file" class="form-control text-light" style="width:230px" id="choose" /></td>
+                                <td><button type="submit" class="btn btn-outline-primary w-100">Save</button></td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- **********************************  reported status modal ******************************** -->
+
+<div class="modal" id="reported">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content modal-xl" style="background-color: #191c24;">
+            <form action="" method="post" enctype="multipart/form-data">
+                <div class="modal-header">
+
+                    <h5 class="modal-title text-light">Report Status</h5>
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="" style="background-color: #191c24;border:none;font-size: 20px">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="table-responsive mt-3 mb-3 container">
+                    <table class="table  table-bordered ">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Task</th>
+                                <th>Sub Task</th>
+                                <th>Work Done</th>
+                                <th>Files</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <td>15-03-2022 </td>
+                            <td>new task </td>
+                            <td>python django</td>
+                            <td>new task</td>
+                            <td><a href="/static/assets/images/dashboard/Rectangle.jpg" class="btn btn-outline-primary btn-icon-text" style="font-size: 15px; font-weight: 100;" download><i
+                                        class="mdi mdi-arrow-collapse-down"></i>Download</a></td>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- project details modal    -->
+
+<div class="row mt-5 modal fade" id="details">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content modal-xl" style="background-color: #191c24;">
+            <div class="card ">
+                <div class="card-body">
+                    <form action="/softwareapp/projectdetailsave/8/6/" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="odrV61QdhZQyTp3VVrVOhRn9qJkmBGTH8TXWY9d6q7ggzOEcvvaSWaCNUDlCc6IB">
+                        <div class="container">
+                            <button type="button" class="close text-light" data-dismiss="modal" aria-label="" style="background-color: #191c24;border:none; float: right;font-size: 20px;"><span
+                                    aria-hidden="true">&times;</span>
+                            </button>
+                            <div class="text-light">Sub Tasks</div>
+                            <div class="row mt-4">
+                                <div class="col-md-0 col-lg-1"></div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-4 col-md-5 col-lg-6 col-form-label">Start
+                                            Date</label>
+                                        <div class="col-12 col-sm-8 col-md-7 col-lg-6">
+                                            <p class="mt-2">04-03-2022</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-4 col-md-5 col-lg-5 col-form-label">End Date</label>
+                                        <div class="col-12 col-sm-8 col-md-7 col-lg-7">
+                                            <p class="mt-2">06-03-2022</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-0 col-lg-1"></div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-4 col-md-5 col-lg-6 col-form-label">Assigned
+                                            to</label>
+                                        <div class="col-12 col-sm-8 col-md-7 col-lg-6">
+                                            <p class="mt-2">anandhu ss</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-4 col-md-5 col-lg-5  col-form-label">Progress</label>
+                                        <div class="col-12 col-sm-8 col-md-7 col-lg-6">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-warning" role="progressbar" data-toggle="modal" data-target="#details" style="width: 37%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-md-0 col-lg-1"></div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-4 col-md-5 col-lg-6 col-form-label">Status</label>
+                                        <div class="col-12 col-sm-8 col-md-7 col-lg-4">
+                                            <select class="drop form-control mt-2 text-light" name="sp" required="">
+                                                <option value="" style="display: none;"> --select--</option>
+                                                <option value="In progress" class="text-light" style="color:white;">In
+                                                    progress</option>
+                                                <option value="Completed" class="text-light" style="color:white;">
+                                                    Completed</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-4 col-md-6 col-lg-5  col-form-label">Current status
+                                        </label>
+                                        <div class="col-12 col-sm-8 col-md-6 col-lg-7">
+                                            <p class="mt-2">In progress</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-md-0 col-lg-1"></div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-4 col-md-6 col-lg-6 col-form-label">Progress</label>
+                                        <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                                            <input type="text" name="dprogress" class="form-control text-light" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-6">
+
+                                    <div class="col-12 col-sm-8 col-md-6 col-lg-7">
+                                        <button type="submit" class="btn btn-primary text-light">Start Work</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="container mt-3" style="border-top:1px solid grey;">
+                                <div class="row mt-3">
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 ">Project Description</div>
+                                    <div class="col-12 col-sm-12 col-md-8  col-lg-9 mt-2">
+                                        <p class="text-wrap text-justify">Lorem ipsum dolor sit,amet consectetur adipisicing elit.Molestiae sed fugit,aliquam unde praesentium perferendis voluptatum doloremque?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container mt-3" style="border-top:1px solid grey;">
+                                <div class="row mt-3">
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-3">Attach Files</div>
+                                    <div class="col-12 col-sm-12 col-md-8  col-lg-9 mt-3">
+                                        <a href="/static/assets/images/dashboard/Rectangle.jpg" class="btn btn-outline-primary btn-icon-text" style="font-size: 15px; font-weight: 100;" download><i
+                                                class="mdi mdi-arrow-collapse-down"></i>Download</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <br><br>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ends here -->
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
+
+
+
+{%endblock%}

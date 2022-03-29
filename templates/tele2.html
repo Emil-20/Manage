@@ -1,0 +1,105 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/tele2.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                   Telecommunications
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Succeed in a 5G world with new business models,<br> operational efficiencies, and customer engagement.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div  >
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+             Digitization of telecommunications unlocks a $1.2 trillion opportunity
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Facilezone empowers telecommunications providers to offer game-changing services
+                with low latency and redefine operations by digitalising internal platforms and processes.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3">
+                    <h4>
+                        Monitoring
+                    </h4>
+                    <ul>
+                        <li>
+                            Network resources inventory
+                        </li>
+                        <li>
+                            Performance management
+                        </li>
+                        <li>
+                            Fault management
+                        </li>
+                        <li>
+                            Trouble ticketing
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Customer service portals
+                    </h4>
+                    <ul>
+                        <li>
+                            Profile-based and personalized
+                        </li>
+                        <li>
+                            Secure, powerful and scalable
+                        </li>
+                        <li>
+                            Integrated with business systems, data analysis tools and social media
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Corporate portals
+                    </h4>
+                    <ul>
+                        <li>
+                            Business workflow automation
+                        </li>
+                        <li>
+                            Project and task management
+                        </li>
+                        <li>
+                            Corporate knowledge base
+                        </li>
+                        <li>
+                            Workforce management
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

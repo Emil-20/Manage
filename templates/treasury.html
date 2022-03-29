@@ -1,0 +1,103 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/treasury.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-size: 40px;font-family: Roboto, sans-serif;text-align: left">
+                    Treasury Management
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Get real-time cash visibility, improve liquidity,<br> and lower risk with treasury and risk
+                    management<br> solutions from Facilezone.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+                Integrated, real-time solutions for treasury management
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Improve business decisions and efficiency by managing working capital, payments, and
+                financial risk with integrated, real-time solutions for treasury management from Facilezone.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3  ">
+                    <h4>
+                        Accounting & Compliance
+                    </h4>
+                    <ul>
+                        <li>
+                            Automatic generation of journal entries
+                        </li>
+                        <li>
+                            Support of all ERP solutions for automated integration
+                        </li>
+                        <li>
+                            GL reconciliations
+                        </li>
+                        <li>
+                            Comply with industry and internal regulation
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Financial Transactions
+                    </h4>
+                    <ul>
+                        <li>
+                            Fully track treasury financial transactions
+                        </li>
+                        <li>
+                            Complete integration to payments, accounting
+                        </li>
+                        <li>
+                            Cash forecasting modules
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Cash Accounting
+                    </h4>
+                    <ul>
+                        <li>
+                            Eliminate  time consuming effort
+                        </li>
+                        <li>
+                            Generating dual multi-sided entries from bank
+                        </li>
+                        <li>
+                            Internal cash transactions for cash accounting.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

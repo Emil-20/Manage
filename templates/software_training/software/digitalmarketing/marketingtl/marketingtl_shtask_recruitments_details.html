@@ -1,0 +1,87 @@
+{%extends 'software_training/software/digitalmarketing/marketingtl/base_digitalmarketing.html'%} {%load static%} {%block content%}
+
+<style>
+    #choose::file-selector-button {
+        background-color: rgb(37, 125, 207);
+        padding: 12px;
+        color: white;
+        width: 100px;
+    }
+</style>
+<!-- Give task for trainees -->
+<div class="row" style="padding-top: 20px;">
+    <!-- <div class="col-md-2"></div> -->
+    <div class="col-12 col-sm-12 col-md-7 col-lg-7 grid-margin stretch-card mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title"></h4>
+                <form class="forms-sample"  method="post" autocomplete="off" enctype="multipart/form-data">
+                  {% csrf_token %}
+                    <div class="row mt-3">
+                        <div class="col-6 col-sm-3 col-md-3 col-lg-3">
+                            <label>Job Post</label>
+                        </div>
+                        <div class="col-6 col-sm-3 col-md-3 col-lg-3">
+                            <label>python developer</label>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6 col-sm-3 col-md-3 col-lg-3">
+                            <label>Posted Date</label>
+                        </div>
+                        <div class="col-6 col-sm-3 col-md-6 col-lg-6">
+                            <label>3/3/2022</label>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6 col-sm-3 col-md-3 col-lg-3">
+                            <label>vacancies</label>
+                        </div>
+                        <div class="col-6 col-sm-3 col-md-6 col-lg-6">
+                            <label>4</label>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6 col-sm-3 col-md-3 col-lg-3">
+                            <label>Qualifications</label>
+                        </div>
+                        <div class="col-6 col-sm-3 col-md-6 col-lg-6">
+                            <label>computer science</label>
+                        </div>
+
+                    </div>
+                    <div class="form-group row mt-5">
+                        <label for="exampleInputEmail2" class="col-6 col-sm-3 col-md-3 col-lg-3 col-form-label">Description</label
+            >
+            <div class="col-12 col-sm-8 col-md-8 col-lg-8">
+              <textarea
+                class="form-control text-light"
+                rows="30"
+                id=""
+                style="height: 140px" name="description"
+                Required
+              >coding skill</textarea>
+            </div>
+          </div>
+          
+          <div class="row mt-5 mb-2">
+            <center>
+              <button type="button"
+                class="btn btn-outline-primary btn-icon-text"
+                onclick="location.href='/softwareapp/marketingtl_recruitments_data'">
+                <i class="mdi mdi-file-check btn-icon-prepend"></i>View Collected Data
+              </button>
+            </center>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

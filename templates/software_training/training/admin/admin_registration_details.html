@@ -1,0 +1,332 @@
+{% extends 'software_training/training/admin/base_admin.html' %}
+{% load static %}
+{% block content %}
+    <body>
+        <style>
+        table tr[data-href] {
+            cursor: pointer;
+        }
+        </style>
+        <div class="row ">
+            <div class="col-12 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <h4>Registration Details</h4>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt-2">
+                                <form>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input type="text"
+                                               class="form-control"
+                                               id="myInput"
+                                               onkeyup="myFunction()"
+                                               placeholder="Search for names.."
+                                               title="Type in a name"
+                                               style="color:white;">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table " id="myTable">
+                                <thead>
+                                    <tr data-href="#">
+                                        <th style="padding-left:50px;">Name</th>
+                                        <th style="padding-left:40px;">Email</th>
+                                        <th>Password</th>
+                                        <th>Category</th>
+                                        <th style="padding-left:10px;">Course</th>
+                                        <th style="padding-left:10px;">Designation</th>
+                                        <th>Date of Appointment</th>
+                                        <th>Employee Id</th>
+                                        <th style="padding-left:15px;">Offer Letter</th>
+                                        <th style="padding-left:15px;">Relieve Letter</th>
+                                        <th>Experience Certificate</th>
+                                        <th style="padding-left:20px;">Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-href="#">
+                                        <td>
+                                            <img src="{% static '/softwareapp/assets/images/faces/face1.jpg' %}" alt="image" />
+                                            <span class="ps-2">Henry Klein</span>
+                                        </td>
+                                        <td>Henry@henry</td>
+                                        <td style="padding-left:25px;">123</td>
+                                        <td>Computer Programing</td>
+                                        <td>java</td>
+                                        <td>Trainer</td>
+                                        <td style="padding-left:40px;">2022-10-5</td>
+                                        <td style="padding-left:30px;">hy78</td>
+                                        <td>
+                                            <a href="#">
+                                                <div class="badge badge-outline-info">Download</div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#">
+                                                <div class="badge badge-outline-primary">Download</div>
+                                            </a>
+                                        </td>
+                                        <td style="padding-left:40px;">
+                                            <a href="#">
+                                                <div class="badge badge-outline-success">Download</div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a id="alert2" onclick="popup()" href="#">
+                                                <div class="badge badge-outline-danger">Delete</div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-href="#">
+                                        <td>
+                                            <img src="{% static '/softwareapp/assets/images/faces/face4.jpg' %}" alt="image" />
+                                            <span class="ps-2">Kenry Klein</span>
+                                        </td>
+                                        <td>
+                                            Henry@henry
+                                        </td>
+                                        <td style="padding-left:25px;">
+                                            123
+                                        </td>
+                                        <td>
+                                            Computer Graphics
+                                        </td>
+                                        <td>
+                                            Software
+                                        </td>
+                                        <td>
+                                            Trainee
+                                        </td>
+                                        <td style="padding-left:40px;">
+                                            2022-10-5
+                                        </td>
+                                        <td style="padding-left:30px;">
+                                            
+                                        </td>
+                                        <td>
+                                            <a href="#">
+                                                <div class="badge badge-outline-info">
+                                                    Download
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#">
+                                                <div class="badge badge-outline-primary">
+                                                    Download
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td style="padding-left:40px;">
+                                            <a href="#">
+                                                <div class="badge badge-outline-success">
+                                                    Download
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a id="alert2" onclick="popup()" href="#">
+                                                <div class="badge badge-outline-danger">
+                                                    Delete
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-href="#">
+                                        <td>
+                                            <img src="{% static '/softwareapp/assets/images/faces/face6.jpg' %}" alt="image" />
+                                            <span class="ps-2">Menry Klein</span>
+                                        </td>
+                                        <td>
+                                            Henry@henry
+                                        </td>
+                                        <td style="padding-left:25px;">
+                                            123
+                                        </td>
+                                        <td>
+                                            Caad
+                                        </td>
+                                        <td>
+                                            Software
+                                        </td>
+                                        <td>
+                                            Trainee
+                                        </td>
+                                        <td style="padding-left:40px;">
+                                            2022-10-5
+                                        </td>
+                                        <td style="padding-left:30px;">
+                                            
+                                        </td>
+                                        <td>
+                                            <a href="#">
+                                                <div class="badge badge-outline-info">
+                                                    Download
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#">
+                                                <div class="badge badge-outline-primary">
+                                                    Download
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td style="padding-left:40px;">
+                                            <a href="#">
+                                                <div class="badge badge-outline-success">
+                                                    Download
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a id="alert2" onclick="popup()" href="#">
+                                                <div class="badge badge-outline-danger">
+                                                    Delete
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-href="#">
+                                        <td>
+                                            <img src="{% static '/softwareapp/assets/images/faces/face7.jpg' %}" alt="image" />
+                                            <span class="ps-2">Penry Klein</span>
+                                        </td>
+                                        <td>
+                                            Henry@henry
+                                        </td>
+                                        <td style="padding-left:25px;">
+                                            123
+                                        </td>
+                                        <td>
+                                            Accounts
+                                        </td>
+                                        <td>
+                                            Software
+                                        </td>
+                                        <td>
+                                            Trainer
+                                        </td>
+                                        <td style="padding-left:40px;">
+                                            2022-10-5
+                                        </td>
+                                        <td style="padding-left:30px;">
+                                            hy78
+                                        </td>
+                                        <td>
+                                            <a href="#">
+                                                <div class="badge badge-outline-info">
+                                                    Download
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#">
+                                                <div class="badge badge-outline-primary">
+                                                    Download
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td style="padding-left:40px;">
+                                            <a href="#">
+                                                <div class="badge badge-outline-success">
+                                                    Download
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a id="alert2" onclick="popup()" href="#">
+                                                <div class="badge badge-outline-danger">
+                                                    Delete
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-href="#">
+                                        <td>
+                                            <img src="{% static '/softwareapp/assets/images/faces/face8.jpg' %}" alt="image" />
+                                            <span class="ps-2">Genry Klein</span>
+                                        </td>
+                                        <td>
+                                            Henry@henry
+                                        </td>
+                                        <td >
+                                            123
+                                        </td>
+                                        <td>
+                                            Computer Programing
+                                        </td>
+                                        <td>
+                                            Software
+                                        </td>
+                                        <td>
+                                            Trainer
+                                        </td>
+                                        <td style="padding-left:40px;">
+                                            2022-10-5
+                                        </td>
+                                        <td style="padding-left:30px;">
+                                            hy78
+                                        </td>
+                                        <td>
+                                            <a href="#">
+                                                <div class="badge badge-outline-info">
+                                                    Download
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#">
+                                                <div class="badge badge-outline-primary">
+                                                    Download
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td style="padding-left:40px;">
+                                            <a href="#">
+                                                <div class="badge badge-outline-success">
+                                                    Download
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a id="alert2" onclick="popup()" href="#">
+                                                <div class="badge badge-outline-danger">
+                                                    Delete
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+        </script>
+    </table>
+{% endblock %}

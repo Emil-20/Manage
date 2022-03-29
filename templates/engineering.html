@@ -1,0 +1,103 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/engineering.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        color: white;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                   Engineering, Construction, <br>and Operations
+                </p>
+                <p style="color:white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Convert bids into profitable contracts <br>and deliver projects on time and on
+                    budget<br> by digitalising expertise and assets.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+              The world’s infrastructure will double two times by 2050
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Our solutions support a growing infrastructure by enabling EC&O companies to improve
+                project schedule performance with intelligent, connected supply chains and reduce labour
+                costs, while improving quality, with automated processes.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Conflict Management
+                    </h4>
+                    <ul>
+                        <li>
+                            Restrict the negative features of conflict
+                        </li>
+                        <li>
+                            Improve learning and group results
+                        </li>
+                        <li>
+                            Efficiency or performance in an organizational setting
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Change Management
+                    </h4>
+                    <ul>
+                        <li>
+                            Execute strategies for effecting change
+                        </li>
+                        <li>
+                            Controlling change and helping employees to adapt to change
+                        </li>
+                        <li>
+                            Systematic approach for dealing with the transition
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Release Management
+                    </h4>
+                    <ul>
+                        <li>
+                            Effective  planning, controlling and scheduling
+                        </li>
+                        <li>
+                            Delivers new and enhanced services required by the customer
+                        </li>
+                        <li>
+                            Protecting the integrity of  services
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

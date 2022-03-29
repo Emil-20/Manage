@@ -1,0 +1,111 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/supply.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                   Manufacturing
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Fast-track time to market, gain new production <br>efficiencies, and lower costs
+                    with Facilezone manufacturing software <br>and Industrial Internet of Things (IIoT) <br>solutions.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div >
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Digital manufacturing solutions are the future of productivity
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Meet demand in a challenging market with manufacturing automation and flexible operations.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Manufacturing Resource Planning
+                    </h4>
+                    <ul>
+                        <li>
+                            Backorder
+                        </li>
+                        <li>
+                            Service attached
+                        </li>
+                        <li>
+                            Drop-ship materials
+                        </li>
+                        <li>
+                            Contracting
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Order management
+                    </h4>
+                    <ul>
+                        <li>
+                            Multi-currency
+                        </li>
+                        <li>
+                            Omni-channel support
+                        </li>
+                        <li>
+                            Presales operations (easy quoting, estimates)
+                        </li>
+                        <li>
+                            Deadline
+                        </li>
+                        <li>
+                            Expected date
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Robust Inventory Management
+                    </h4>
+                    <ul>
+                        <li>
+                            Track barcodes and enable label printing.
+                        </li>
+                        <li>
+                            Position tracking by warehouses, shelves.
+                        </li>
+                        <li>
+                            Current stock levels.
+                        </li>
+                        <li>
+                            Expiration dates
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

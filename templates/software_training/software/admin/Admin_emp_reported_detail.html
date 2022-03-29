@@ -1,0 +1,69 @@
+{% extends 'software_training/software/admin/Base_admin.html' %} {% load static %} {% block content %}
+
+<body>
+
+    <div class="row">
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Employee issues</h4>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="color:white;">
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+
+                            <thead>
+                                <tr>
+                                    <th style="padding-left:20px;">Name</th>
+                                    <th style="padding-left:35px;"> Date </th>
+                                    <th>Department</th>
+                                    <th style="padding-left:35px;"> Status </th>
+                                </tr>
+                            </thead>
+                            <tbody id="myTable">
+
+                                <tr>
+                                    <td>Henry</td>
+                                    <td>09-03-2022</td>
+                                    <td>Python</td>
+                                    <td>
+                                        <a href="/admin_emp_reported_issue_show/">
+                                            <div class="badge badge-outline-success" style="width: 90px;">Solved</div>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Klein</td>
+                                    <td>10-03-2022</td>
+                                    <td>Java</td>
+                                    <td>
+                                        <div class="badge badge-outline-danger" style="width: 90px;">Pending</div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+
+<script>
+    $(document).ready(function() {
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+
+{% endblock%}

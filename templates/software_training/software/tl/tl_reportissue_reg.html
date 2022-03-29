@@ -1,0 +1,76 @@
+{%extends 'software_training/software/tl/tlDashboard.html'%} {%load static%} {%block content%}
+
+<style>
+    #head {
+        color: #6c7293;
+        font-size: 20px;
+        font-weight: 600;
+        margin-left: 0%;
+        margin-top: auto;
+        padding: 0.2% 1% 1.5% 1%;
+        width: 79%;
+    }
+    
+    .card {
+        border-radius: 0.25rem;
+        width: 100%;
+        padding: 0%;
+    }
+    
+    #exampleTextarea1 {
+        height: 30vh;
+        color: white;
+    }
+    
+    .btn {
+        margin-top: 4%;
+        float: right;
+        margin-right: 5%;
+        padding-left: 3%;
+        padding-right: 3%;
+        line-height: 2;
+    }
+    
+    .card-title1 {
+        color: white;
+    }
+    
+    .table1 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5vh;
+    }
+</style>
+
+<body>
+    <form action="{% url 'tl_reportissue_success' %}" method='post'>
+        {% csrf_token %}
+        <div class="row pt-5">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-12 grid-margin stretch-card mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleinputusername1">
+                                            <h4>Report Issue</h4>
+                                        </label>
+                            <div><br></div>
+                            <textarea class="col-12  col-sm-12 col-md-12 col-lg-12 form-control  text-light" style="height: 200px; background-color: #2A3038; " rows="4"></textarea>
+                            <br>
+                            <div class="col-12  col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-outline-primary btn-icon-text ">
+                                                <i class="mdi mdi-file-check btn-icon-prepend"></i>Submit
+                                                    
+                                            </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+
+    {% endblock %}

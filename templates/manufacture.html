@@ -1,0 +1,362 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    #one{
+        position: relative;
+        background-image: url({% static 'manufacture/1.png' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+        color: white;
+        z-index: -1;
+    }
+    #two{
+        position: relative;
+        padding-top: 15%;
+        margin-left: 7%;
+        color: white;
+        z-index: -1;
+    }
+    #three{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        padding-top: 10%;
+        text-align: left;
+    }
+    #four{
+       background-image: url({% static 'software/img.png' %});
+        padding-top: 5%;
+    }
+    #five{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        text-align: left;
+    }
+    #six{
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        text-align: left;
+    }
+    #seven{
+        font-family: Roboto, sans-serif;
+        text-align: center;
+    }
+
+</style>
+<body>
+
+    <div class="container-fluid" id="one">
+        <div id="two">
+            <h3>
+                Facilezone for Manufacturing companies
+            </h3>
+            <p>
+                We have developed one of the finest management software to make your company more
+                proficient.<br> Our software can help you to manage your company’s milestone components like finance, operations,
+                and marketing. <br>Our product can save your time and exertion and subsequently it can build your organization's
+                efficiency.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <p id="three">
+                    Easily manage your employees with Facilezone
+                </p>
+                <p id="six">
+                    We have developed one of the finest management software to make your company more proficient.
+                    Our software can help you to manage your company’s milestone components like finance, operations, and
+                    marketing.<br>Our product can save your time and exertion and subsequently it can build your organization's
+                    efficiency.
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <img loading="lazy" style="width: 100%; position:relative;z-index: -1" alt="Error 404!!!" src= {% static  'manufacture/2.jpg' %}>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" id="four">
+        <div class="row">
+             <div class="col-sm-6 col-md-6 col-lg-6">
+                <img loading="lazy" style="width: 100%" alt="Error404!!!" src="{% static 'software/mac.png' %}">
+            </div>
+            <div class="col-sm-6">
+                <p id="five">
+                    Loaded with interesting features
+                </p>
+                <p id="six">
+                    Facilezone incorporated complete features and tools to manage the
+                    entire business operations of your company. It’s simple and comprehensive to use. We will
+                    make it as in the form that appropriate to your business requirements.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Main Features
+                    </b>
+                </h4>
+                <p>
+                    The Facilezone software provide huge number of features to make your business management more
+                    effective and seamlessly smooth. Expense tracking is one of our highlight features. Our product can without
+                    a doubt screen your expenses by saving the expense bills. It can show you a layout of your expenses with a
+                    clear look. The element of this is that we can lessen human bungles and make the communication faster and effective.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left; margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Expense Tracking
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    Monitoring costs is difficult. It requires a ton of centre since one blunder in
+                    your information can influence the entire organization. Our product can make this work simpler
+                    and smoother for you. Our software can undoubtedly monitor your costs by saving the cost bills.
+                    It can show you an outline of your costs with straightforward look. The feature of this is that
+                    we can diminish human blunders and make the interaction quicker and more powerful. It will assist
+                    you with following your cost so you can figure out how to build the benefit without expanding the costs.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'manufacture/3.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'manufacture/4.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Payroll Management
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     Our software comes up with the latest payroll management system. it helps to store all
+                     your employees’ salaries, bonus, taxes, deductions and so on. This helps you to maintain the financial
+                     stability of your company and your employees. And it helps you to over come certain issues like
+                     payment delays and losses. Preventing unwanted loss of money can make huge difference in your
+                     organization.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Easy Access
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    The most highlight feature of this software is the easy access. You can access this
+                    software from anywhere any time. This software is developed user-friendly so that you don’t have
+                    to spent hours to learn. You can access every feature of the software just by entering essential
+                    details. Our software is bult with high security so that you don’t have to worry about your
+                    confidential files. So you can keep your business safe and close.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'manufacture/20(2).jpg' %}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'manufacture/6.jpg'%}" style="margin-left: 7%;height: 70%;width: 90%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Vacation/ Leave tracking
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     The wealth of an organization depends upon the employees. For a large organizations
+                     keeping track of their leaves is quite a hard job. Our software can keep track of every employee’s
+                     day to day’s work. How much time they spend for the company, how much leaves they took and how much
+                     they work overtime, medical leaves, and stores every holidays. It helps the company to properly
+                     manage payment scale of employees. So, it also reduces unwanted payments and allowances. And by
+                     managing the vacations and leaves we can increase the productivity by properly managing the leaves
+                     and overtime works. So that your employee their time without affecting your business profits.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Easy Estimations
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    For manufacturing company there is always an estimated price for each and every product.
+                    Our software can give the prefect estimated price of your product by checking the costs of direct
+                    materials, direct labour, and manufacturing over heads. Our aim is to give the product at a
+                    competitive price range without compromising our profit. By calculating the perfect estimations,
+                    you can increase your productivity to next level.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'manufacture/9.jpg'%}" style="margin-left: 15%;height: 70%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'manufacture/10.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Activity Monitoring
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     Monitoring activities is an essential part of an organization. It will keep us close
+                     to our company. The major use of this feature is that we can get real time information about
+                     our companies work. And a routine monitoring can reduce unwanted loose and increase the productivity.
+                     It is also useful to solve any issues whether it is lack of materials or availability of certain
+                     materials you can get notified and take necessary action without affecting the productivity of
+                     your organization.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Files and Document Tracking
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    Files and documents are the most valuable for an organization. We should keep each file
+                    safely from others to increase the safety of our organization. Our software can keep your confidential
+                    documents securely in hassle free and automated fashion. So that you can retrieve your file without
+                    any complications. It keeps track of documents and files to keep you updated.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'manufacture/8.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'manufacture/12.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Reports and issues
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     This feature enables the manager to get a real time update about the works in the
+                     organization. This can help the user to identify the faults in the workflow and the company’s
+                     services and can make right precautions before the problem escalates. Repots makes the organizations
+                     much better. Because it helps help us to know how much our organization needs to improve. So,
+                     it always helps the company to grow better.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                    Time Management
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    Proper time management can increase the productivity of the organization. Our software
+                    can schedule perfect timing for employees. It is a strategy that is used for increasing the productivity
+                    with employee friendly time scheduling. Our software can schedule each day’s time with the
+                    availability of the employees. So that the work will be rum smoothly and even if there is lack employees.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'manufacture/13.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'manufacture/14.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                    Job offerings and interviews
+                </p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                     Use our software to conduct the entire hiring process in an autonomous way. It occupies complete
+                     features to schedule an interview including video conference and live results assessments.
+                     The shortlisting of resumes make easier with advanced filtering mechanisms. You can predefine
+                     the requirement, so the resumes which don’t matches with current requirement will be automatically
+                     eliminated from the selection process. The interview scheduling for candidates can managed without
+                     a clash on time. This can integrate with the email and calendar applications. The hiring manager
+                     can set the interview rounds that desired to conduct in advance. The results of each round can
+                     transmit to candidates automatically.
+                 </p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">
+                   Performance Evaluation
+                </p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">
+                    Monitoring the performance of the staff is important to make the organization stable.
+                    Our software supports advanced performance evaluation. It evaluates every day’s performance of every
+                    employee. it evaluates based on how much hours they work and how much overtime and leaves they have
+                    taken. Our software can represent the performance of every employee in a user-friendly manner.
+                </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'manufacture/141.jpg'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Contact Us
+                    </b>
+                </h4>
+                <p>
+                   Do you need software to manage complete business operations of your company?
+                    <br>Then Facilezone is right choice for you. Sent an Enquiry now,
+                    we will get back to you as soon as possible.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+</body>
+{% endblock %}

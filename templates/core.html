@@ -1,0 +1,132 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/core.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        color: white;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                  Core HR and Payroll
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Manage a global workforce with flexible cloud <br>solutions for core HR, payroll,
+                    service delivery,<br> and work visa management.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Meet the needs of your people and your business with a global HR and payroll system
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Our extensible solutions can help you manage global benefits and payroll, improve employee
+                self-service, automate HR processes, and strengthen compliance. They can also make it easier
+                to define and execute successful people strategies and to provide information and services that
+                improve the employee experience and add value to your business.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Integrated Accounting
+                    </h4>
+                    <ul>
+                        <li>
+                            Automatic management of every payroll
+                        </li>
+                        <li>
+                            Eliminate scope of miscalculations
+                        </li>
+                        <li>
+                            Generate reports including Leave summary, salary, benefits
+                        </li>
+                        <li>
+                            Sole repository of employment records and document
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Keeping Track of Earning
+                    </h4>
+                    <ul>
+                        <li>
+                            Calculation rules
+                        </li>
+                        <li>
+                            FLSA overtime pay
+                        </li>
+                        <li>
+                           Tax Earning
+                        </li>
+                        <li>
+                            Worker specific earning code
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Tax Management
+                    </h4>
+                    <ul>
+                        <li>
+                            Automatic quarter-end updates on tax table
+                        </li>
+                        <li>
+                           Pre-tax deduction
+                        </li>
+                        <li>
+                            E-media reporting of every state
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                         High level of security
+                    </h4>
+                    <ul>
+                        <li>
+                            Database Encryption
+                        </li>
+                        <li>
+                            Restricting highly valued resources like tax files, employee details and payroll info.
+                        </li>
+                        <li>
+                           Security features also focus on Control Access
+                        </li>
+                        <li>
+                            Additional record level security
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

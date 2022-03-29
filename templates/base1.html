@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta charset="UTF-8">
+    <title>Facilezone</title>
+</head>
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+nav {
+	background: white;
+	font-size:22px;
+	line-height: 32px;
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+	word-wrap:break-word !important;
+	font-family: 'Open Sans', sans-serif;
+	}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 {
+	font-size: 30px;
+	line-height: 34px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3  {
+	color: #FFF;
+}
+
+#l1 {
+	color: #FFF;
+}
+
+h1 {
+	margin-top: 100px;
+	text-align:center;
+	font-size:60px;
+	line-height: 70px;
+	font-family: 'Bree Serif', 'serif';
+	}
+
+#container {
+	margin: 0 auto;
+	max-width: 890px;
+}
+
+p {
+	text-align: center;
+}
+
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav {
+	margin:0;
+	padding: 0;
+	background-color: cadetblue;
+}
+
+#logo {
+	display: block;
+	padding: 0 30px;
+	float: left;
+	font-size:20px;
+	line-height: 60px;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+	float: right;
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	}
+
+/* Positioning the navigation items inline */
+nav ul li {
+	margin: 0px;
+	display:inline-block;
+	float: left;
+	background-color:  cadetblue;
+	}
+
+/* Styling the links */
+nav #l1 {
+	display:block;
+	padding:14px 20px;
+	color:#FFF;
+	font-size:17px;
+	text-decoration:none;
+}
+
+
+nav ul li ul li:hover { background: #000000;
+    transition: 0.6s ease ; }
+
+/* Background color change on Hover */
+nav #l1:hover {
+	background-color: #000000;
+    transition: 0.6s ease ;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+	display: none;
+	position: absolute;
+	/* has to be the same number as the "line-height" of "nav a" */
+	top: 60px;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of "nav ul ul li" */
+	left:170px;
+}
+
+
+/* Change ' +' in order to change the Dropdown symbol */
+li > #l1:after { content:  ' +'; }
+li > #l1:only-child:after { content: ''; }
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 768px) {
+
+	#logo {
+		display: block;
+		padding: 0;
+		width: 100%;
+		text-align: center;
+		float: none;
+	}
+
+	nav {
+		margin: 0;
+	}
+
+	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	.toggle + #l1,
+	.menu {
+		display: none;
+	}
+
+	/* Stylinf the toggle lable */
+	.toggle {
+		display: block;
+		background-color: cadetblue;
+		padding:14px 20px;
+		color:#FFF;
+		font-size:17px;
+		text-decoration:none;
+		border:none;
+	}
+
+	.toggle:hover {
+		background-color: #000000;
+	}
+
+	/* Display Dropdown when clicked on Parent Lable */
+	[id^=drop]:checked + ul {
+		display: block;
+	}
+
+	/* Change menu item's width to 100% */
+	nav ul li {
+		display: block;
+		width: 100%;
+		}
+
+	nav ul ul .toggle,
+	nav ul ul #l1 {
+		padding: 0 40px;
+	}
+
+	nav ul ul ul #l1 {
+		padding: 0 80px;
+	}
+
+	nav #l1:hover,
+ 	nav ul ul ul #l1 {
+		background-color: #000000;
+	}
+
+	nav ul li ul li .toggle,
+	nav ul ul #l1,
+  nav ul ul ul #l1{
+		padding:14px 20px;
+		color:#FFF;
+		font-size:17px;
+	}
+
+
+	nav ul li ul li .toggle,
+	nav ul ul #l1 {
+		background-color: #212121;
+	}
+
+	/* Hide Dropdowns by Default */
+	nav ul ul {
+		float: none;
+		position:static;
+		color: #ffffff;
+		/* has to be the same number as the "line-height" of "nav a" */
+	}
+
+	/* Hide menus on hover */
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul {
+		display: none;
+	}
+
+	/* Fisrt Tier Dropdown */
+	nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+
+	nav ul ul ul li {
+		position: static;
+		/* has to be the same number as the "width" of "nav ul ul li" */
+
+	}
+
+}
+
+@media all and (max-width : 330px) {
+
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+
+}
+</style>
+ <head>
+   <meta charset="UTF-8" />
+
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <title>Document</title>
+ </head>
+ <body>
+
+    <nav>
+        <div id="logo">Facilezone</div>
+
+         <label for="drop" class=" toggle " data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+        </label>
+        <input type="checkbox" id="drop" />
+        <ul class="menu">
+            <li><a id="l1" href="/">Home</a></li>
+            <li>
+                <!-- First Tier Drop Down -->
+                <label for="drop-1" class="toggle">Product +</label>
+                <a id="l1" href="#">Product</a>
+                <input type="checkbox" id="drop-1"/>
+                <ul>
+                    <li>
+                        <label for="drop-6" class="toggle">ERP & Finance +</label>
+                        <a id="l1" href="#">ERP & Finance</a>
+                        <input type="checkbox" id="drop-6"/>
+                        <ul>
+                            <li><a id="l1" href= 'Erp'>ERP for small & midsize enterprise Finance</a></li>
+                            <li><a id="l1" href='Accounting&Financial'>Accounting & financial clause</a> </li>
+                            <li><a id="l1" href='TreasuryManagement'>Treasury management</a></li>
+                            <li><a id="l1" href='ARB&RManagement'>Account receivables,Billing & revenue management</a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="drop-7" class="toggle">Supply chain management +</label>
+                        <a id="l1" href="#">Supply chain management</a>
+                        <input type="checkbox" id="drop-7"/>
+                        <ul>
+                            <li><a id="l1" href='Supply-Manufacturing'>Manufacturing</a></li>
+                            <li><a id="l1" href='Enterprise_AssetManagement'>Enterprise asset management</a> </li>
+                            <li><a id="l1" href='PLC_Management'>Product lifecycle management</a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="drop-8" class="toggle">CRM & Customer +</label>
+                        <a id="l1" href="#">CRM & Customer</a>
+                        <input type="checkbox" id="drop-8"/>
+                        <ul>
+                            <li><a id="l1" href='CustomerData'>Customer data</a></li>
+                            <li><a id="l1" href='Supply-Marketing'>Marketing</a></li>
+                            <li><a id="l1" href='Supply-Commerce'>Commerce</a> </li>
+                            <li><a id="l1" href='Supply-Sales'>Sales</a></li>
+                            <li><a id="l1" href='Supply-Serve'>Services</a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="drop-9" class="toggle">Human Capital Management +</label>
+                        <a id="l1" href="#">Human Capital Management</a>
+                        <input type="checkbox" id="drop-9"/>
+                        <ul>
+                            <li><a id="l1" href='EmployeeExperienceManagement'>Employee Experience Management</a></li>
+                            <li><a id="l1" href='CoreHR&Payroll'>Core HR & Payroll</a></li>
+                            <li><a id="l1" href='TalentManagement'>Talent Management</a> </li>
+                            <li><a id="l1" href='Analytics&Workforce'>HR Analytics & Workforce Planning</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </li>
+            <li>
+                <!-- First Tier Drop Down -->
+                <label for="drop-2" class="toggle">Industries +</label>
+                <a id="l1" href="#">Industries</a>
+                <input type="checkbox" id="drop-2"/>
+                <ul>
+                    <li>
+                        <label for="drop-4" class="toggle">Financial Services +</label>
+                        <a id="l1" href="#">Financial Services</a>
+                        <input type="checkbox" id="drop-4"/>
+                        <ul>
+                            <li><a id="l1" href='Finance_banking'>Banking</a> </li>
+                            <li><a id="l1" href='Insurance'>Insurance</a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="drop-5" class="toggle">Customer Industries +</label>
+                        <a id="l1" href="#">Customer Industries</a>
+                        <input type="checkbox" id="drop-5"/>
+                        <ul>
+                            <li><a id="l1" href='AgriBussiness'>AgriBussiness</a> </li>
+                            <li><a id="l1" href='Customer_Product'>Customer Products</a> </li>
+                            <li><a id="l1" href='Fashion'>Fashion</a></li>
+                            <li><a id="l1" href='LifeScience'>Life Sciences</a></li>
+                            <li><a id="l1" href='Retail'>Retail</a></li>
+                            <li><a id="l1" href='WholesaleDistribution'>Wholesale Distribution</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- Second Tier Drop Down -->
+                        <label for="drop-3" class="toggle">Service Industries +</label>
+                        <a id="l1" href="#">Service Industries</a>
+                        <input type="checkbox" id="drop-3"/>
+                        <ul>
+                            <li><a id="l1" href='Media'>Media</a></li>
+                            <li><a id="l1" href='Engineering,Construction&Operation'>Engineering, Construction & Operation</a></li>
+                            <li><a id="l1" href='Sports&Entertainment'>Sports & Entertainment</a></li>
+                            <li><a id="l1" href='ServiceTelecommunication'>Telecommunication</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a id="l1" href="#">About</a></li>
+            <li><a id="l1" href='enquiry'>Enquiries</a></li>
+        </ul>
+    </nav>
+ {% block content %}
+
+
+ {% endblock %}
+
+ </body>
+</html>

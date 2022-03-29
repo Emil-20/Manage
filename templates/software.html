@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    #one{
+        position: relative;
+        background-image: url({% static 'software/unsplash_5U_28ojjgmsimg2.png' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+        color: white;
+        z-index: -1;
+    }
+    #two{
+        position: relative;
+        padding-top: 15%;
+        margin-left: 7%;
+        color: white;
+        z-index: -1;
+    }
+    #three{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        padding-top: 25%;
+        text-align: left;
+    }
+    #four{
+       background-image: url({% static 'software/img.png' %});
+        padding-top: 5%;
+    }
+    #five{
+        color: black;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        text-align: left;
+    }
+    #six{
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        text-align: left;
+    }
+    #seven{
+        font-family: Roboto, sans-serif;
+        text-align: center;
+    }
+
+</style>
+<body>
+
+    <div class="container-fluid" id="one">
+        <div id="two">
+            <h3>
+                Facilezone for Software Industries
+            </h3>
+            <p>
+                The project management tool to empower productivity of your organization. Facilezone
+                works great on both start-ups and large scale software firms.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <p id="three">
+                    Easily manage your employees with Facilezone
+                </p>
+                <p id="six">
+                   Facilezone helps to organize your employees across multiple projects.
+                    Allow automatic task assignment and real time monitoring facility.
+                    It shows actual working hour of your employees with a performance chart,
+                    so that you can determine whether they deliver an expected performance.
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <img loading="lazy" style="width: 100%; position:relative;z-index: -1" alt="Error 404!!!" src= {% static  'software/Group7.png' %}>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" id="four">
+        <div class="row">
+             <div class="col-sm-6 col-md-6 col-lg-6">
+                <img loading="lazy" style="width: 100%" alt="Error404!!!" src="{% static 'software/mac.png' %}">
+            </div>
+            <div class="col-sm-6">
+                <p id="five">
+                    Loaded with interesting features
+                </p>
+                <p id="six">
+                    Facilezone incorporated complete features and tools to manage the
+                    entire business operations of your company. It’s simple and comprehensive to use. We will
+                    make it as in the form that appropriate to your business requirements.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Main Features
+                    </b>
+                </h4>
+                <p>
+                   IT escalates the total performance of your company by a proper workflow
+                    management. <br>Some of the important features are such as employee’s task assignment, payroll
+                    and attendance management, chat room, File sharing etc.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left; margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">Managers module</p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">The Managers and team lead can monitor the performance of individual team members on real time. They can connect with the team a member in a remote way, allows live communication and file transfer. Gives secure transfer of information through data encryption techniques. Sender can restrict the views with a password, so that external members could share or access company information. The managers and clients can work together to make solution with collaborative way. The employee training can do on remote basis without disrupt the on-going works.so it could save time and resource that need to spend the training programs. Manger provides the performance chart of company in the form of accurate numbers. It simplifies the decision making and plan formulation.</p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'software/img_1.png'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'software/img_5.png'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">Accounts module</p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">Build with wide range of tools to record and store financial transaction data of your business. Which helps to store data’s from multiple departments and branches in an integrated form. The mange Zone will show actual working hours of your employees. The performance bonus, payroll or compensation can automatically manage with this software. The timely payment of salary can be handles in auto mode.Fast and simple transaction also enhances the customer satisfaction. Facilezone will track your expenses and revenue, so you can find and limit the source of unnecessary burdens. It provides your company data access from anywhere, a smartphone is more than enough to control all transaction of your business. Login your Facilezone account from anywhere, anytime and make your daily business operations easier.</p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">Company assets</p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">Keep Tracks and reports the assets that owned by company. The assets of Multinational companies are usually spread on multiple locations. Facilezone helps to keeps the assets under control through proper tracking and management. It provides mangers a proper way to measure the performance and availability of assets. This Provides complete visibility of assets that on multiple countries. Supports inter and intra company asset transfer with minimum charges. The periodic auditing of your assets ensures security.It is important to keep aware on asset information whether you are medium or large company. Facilezone is a user friendly tool to manage your assets; we can customize it based on the business sector.</p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'software/img_6.png'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'software/img_8.png'%}" style="margin-left: 7%;height: 70%;width: 90%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">Manage employees</p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">Manage your employees and contractors with our software platform. It maintains records about all personal data, work report, attendance and working hours. The payroll can be automated by set the criteria that allows salary hike and performance bonus. It provides live monitoring and tracking of performance your employees.so that managers can analyse and determine the fact that whether the employees or whole department could produce a satisfactory output. Otherwise you can take action to improve performance of the staffs.The automated task assignment feature will avoid delay in workflow of company and ensure completion of tasks before the estimated time.</p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">Client management</p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">This system enables storage and access of all information about clients, Brings better balance on your client relations.it provides live tracking of communication between your employees and clients.so you get a clear idea about client demands and market trends.it helps the marketing team and business development team to deliver an engaging service by analysing response of past clients.It provides integrate with all communication devices and act as a centralized system. Our software will provide a smooth flow in client enquiry.it will automatically transfer the enquiries to concerned department without any delay. Create an interrupt communication network for your organization.it only allows transfer of valid calls and genuine clients so that you could utilize the complete business time to grow new relations.</p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'software/img_9.png'%}" style="margin-left: 15%;height: 70%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img  loading="lazy" alt="Error404!!!" src="{% static 'software/img_10.png'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">Attendance management</p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">Generate an attendance report through record and monitoring actual working hours of your employees. This system allows the integration with all attendance devices such as biometrics, smart-card, facial detection etc.it helps to analyse the working pattern of your employees, so you can identify the idle hours of your company. The working hours are difficult to calculate manually if your employees have rotation shifts. This system will help to establish a plan to utilize maximum time to improve productivity of your company. The payroll can be automated with based on working hours of your employees.It also notifies the employees, if their performance is unsatisfactory.so that managers can time from direct scold between employees that related to low working hours.</p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">Events and trainings</p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">Do you face any issue on organize your events or plan a training program? Then Facilezone is right choice for you.it will simplifies the event registration process and automate attendance recording and program scheduling in a systematic order. A proper organization can minimize the budget by eliminate the unnecessary expenses. The payments a handled hand free and also allows sharing of latest training packages with the associates. Facilezone incorporated versatile features to reduce the complexity of cooperative event and meeting organization.This software can enhance the interactive experience of your training programs.it supports multi-user access and collaboration between team members. </p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'software/img_11.png'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'software/img_12.png'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">Reports and issues</p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">Facilezone offers smart business reports and real performance forecasting of your organization. This provides a true insight to plan further steps that contribute an improvement in performance of your company. The reports are generated with extracting patterns from historical data and current working data. This provides clear idea about how the market condition and other external factors that affect a growth and decline in company revenue. Based on this report you can make a long term plan for coming business years. Use Facilezone to predict the future of your company.it provides tools Evaluate market condition before invest on a product or services. We will help you to expand your business through creating a better business plan.</p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">Daily work updates</p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">A software to maintains and record work details of your employees of each working days. We created a platform which lets your employee’s login and present their works for approval of managers and team leads. It provides a way to check the work reports of multiples team at a single place. You can eliminate the difficulty and clash of work sharing that through emails and other medium. Facilezone is cloud storage based platform it enables data transfer without bothering the size or format of information. It has chat feature so that if there are any modifications are necessary, the managers can share it abruptly without a delay.This software is flexible and adaptable enough to serve vast business sectors.</p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'software/img_13.png'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'software/img_14.png'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">Daily work updates</p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">A software to maintains and record work details of your employees of each working days. We created a platform which lets your employee’s login and present their works for approval of managers and team leads. It provides a way to check the work reports of multiples team at a single place. You can eliminate the difficulty and clash of work sharing that through emails and other medium. Facilezone is cloud storage based platform it enables data transfer without bothering the size or format of information. It has chat feature so that if there are any modifications are necessary, the managers can share it abruptly without a delay.This software is flexible and adaptable enough to serve vast business sectors.</p>
+             </div>
+         </div>
+    </div>
+    <div class="container-fluid" style="background-color:#2186A2;">
+        <div class="row">
+            <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: white;">Job offerings and interviews</p>
+                <p style="position:relative;text-align: left;margin-left:7%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: white;">Use our software to conduct the entire hiring process in an autonomous way. It occupies complete features to schedule an interview including video conference and live results assessments. The shortlisting of resumes make easier with advanced filtering mechanisms. You can predefine the requirement, so the resumes which don’t matches with current requirement will be automatically eliminated from the selection process. The interview scheduling for candidates can managed without a clash on time. This can integrate with the email and calendar applications. The hiring manager can set the interview rounds that desired to conduct in advance. The results of each round can transmit to candidates automatically.</p>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-md-6">
+                <img loading="lazy" alt="Error404!!!" src="{% static 'software/img_15.png'%}" style="margin-left: 15%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" >
+         <div class="row">
+             <div class="col-lg-5">
+                 <img loading="lazy" alt="Error404!!!" src="{% static 'software/img_16.png'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+             </div>
+             <div class="col-lg-7">
+                <p style="position:relative;text-align: left;margin-left:20%;margin-top:3%;font-family: Roboto,sans-serif;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">Performance charts</p>
+                 <p style="position:relative;text-align: left;margin-left:20%;margin-top:1%;font-family: Roboto,sans-serif;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">You can understand actual performance of your company though analyse the performance chart. It is generated by continuous monitoring of staffs and workflow of your company. Mange zone provide the financial data which in comprehensible format. This chart will help managers and decision making wing to set future goals of the company.From this data they get a brief idea that whether the company achieved previous year’s goals or not. The declaration of company performance value will boost team spirit of your employees.it also provides the detailed report about individual contribution on total productivity of company. From that you can identify the real performers and low performing Employees.it helps the managers to construct a team which are capable to make a target results.</p>
+             </div>
+         </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="seven">
+                <h4>
+                    <b>
+                        Contact Us
+                    </b>
+                </h4>
+                <p>
+                   Do you need software to manage complete business operations of your company?
+                    <br>Then Facilezone is right choice for you. Sent an Enquiry now,
+                    we will get back to you as soon as possible.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+</body>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'software_training/software/pm/base_pm.html'%}
+{%load static%}
+{%block content%}
+
+    <div class="row mt-5">
+        <div class="col-12 col-sm-1 col-md-2 col-lg-3"></div>
+        <div class="col-12 col-sm-10 col-md-9 col-lg-7 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                   
+                        <h3>Project Details</h3>
+                    <br>
+                    <form class="forms-sample" action="trainer_taskfor">
+    
+                        <div class="form-group row">
+                            <label for="exampleInputEmail2" class="col-5 col-sm-5 col-md-3 col-lg-4 col-form-label">Project Name
+                                </label>
+                            <div class="col-7 col-sm-7 col-md-8 col-lg-7 mt-2">
+                                <label for="exampleInputEmail2">project 1</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputEmail2"
+                                class="col-5 col-sm-5 col-md-3 col-lg-4 col-form-label">Start Date</label>
+                            <div class="col-7 col-sm-7 col-md-8 col-lg-7 mt-2">
+                                <label for="exampleInputEmail2">01-03-2022</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputEmail2"
+                                class="col-5 col-sm-5 col-md-3 col-lg-4 col-form-label">Due Date</label>
+                            <div class="col-7 col-sm-7 col-md-8 col-lg-7 mt-2">
+                                <label for="exampleInputEmail2">05-03-2022</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-5 col-sm-5 col-md-3 col-lg-4 col-form-label " for="exampleInputUsername2"
+                                class="col-7 col-sm-7 col-md-8 col-lg-7 mt-2" required>Description</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control bg-dark text-light" rows="10" id="" style="height: 140px"
+                                    name="description" disabled>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta possimus, nihil, rem molestias eum corrupti expedita officiis ipsa ab cumque perferendis nesciunt corporis, odit atque ea. Ducimus enim voluptates veritatis!</textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {%endblock%}

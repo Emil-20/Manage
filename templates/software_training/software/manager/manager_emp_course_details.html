@@ -1,0 +1,62 @@
+{% extends 'software_training\software_training/training/manager/base_manager.html' %} {% load static %} {% block content %}
+<div class="row ">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+
+                <h3 class="card-title">{{ Project_man.designation }}</h3>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="color:white;">
+                </div>
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr class="header" data-href="">
+
+                                <th> Name </th>
+                                <th> Joining Date </th>
+                                <th> Project Name </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr data-href="/softwareapp/Manager_emp_profile/">
+                                <td>anandhu</td>
+                                <td>25/02/2021</td>
+                                <td>software </td>
+                            </tr>
+
+                            <tr data-href="/softwareapp/Manager_emp_profile/">
+                                <td>anandhu</td>
+                                <td>25/02/2021</td>
+                                <td>software </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+    $(document).ready(function() {
+        $('table tr').click(function() {
+            window.location = $(this).data('href');
+            return false;
+        });
+    });
+</script>
+
+
+{% endblock %}

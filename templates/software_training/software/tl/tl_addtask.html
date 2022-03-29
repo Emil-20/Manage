@@ -1,0 +1,134 @@
+{%extends 'software_training/software/tl/tlDashboard.html'%} {%load static%} {%block content%}
+<style>
+    .Search {
+        margin-top: 4%;
+        float: right;
+        margin-right: 5%;
+        padding-left: 3%;
+        padding-right: 3%;
+        line-height: 2;
+    }
+</style>
+
+
+<div class="row " style="background-color: black;">
+    <div class="" style="font-size: 20px;font-weight: 600;color:white ;">GIVE TASK</div>
+</div>
+<div class="row mt-3">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <form action="" method="post" enctype="multipart/form-data">
+
+
+
+                    <div class="row pt-1">
+                        <div class="col-md-4">
+                            <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">Select Employee </div>
+                        </div>
+                        <div class="col-md-8 ">
+                            <select id="" name="ename" class="drop form-control ml-3 mt-2 text-light" required style="border:1px solid #6C7293 ;">
+                <option value="">--select--</option>
+                <option value="{{i.id}}">employee 1</option>
+                <option value="{{i.id}}">employee 2</option>
+                <option value="{{i.id}}">employee 3</option>
+               
+              </select>
+                        </div>
+                    </div>
+                    <div class="row pt-1">
+                        <div class="col-md-4">
+                            <div class="mr-2 ml-3 mt-2" style="color:#6C7293; ;">Select Tester </div>
+                        </div>
+                        <div class="col-md-8 ">
+                            <select id="" name="tname" class="drop form-control ml-3 mt-2 text-light" required style="border:1px solid #6C7293 ;">
+                <option value="">--select--</option>
+                <option value="{{i.id}}">tester 1</option>
+                <option value="{{i.id}}">tester 2</option>
+                <option value="{{i.id}}">tester 3</option>
+               
+              </select>
+                        </div>
+                    </div>
+                    <div class="row pt-1">
+                        <div class="col-md-4">
+                            <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">Select Task </div>
+                        </div>
+                        <div class="col-md-8 ">
+                            <select id="" name="task" class="drop form-control ml-3 mt-2 text-light" required style="border:1px solid #6C7293 ;">
+                <option value="">--select--</option>
+                <option value="{{i.id}}">task 1</option>
+                <option value="{{i.id}}">task 2</option>
+                <option value="{{i.task}}">task 3</option>
+               
+              </select>
+                        </div>
+                    </div>
+                    <div class="row pt-1">
+                        <div class="col-md-4">
+                            <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">SubTask</div>
+                        </div>
+                        <div class="col-md-8 ">
+                            <input type="text" name="subtask" class="drop form-control ml-3 mt-2 text-light" autocomplete="off" required style="border:1px solid #6C7293 ;">
+                        </div>
+                    </div>
+                    <div class="row pt-1">
+                        <div class="col-md-4">
+                            <div class=" mr-2 ml-3 mt-2" style="color:#6C7293;">Description</div>
+                        </div>
+                        <div class="col-md-8 ">
+                            <textarea name="description" class="drop form-control ml-3 mt-2 text-light" required style="border:1px solid #6C7293 ;height:70px;"></textarea>
+                        </div>
+                    </div>
+                    <div class="row pt-1">
+                        <div class="col-md-4">
+                            <div class=" mr-2 ml-3 mt-2" style="color:#6C7293;">Date</div>
+
+                        </div>
+                        <div class="col-md-8 ">
+                            <div class="mt-2 mr-2 text-light"></div>
+                        </div>
+                    </div>
+                    <div class="row pt-1">
+                        <div class="col-md-4">
+                            <div class=" mr-2 ml-3 mt-2" style="color:white;"></div>
+                        </div>
+                        <div class="col-md-8 ">
+                            <input type="date" name="date" id="txtDate" class="drop form-control ml-3 mt-2 text-light" required style="border:1px solid #6C7293 ;">
+                        </div>
+                    </div>
+                    <div class="row pt-1">
+                        <div class="col-md-4">
+                            <div class="mr-2 ml-3 mt-2" style="color:#6C7293;">Attach Files</div>
+                        </div>
+                        <div class="col-md-8 ">
+                            <input type="file" name="files" class="form-control mt-2 " style="text-decoration:none;border:none;background-color: #191c24;color:#6C7293 ;">
+                        </div>
+                    </div>
+                    <div class=" row  mt-3 ">
+                        <div class="">
+                            <button type="submit" id="alert2" class="btn-primary Search">Assign</button>
+                        </div>
+                        <div>
+                </form>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <script>
+            var dtToday = new Date();
+
+            var month = dtToday.getMonth() + 1;
+            var day = dtToday.getDate();
+            var year = dtToday.getFullYear();
+            if (month < 10)
+                month = '0' + month.toString();
+            if (day < 10)
+                day = '0' + day.toString();
+            var maxDate = year + '-' + month + '-' + day;
+            document.getElementById("txtDate").setAttribute("max", maxDate);
+        </script>
+        {% endblock %}

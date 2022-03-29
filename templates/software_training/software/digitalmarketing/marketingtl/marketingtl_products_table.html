@@ -1,0 +1,143 @@
+{%extends 'software_training/software/digitalmarketing/marketingtl/base_digitalmarketing.html'%} {%load static%} {%block content%}
+
+<style>
+    table tbody tr[data-href] {
+        cursor: pointer;
+    }
+</style>
+
+<div class="row" style="padding-top: 20px;">
+    <div class="col-2 col-sm-2 col-md-2 col-lg-2"></div>
+    <div class="col-12 col-sm-8 col-md-8 col-lg-8 grid-margin ">
+        <div class="card">
+            <div class="card-body" style="height:auto">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                    <h3 class="page-title ">Product Table</h3>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12"><br></div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <form>
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" class="form-control text-white" id="myInput" onkeyup="myFunction()" placeholder="Search" />
+                        </div>
+                    </form>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr data-href="#">
+                                <th class="text-white " style="padding-left:36px;">SNo</th>
+                                <th class="text-white">
+                                    product name
+                                </th>
+                                <th class="text-white">
+                                    posted date
+                                </th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr data-href="/softwareapp/marketingtl_products_details">
+
+
+                                <td style="padding-left:40px;">
+                                    1
+                                </td>
+
+                                <td>
+                                    britania
+                                </td>
+                                <td>
+                                    3/3/2022
+                                </td>
+                                
+                            </tr>
+                            <tr data-href="/softwareapp/marketingtl_products_details">
+
+
+                                <td style="padding-left:40px;">
+                                    2
+                                </td>
+
+                                <td>
+                                    tiger
+                                </td>
+                                <td>
+                                    13/3/2022
+                                </td>
+                                
+                            </tr>
+                            <tr data-href="/softwareapp/marketingtl_products_details">
+
+
+                                <td style="padding-left:40px;">
+                                    3
+                                </td>
+
+                                <td>
+                                    samsung
+                                </td>
+                                <td>
+                                    10/3/2022
+                                </td>
+                                
+                            </tr>
+                            <tr data-href="/softwareapp/marketingtl_products_details">
+
+
+                                <td style="padding-left:40px;">
+                                    4
+                                </td>
+
+                                <td>
+                                    lenova
+                                </td>
+                                <td>
+                                    1/3/2022
+                                </td>
+                                
+                            </tr>
+                           
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+    $(document).ready(function() {
+        $('table tr').click(function() {
+            window.location = $(this).data('href');
+            return false;
+        });
+    });
+</script>
+
+
+
+
+{% endblock %}

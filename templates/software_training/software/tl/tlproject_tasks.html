@@ -1,0 +1,760 @@
+{%extends 'software_training/software/tl\tlDashboard.html'%} {%load static%} {%block content%}
+<style>
+    .Search {
+        margin-top: 4%;
+        float: left;
+        margin-right: 5%;
+        padding-left: 3%;
+        padding-right: 3%;
+        line-height: 2;
+        width: 95px;
+    }
+    
+    .table1 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 6vh;
+    }
+</style>
+
+<div class="row pt-3" style="background-color: black;">
+    <div class="text-light" style="font-size: 20px;font-weight: 600;">PROJECTS</div>
+</div>
+<div class="row mt-4">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">Projects</div>
+            <input type="text" style="color: white;" onkeyup="myFunction()" class="form-control " id="search" name="search" autocomplete="off" placeholder="Search...">
+            <div class="table-responsive">
+                <table class="table" id="myTable">
+                    <thead ">
+            <tr>
+              <th scope="col " style="color:#6C7293; ">Task name</th>
+              <th scope="col " style="color:#6C7293; ">AssignedTo</th>
+              <th scope="col " style="color:#6C7293; ">Task Status</th>
+              <th scope="col " style="color:#6C7293; ">Test Status</th>
+              <th scope="col " style="color:#6C7293; ">Extension</th>
+              <th scope="col " style="color:#6C7293; ">Split Task</th>
+              <th scope="col " style="color:#6C7293; ">Project Details</th>
+            </tr>
+            </thead>
+            <tbody>
+              
+
+              <tr>
+                <td  style="color:white ">tl module</td>
+
+                <td  style="color:white ">anu</td>
+
+                <td class="text-info "><a href="{% url 'tl_projecttask_status' %} " data-toggle="modal " data-target="#taskstatus{{i.id}} "
+                    style="text-decoration: none; ">
+                    <div class="badge badge-outline-info ">Task Status</div>
+                  </a>
+                </td>
+                <td class="text-info "><a href="# " data-toggle="modal " data-target="#testerstatus{{i.id}} "
+                    style="text-decoration: none; ">
+                    <div class="badge badge-outline-info ">Tester Status</div>
+                  </a></td>
+                <td class="text-info "><a href="# " data-toggle="modal " data-target="#extensionstatus{{i.id}} "
+                    style="text-decoration: none; ">
+                    <div class="badge badge-outline-info ">Extension Status</div>
+                  </a></td>
+
+                <td class="text-info "><a href="{% url 'tl_project_splittask' %} " style="text-decoration: none; ">
+                    <div class="badge badge-outline-info ">Split Status</div>
+                  </a></td>
+                <td>
+                  <div class="progress " data-toggle="modal " data-target="#projectdetails{{i.id}} "
+                    style="border-radius:5px;height:20px;background-color:#C2F0EB ">
+                    <div class="progress-bar " style="height:20px; ">{{i.progress}}%</div>
+                </td>
+              </tr>
+
+              
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- pop up window for Project details -->
+<form action="# " method="post ">
+  
+  <div class="row modal fade " id="projectdetails{{i.id}} ">
+    <div class="modal-dialog modal-xl modal-dialog-centered " role="document ">
+      <div class="modal-content modal-xl " style="background-color: #191c24; ">
+        <div class="modal-header " style="border-bottom: 0 none; ">
+          <h5 class="modal-title text-info ">Sub Tasks</h5>
+          <button type="button " class="close text-light " data-dismiss="modal " aria-label=" "
+            style="background-color: #191c24;border:none;font-size: 20px; ">
+            <span aria-hidden="true ">&times;</span>
+          </button>
+        </div>
+        
+        <div class="card ">
+          <div class="card-body ">
+         
+              <div class="row ">
+                <div class="col-md-1 "></div>
+                <div class="col-md-2 mt-2 " style="color:#6C7293; ">Start date</div>
+                <div class="col-md-2 mt-2 ">
+                  <div class="ml-3 " style="color:white; ">16/03/2022</div>
+                </div>
+                <div class="col-md-2 "></div>
+                <div class="col-md-2 mt-2 " style="color:#6C7293; "> End date</div>
+                <div class="col-md-2 mt-2 " style="color:white; "> 16/03/2022</div>
+                <div class="col-md-1 "></div>
+              </div>
+  
+  
+              <div class="row mt-3 ">
+                <div class="col-md-1 "></div>
+                <div class="col-md-2 mt-2 " style="color:#6C7293; ">Assigned to</div>
+                <div class="col-md-2 mt-2 ">
+                  <div style="color:white; ">ammu</div>
+                </div>
+                <div class="col-md-2 "></div>
+                <div class="col-md-2 mt-2 " style="color:#6C7293; ">Progress</div>
+                <div class="col-md-2 mt-2 "> <span class="progress " data-toggle="modal " data-target=" "
+                    style="border-radius:5px;height:20px;background-color:#C2F0EB ">
+                    <span class="progress-bar " style="height:20px; ">{{i.progress}}%</span></div>
+                <div class="col-md-1 "></div>
+              </div>
+  
+              <div class="row mt-3 ">
+                <div class="col-md-1 "></div>
+                <div class="col-md-2 mt-2 " style="color:#6C7293; ">Status</div>
+                <div class="col-md-2 mt-2 ">
+                  <select class="drop form-control ml-3 mt-2 text-light " style="border:1px solid #6C7293 ; " name="prostatus " required>
+                    <option value=" "> </option>
+                    <option value="in progress " class="text-light mt-2 " style="color:#6C7293; ">in progress</option>
+                    <option value="completed " class="text-light mt-2 " style="color:#6C7293; ">completed</option>
+                  </select>
+                </div>
+                <div class="col-md-2 "></div>
+                <div class="col-md-2 mt-2 " style="color:#6C7293; ">Current status</div>
+                <div class="col-md-2 mt-2 " style="color:white; ">progress</div>
+                <div class="col-md-1 "></div>
+              </div>
+  
+              <div class="row mt-3 ">
+                <div class="col-md-1 "></div>
+                <div class="col-md-2 mt-1 mt-2 " style="color:#6C7293; ">Progress</div>
+                <div class="col-md-2 mt-1 mt-2 ">
+                  <input type="text " name="progress " class="form-control text-light " autocomplete="off " style="border:1px solid #6C7293 ; ">
+                </div>
+                <div class="col-md-2 "></div>
+                <div class="col-md-2 "></div>
+                <div class="col-md-2 mt-2 "> <button type="submit " id="alert2 " class="btn-primary Search ">Start
+                    work</button>
+                </div>
+                <div class="col-md-1 "></div>
+              </div>
+  
+          </div>
+  
+  
+        </div>
+  
+        <div class="container mt-1 " style="border-top:1px solid grey; ">
+          <div class="text-info pt-4 " style="font-size: 20px;font-weight: 600; ">Project description</div>
+          <div class="pt-3 " style="margin-left:20px;color: white; ">team leader</div>
+        </div>
+  
+        <div class="container mt-3 " style="border-top:1px solid grey;border-bottom:1px solid grey; ">
+          <div class="text-info pt-4 pb-2 " style="font-size: 20px;font-weight: 600; ">Attach files</div>
+          <a href="{{i.projectfiles.url}} " download class="text-info " style="text-decoration:none;margin-left:20px; ">Download</a>
+          <br>
+          <br>
+        </div>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+  </form>
+  
+  
+<!-- pop up window for tester status -->
+
+<div class="modal fade " id="testerstatus{{i.id}} ">
+  <div class="modal-dialog modal-xl modal-dialog-centered " role="document ">
+    <div class="modal-content modal-xl " style="background-color: #191c24; ">
+<div class="modal-header " style="border-bottom: 0 none; ">
+          <h5 class="modal-title text-info ">Tester status</h5>
+          <button type="button " class="close text-light " data-dismiss="modal " aria-label=" "
+            style="background-color: #191c24;border:none; float: right;font-size: 20px; ">
+            <span aria-hidden="true ">&times;</span>
+          </button>
+        </div>
+        <div class="table-responsive mt-3 mb-3 container ">
+          <table class="table table-bordered ">
+            <thead >
+              <tr>
+                <th scope="col " style="color:#6C7293; ">Date</th>
+                <th scope="col " style="color:#6C7293; ">ReportBy</th>
+                <th scope="col " style="color:#6C7293; ">Task</th>
+                <th scope="col " style="color:#6C7293; ">Sub Task</th>
+                <th scope="col " style="color:#6C7293; ">Work Done</th>
+                <th scope="col " style="color:#6C7293; ">Files</th>
+              </tr>
+            </thead>
+            <tbody>
+  
+              
+         
+            <tr>
+             
+              <td style="color:white; ">03/15/2022</td>
+              <td style="color:white; ">project</td>
+              <td style="color:white; ">dsdvvdvv
+              </td>
+              <td style="color:white; ">status
+              </td>
+              
+              <td style="color:white; ">nnnnn</td>
+              <td class="text-info "><a href="# " download style="text-decoration:none; ">
+                <div class="badge badge-outline-primary ">Download</div>
+              </a></td>
+          </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- pop up window for task status -->
+
+<form action="# " method="post " enctype="multipart/form-data ">
+  {% csrf_token %}
+  <div class="modal fade " id="taskstatus{{dp.id}} ">
+    <div class="modal-dialog modal-xl modal-dialog-centered " role="document ">
+      <div class="modal-content modal-xl " style="background-color: #191c24; ">
+        <div class="modal-header ">
+          <h5 class="modal-title text-info ">Daily Work Report</h5>
+          <button type="button " class="close text-light " data-dismiss="modal " aria-label=" "
+            style="font-size: 20px;;background-color: #191c24;border:none; ">
+            <span aria-hidden="true ">&times;</span>
+          </button>
+        </div>
+        <div class="table-responsive mt-3 mb-3 container ">
+
+          <table class="table table-bordered ">
+            <thead>
+              <tr>
+                <th scope="col " style="color:#6C7293; ">Date</th>
+                <th scope="col " style="color:#6C7293; ">Task</th>
+                <th scope="col " style="color:#6C7293; ">Sub Task</th>
+                <th scope="col " style="color:#6C7293; ">Work Done</th>
+                <th scope="col " style="color:#6C7293; ">Files</th>
+                <th scope="col " style="color:#6C7293; ">Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td style="color:white; ">09-03-2022</td>
+
+                <td style="color:white; ">new project new task1 as
+                </td>
+                <td style="color:white; ">new project new task1 subtask2 a
+                </td>
+                <td style="color:white; ">task1
+                </td>
+                <td style="color:white; "><div class="badge badge-outline-primary "><a style="text-decoration: none; " href="/media/images/face1_rAZoz46.jpg " download > Download</a></div>
+                </td>
+
+              </tr>
+              <tr>
+                <td style="color:white; ">14-03-2022</td>
+
+                <td style="color:white; ">new project new task1 as
+                </td>
+                <td style="color:white; ">new project new task1 subtask2 a
+                </td>
+
+                <td style="color:white; "><textarea name="workdone " class="form-control-sm bg-transparent text-light " cols="25 " rows="7 "
+                    ></textarea></td>
+                <td class="text-info "><input type="file " name="filed "></td>
+                <td class="text-info "><button type="submit " class="btn badge-outline-primary ">submit</button></td>
+
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
+
+<!-- pop up window for extension status -->
+
+
+
+
+
+<div class="modal fade " id="extensionstatus{{dp.id}} ">
+  <div class="modal-dialog bd-example-modal-xl modal-dialog-centered " role="document " tabindex="-1 " role="dialog "
+    aria-labelledby="myLargeModalLabel " aria-hidden="true ">
+    <div class="modal-content modal-xl " style="background-color: #191c24; ">
+      <div class="card ">
+        <div class="card-body ">
+          <button type="button " class="close text-light " data-dismiss="modal " aria-label=" "
+            style="background-color: #191c24;border:none;float: right;font-size: 20px; ">
+            <span aria-hidden="true ">&times;</span>
+          </button>
+          <div class="text-info " style="font-size: 20px;font-weight: 600; ">Extension Request</div>
+
+          <form action="# " method="post ">
+            <input type="hidden " name="csrfmiddlewaretoken " value=" ">
+
+            <div class="row mt-5 ">
+              <div class="col-md-4 ">
+                <div class=" mr-2 ml-3 mt-2 text-light " style="color:white; ">Requested Days</div>
+              </div>
+              <div class="col-md-8 ">
+                <input type="number " name="dayz " class="drop form-control ml-3 mt-2 text-light " required>
+              </div>
+            </div>
+            <div class="row pt-1 ">
+              <div class="col-md-4 ">
+                <div class="mr-2 ml-3 mt-2 text-light " style="color:white; ">Reason</div>
+              </div>
+              <div class="col-md-8 ">
+                <textarea class="form-control ml-3 mt-2 text-light " name="resn " rows="4 " cols="50 "  required></textarea>
+              </div>
+            </div>
+            <div class="row pt-1 ">
+              <div class="col-md-4 ">
+                <div class=" mr-2 ml-3 mt-2 " style="color:white; ">Previous Status</div>
+              </div>
+              
+              
+              <div class="col-md-8 ">
+                <div class="mr-2 ml-3 mt-2 " style="color:white; ">No extensions !!!</div>
+              </div>
+              
+       
+            </div>
+
+            <div class=" " style="float:right; ">
+              <button type="submit " class="btn btn-primary ">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("search ");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable ");
+    tr = table.getElementsByTagName("tr ");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td ")[1];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = " ";
+        } else {
+          tr[i].style.display = "none ";
+        }
+      }
+    }
+  }
+</script>
+{% endblock %}<style>
+  .Search {
+    margin-top: 4%;
+    float: left;
+    margin-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    line-height: 2;
+
+    width: 95px;
+  }
+</style>
+
+<div class="row pt-3 " style="background-color: black; ">
+  <div class=" " style="font-size: 20px;font-weight: 600;color:#6C7293; ">PROJECT TASKS</div>
+</div>
+<div class="row mt-4 ">
+  <div class="card ">
+    <div class="card-body ">
+      <input type="text " class="form-control " id="search " onkeyup="myFunction() " placeholder="search... ">
+      <div class="table-responsive ">
+        <table class="table " id="myTable ">
+          <thead">
+                        <tr>
+                            <th scope="col" style="color:#6C7293;">Task name</th>
+                            <th scope="col" style="color:#6C7293;">AssignedTo</th>
+                            <th scope="col" style="color:#6C7293;">Task Status</th>
+                            <th scope="col" style="color:#6C7293;">Test Status</th>
+                            <th scope="col" style="color:#6C7293;">Extension</th>
+                            <th scope="col" style="color:#6C7293;">Split Task</th>
+                            <th scope="col" style="color:#6C7293;">Project Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        <tr>
+                            <td style="color:white;">tl module</td>
+
+                            <td style="color:white">anu</td>
+
+                            <td class="text-info">
+                                <a href="" data-toggle="modal" data-target="#taskstatus{{i.id}}" style="text-decoration: none;">
+                                    <div class="badge badge-outline-info">Task Status</div>
+                                </a>
+                            </td>
+                            <td class="text-info">
+                                <a href="" data-toggle="modal" data-target="#testerstatus{{i.id}}" style="text-decoration: none;">
+                                    <div class="badge badge-outline-info">Tester Status</div>
+                                </a>
+                            </td>
+                            <td class="text-info">
+                                <a href="" data-toggle="modal" data-target="#extensionstatus{{i.id}}" style="text-decoration: none;">
+                                    <div class="badge badge-outline-info">Extension Status</div>
+                                </a>
+                            </td>
+                            <td class="text-info">
+                                <a href="#" style="text-decoration: none;">
+                                    <div class="badge badge-outline-info">Split Status</div>
+                                </a>
+                            </td>
+                            <td>
+                                <div class="progress" data-toggle="modal" data-target="#projectdetails{{i.id}}" style="border-radius:5px;height:20px;background-color:#C2F0EB">
+                                    <div class="progress-bar" style="height:20px;">{{i.progress}}%</div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- pop up window for Project details -->
+
+    <form action="#" method="post">
+        {% csrf_token %}
+        <div class="row modal" id="#projectdetails{{i.id}}">
+            <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                <div class="modal-content modal-xl" style="background-color: #191c24;">
+                    <div class="modal-header" style="border-bottom: 0 none;">
+                        <h5 class="modal-title text-info">Sub Tasks</h5>
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="" style="background-color: #191c24;border:none;font-size: 20px;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                    </div>
+                    <div class="card ">
+                        <div class="card-body">
+
+
+                            <div class="row ">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mt-2" style="color:#6C7293;">16/03/2022</div>
+                                <div class="col-md-2 mt-2">
+                                    <div class="ml-3" style="color:#6C7293;">17/03/2022</div>
+                                </div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-2 mt-2" style="color:#6C7293;"> End date</div>
+                                <div class="col-md-2 mt-2" style="color:#6C7293;"> 18/03/2022</div>
+                                <div class="col-md-1"></div>
+                            </div>
+
+
+
+                            <div class="row mt-3">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mt-2" style="color:#6C7293;">Assigned to</div>
+                                <div class="col-md-2 mt-2">
+                                    <div style="color:#6C7293;">{{i.user}}</div>
+                                </div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-2 mt-2" style="color:#6C7293;">Progress</div>
+                                <div class="col-md-2 mt-2"> <span class="progress" data-toggle="modal" data-target="" style="border-radius:5px;height:20px;background-color:#C2F0EB">
+                  <span class="progress-bar" style="height:20px;">{{i.progress}}%</span></div>
+                                <div class="col-md-1"></div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2 mt-2" style="color:#6C7293;">Status</div>
+                                <div class="col-md-2 mt-2">
+                                    <select class="drop form-control ml-3 mt-2 text-light name=" status " style="border:1px solid #6C7293 ; " required>
+                  <option value=" " selected="selected " class="text-light mt-2 ">Not selected</option>
+                  <option value="Inprogress " class="1 text-light mt-2 ">In progress</option>
+                  <option value="pending " class="2 text-light mt-2 ">pending</option>
+                  <option value="completed " class="3 text-light mt-2 ">completed</option>
+                </select>
+              </div>
+              <div class="col-md-2 "></div>
+              <div class="col-md-2 mt-2 " style="color:#6C7293; ">progress</div>
+              <div class="col-md-2 mt-2 " style="color:#6C7293; "> progress</div>
+              <div class="col-md-1 "></div>
+            </div>
+
+            <div class="row mt-3 ">
+              <div class="col-md-1 "></div>
+              <div class="col-md-2 mt-1 mt-2 " style="color:#6C7293; ">Progress</div>
+              <div class="col-md-2 mt-1 mt-2 ">
+                <input type="text " name="progress " class="form-control ">
+              </div>
+              <div class="col-md-2 "></div>
+              <div class="col-md-2 "></div>
+              <div class="col-md-2 mt-2 "> <button type="submit " id="alert2 " class="btn-primary Search ">Start
+                  work</button>
+              </div>
+              <div class="col-md-1 "></div>
+            </div>
+          </form>
+        </div>
+
+
+      </div>
+
+      <div class="container mt-1 " style="border-top:1px solid grey; ">
+        <div class="text-info pt-4 " style="font-size: 20px;font-weight: 600; ">Project description</div>
+        <div class="pt-3 " style="margin-left:20px;color:white; ">{{i.description}}</div>
+      </div>
+
+      <div class="container mt-3 " style="border-top:1px solid grey;border-bottom:1px solid grey; ">
+        <div class="text-info pt-4 pb-2 " style="font-size: 20px;font-weight: 600; ">Attach files</div>
+        <a href="{{i.projectfiles.url}} " download class="text-info " style="text-decoration:none;margin-left:20px; ">Download</a>
+      </div>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+</form>
+
+
+<!-- pop up window for tester status -->
+
+<div class="modal fade " id="#testerstatus{{i.id}} ">
+  <div class="modal-dialog modal-xl modal-dialog-centered " role="document ">
+    <div class="modal-content modal-xl " style="background-color: #191c24; ">
+      <div class="modal-header " style="border-bottom: 0 none; ">
+        <h5 class="modal-title text-info ">Test Report</h5>
+        <button type="button " class="close text-light " data-dismiss="modal " aria-label=" "
+          style="background-color: #191c24;border:none;font-size: 20px; ">
+          <span aria-hidden="true ">&times;</span>
+        </button>
+      </div>
+      <div class="table-responsive mt-3 mb-3 container ">
+        <table class="table table-bordered ">
+          <thead style="background-color: black; ">
+            <tr>
+              
+              <th scope="col " style="color:#6C7293; ">DATE</th>
+              <th scope="col " style="color:#6C7293; ">TASK</th>
+
+              <th scope="col " style="color:#6C7293; ">DESCRIPTION</th>
+              <th scope="col " style="color:#6C7293; ">STATUS</th>
+              <th scope="col " style="color:#6C7293; ">FILES</th>
+              <th scope="col " style="color:#6C7293; ">TEST BY</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+             
+              <td style="color:#6C7293; ">16/03/2022 </td>
+              <td style="color:#6C7293; ">sub task</td>
+              <td style="color:#6C7293; ">{{i.project.description}}
+              </td>
+              <td style="color:#6C7293; ">progrss
+              </td>
+              <td style="color:#6C7293; "><a href="{{i.files}} " download style="text-decoration:none; ">
+                  <div class="badge badge-outline-info ">Download</div>
+                </a></td>
+              <td class="text-info ">anu</td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- pop up window for task status -->
+
+<form action="# " method="post " enctype="multipart/form-data ">
+  {% csrf_token %}
+  <div class="modal fade " id="taskstatus{{dp.id}} ">
+    <div class="modal-dialog modal-xl modal-dialog-centered " role="document ">
+      <div class="modal-content modal-xl " style="background-color: #191c24; ">
+        <div class="modal-header ">
+          <h5 class="modal-title text-info ">Daily Work Report</h5>
+          <button type="button " class="close text-light " data-dismiss="modal " aria-label=" "
+            style="font-size: 20px;;background-color: #191c24;border:none; ">
+            <span aria-hidden="true ">&times;</span>
+          </button>
+        </div>
+        <div class="table-responsive mt-3 mb-3 container ">
+
+          <table class="table table-bordered ">
+            <thead style="background-color: black; ">
+              <tr>
+                <th scope="col " style="color:#6C7293; ">DATE</th>
+                <th scope="col " style="color:#6C7293; ">TASK</th>
+
+                <th scope="col " style="color:#6C7293; ">WORK DONE</th>
+                <th scope="col " style="color:#6C7293; ">FILES</th>
+                <th scope="col " style="color:#6C7293; ">ACTION</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              
+              <tr>
+                <td style="color:#6C7293; ">16/03/2022</td>
+
+                <td style="color:#6C7293; ">sub task</td>
+
+
+                <td style="color:#6C7293; ">work done
+                </td>
+                <td class="text-info "><button type="button " class="btn badge-outline-primary ">
+                  <a href="{{i.files.url}} " style="text-decoration: none; " download>Download</a></button></td>
+
+              </tr>
+
+           
+
+              <tr>
+                <td style="color:#6C7293; ">2.30pm 16/03/2022</td>
+
+                <td style="color:#6C7293; ">task
+                </td>
+
+
+                <td style="color:#6C7293; "><textarea type="text " name="workdone " class="form-control "
+                    style="height: 75px; "></textarea></td>
+                <td class="text-info "><input type="file " name="filed "></td>
+                <td class="text-info "><button type="submit " class="btn badge-outline-primary ">submit</button></td>
+
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
+
+
+<!-- pop up window for extension status -->
+
+
+
+
+
+<div class="modal fade " id="#extensionstatus{{i.id}} ">
+  <div class="modal-dialog bd-example-modal-xl modal-dialog-centered " role="document " tabindex="-1 " role="dialog "
+    aria-labelledby="myLargeModalLabel " aria-hidden="true ">
+    <div class="modal-content modal-xl " style="background-color: #191c24; ">
+      <div class="modal-header " style="border-bottom: 0 none; ">
+        <h5 class="modal-title text-info ">Extension Request</h5>
+        <button type="button " class="close text-light " data-dismiss="modal " aria-label=" "
+          style="background-color: #191c24;border:none;font-size: 20px; ">
+          <span aria-hidden="true ">&times;</span>
+        </button>
+      </div>
+      <div class="card ">
+        <div class="card-body ">
+          <form action="# " method="post " enctype="multipart/form-data ">
+            {% csrf_token %}
+
+            <div class="row ">
+              <div class="col-md-4 ">
+
+                <div class="mr-2 ml-3 mt-2 "style="color:#6C7293; ">Requested Days</div>
+              </div>
+              <div class="col-md-8 ">
+                <input type="number " name="days " class="drop form-control ml-3 mt-2 " required
+                  style="border:1px solid #6C7293 ; ">
+              </div>
+            </div>
+            <div class="row pt-1 ">
+              <div class="col-md-4 ">
+                <div class=" mr-2 ml-3 mt-2 " style="color:#6C7293; ">Reason</div>
+              </div>
+              <div class="col-md-8 ">
+                <textarea name="reason " class="form-control ml-3 mt-2 "
+                  style="height:70px;border:1px solid #6C7293 ; ">nnnnnnn</textarea>
+              </div>
+            </div>
+            <div class="row pt-1 ">
+              <div class="col-md-4 ">
+                <div class="mr-2 ml-3 mt-2 " style="color:#6C7293; ">Previous Status</div>
+              </div>
+              <div class="col-md-8 ">
+
+              
+                <div class="mt-2 " style="color:#6C7293; ">{{dp.extension_status}} on {{dp.extension_date|date:"d-m-Y "}} for
+                  {{dp.extension}} days</div>
+            
+                <div class="mt-2 " style="color:#6C7293; ">Not extended ....yet !!!</div>
+         
+
+
+              </div>
+            </div>
+            <div class=" " style="float:right;margin-top:20px; ">
+              <button type="submit " id="alert2 " class="Search btn-primary ">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("search ");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable ");
+    tr = table.getElementsByTagName("tr ");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td ")[1];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = " ";
+        } else {
+          tr[i].style.display = "none ";
+        }
+      }
+    }
+  }
+</script>

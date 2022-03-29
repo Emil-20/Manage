@@ -1,0 +1,151 @@
+{%extends 'software_training/software/tl/tlDashboard.html'%} {%load static%} {%block content%}
+
+
+<style>
+    * {
+        color: #6C7293;
+    }
+</style>
+<h2>Requested Leave</h2>
+
+
+<style>
+    .card {
+        margin-top: 1%;
+    }
+    
+    #qwe {
+        font-size: 19px;
+        font-weight: 500;
+    }
+    
+    .card .card-body {
+        flex: 1 1 auto;
+        padding: 0.5rem 0.2rem;
+    }
+    
+    .table1 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5vh;
+    }
+    
+    th,
+    td {
+        text-align: center;
+    }
+    
+     ::-webkit-scrollbar {
+        width: 10px;
+        height: 5px;
+    }
+    /* Track */
+    
+     ::-webkit-scrollbar-track {
+        background: #191c24;
+    }
+    /* Handle */
+    
+     ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    /* Handle on hover */
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+    
+    .card-title {
+        font-size: 20px;
+        font-weight: 900px;
+    }
+</style>
+
+<div class="row" style="padding-top: 20px;">
+
+    <div class="col-2 col-sm-1 col-md-1 col-lg-1"></div>
+    <div class="col-12 col-sm-10 col-md-10 col-lg-10 grid-margin ">
+        <div class="card">
+            <div class="card-body" style="height:auto">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <h3 class="page-title ">Applied Leave</h3>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12"><br></div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <form>
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" class="form-control text-light" id="myInput" onkeyup="myFunction()" placeholder="Search" />
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+
+
+                            <th> S.No </th>
+                            <th> From </th>
+                            <th> To</th>
+                            <th>Leave Type</th>
+                            <th>Reason</th>
+                            <th> Status </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td style="color: white;">1</td>
+                                <td style="color: white;"> 15/03/2022 </td>
+                                <td style="color: white;">16/03/2022</td>
+                                <td style="color: white;">submitted</td>
+                                <td style="color: white;">personal</td>
+                                <td>
+
+                                    <div class="badge badge-outline-warning">submitted</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color: white;">2</td>
+                                <td style="color: white;"> 16/03/2022 </td>
+                                <td style="color: white;">18/03/2022</td>
+                                <td style="color: white;">Approved</td>
+                                <td style="color: white;">personal</td>
+                                <td>
+                                    <div class="badge badge-outline-success">Approved</div>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
+{% endblock %}

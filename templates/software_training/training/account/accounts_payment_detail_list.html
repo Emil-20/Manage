@@ -1,0 +1,82 @@
+{% extends 'software_training/training/account/base_accounts.html' %} {% load static %} {% block content %}
+
+<body>
+    <style>
+        table tr[data-href] {
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="row ">
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <h4> Payment Details</h4>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table " id="myTable">
+                            <thead>
+                                <tr>
+                                    <th style="padding-left:38px;"> Date </th>
+                                    <th style="padding-left:15px;"> Name </th>
+                                    <th style="padding-left:12px;"> Amount </th>
+                                    <th style="padding-left:28px;">Download </th>
+                                    <th style="padding-left:15px;"> Status </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>12/03/2000</td>
+                                    <td> John</td>
+                                    <td>30000</td>
+                                    <td>
+                                        <a href="{{i.amount_downlod.url}}" class="btn btn-outline-primary mr-2 ml-6  " style="font-size: 15px; font-weight: 100;" download>  Download</a>
+                                    </td>
+                                    <td>
+                                        Verified
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row mt-5 mb-3">
+                            <div class="col-12 col-sm-9 col-md-9 col-lg-9 ">
+                                <label class="">Balance : 12000</label>
+                            </div>
+                            <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+                                <label class="">Total : 30000</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+{% endblock %}

@@ -1,0 +1,111 @@
+{%extends 'software_training\software/manager\base_manager.html' %} {% load static %} {% block content %}
+<style>
+    #choose::file-selector-button {
+        background-color: rgb(37, 125, 207);
+        padding: 12px;
+        color: white;
+        width: 100px;
+    }
+</style>
+<!-- Give task for trainees -->
+<div class="row mt-5">
+    <div class="col-12 col-sm-1 col-md-2 col-lg-2"></div>
+    <div class="col-12 col-sm-10 col-md-9 col-lg-9 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mt-3" style="text-align:center">Give Project</h4>
+                <form class="forms-sample" method="post" enctype="multipart/form-data" autocomplete="OFF">
+                    {% csrf_token %}
+                    <div class="row mt-5">
+                        <div class="col-md-12">
+                            <div class="row"></div>
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-3 col-md-3 col-lg-3 col-form-label mt-1">Select Department</label>
+                                <div class="col-12 col-sm-8 col-md-8 col-lg-8 ">
+                                    <select class="form-control" id="regdetailsdept" style="color:white;" name="Department" required>
+                                        <option selected="true" disabled="disabled" value="">Select an option</option>
+                                        <option value="">Python</option>
+                                        <option value="">Java</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-3 col-md-3 col-lg-3 col-form-label mt-1">Select Designation</label>
+                                <div class="col-12 col-sm-8 col-md-8 col-lg-8 ">
+                                    <select class="form-control" id="regdetailsdept" style="color:white;" name="Department" required>
+                                        <option selected="true" disabled="disabled" value="">Select an option</option>
+                                        <option value="">Project manager</option>
+                                        <option value="">Developer</option>
+                                    </select>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+          
+                        <div class="form-group row">
+                            <label class="col-12 col-sm-3 col-md-3 col-lg-3 col-form-label mt-1">Select Project</label>
+                            <div class="col-12 col-sm-8 col-md-8 col-lg-8 ">
+                                <select class="form-control" id="regdetailsdept" style="color:white;" name="Department" required>
+                                    <option selected="true" disabled="disabled" value="">Select an option</option>
+                                <option value="">Frontend</option>
+                                <option value="">Infoxcore</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputEmail2"  class="col-12 col-sm-3 col-md-3 col-lg-3 col-form-label"> Task</label>
+                            <div class="col-12 col-sm-8 col-md-8 col-lg-8">
+                                <input type="text" name="projectname" class="form-control text-light" id="exampleInputUsername1" placeholder="" >
+                            </div>
+                        </div>
+                            <div class="form-group row">
+                                <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+                                    <label for="exampleInputEmail2" class=" col-form-label">Start Date</label>
+                                </div>
+
+                                <div class="col-12 col-sm-8 col-md-8 col-lg-8">
+                                    <input type="Date" class="form-control text-light" name="start" id="from">
+                                </div>
+
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+                                    <label for="exampleInputMobile" class=" col-form-label">End Date</label>
+                                </div>
+
+                                <div class="col-12 col-sm-8 col-md-8 col-lg-8">
+                                    <input type="Date" class="form-control text-light" name="end" id="to">
+                                </div>
+
+                            </div>
+
+                            
+                
+          <div class="row">
+            <center>
+              <button
+                type="submit" class="btn btn-primary btn-icon-text mt-3 " style="width: 120px;">
+                Assign
+              </button>
+            </center>
+          </div>
+       
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ends here -->
+<script language="javascript">
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0');
+  var yyyy = today.getFullYear();
+
+  today = yyyy + '-' + mm + '-' + dd;
+  $('#from').attr('min',today);
+  $('#to').attr('min',today);
+</script>
+
+{%endblock%}

@@ -1,0 +1,99 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/service.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                  Make it easy for customers to <br>connect with you
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Provide great service experiences and enable fast <br>resolutions across channels.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               What is Facilezone Service Cloud?
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Facilezone Service Cloud is a comprehensive customer <br>service solution that supports great
+                omnichannel customer<br> experiences and contact centre efficiency.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Self Service
+                    </h4>
+                    <ul>
+                        <li>
+                            Reduces support agents
+                        </li>
+                        <li>
+                            Maximum convenience and easy issue resolution
+                        </li>
+                        <li>
+                            Faster access to customers
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Easy Customisation
+                    </h4>
+                    <ul>
+                        <li>
+                             Ability for each user to easily customise application
+                        </li>
+                        <li>
+                            Lesser cost
+                        </li>
+                        <li>
+                            Easy to monitor
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Prioritize customer requests
+                    </h4>
+                    <ul>
+                        <li>
+                            Prioritizing prime customers
+                        </li>
+                        <li>
+                            Reduce customer queue
+                        </li>
+                        <li>
+                            Provides increased attention to customers
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

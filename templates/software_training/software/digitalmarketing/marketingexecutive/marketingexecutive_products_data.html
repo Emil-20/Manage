@@ -1,0 +1,178 @@
+{%extends 'software_training/software/digitalmarketing/marketingexecutive/base_marketingexecutive.html'%} {%load static%} {%block content%}
+ 
+<div class="row" style="padding-top: 20px;">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h3>Product Data</h3>
+                    </div>
+                    <br><br>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <form>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type="text" class="form-control text-light" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="color:white;">
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table " id="myTables">
+                        <thead>
+
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                
+                                <td>ajay</td>
+                                <td>ajay@gmail.com</td>
+                                <td>9988776655</td>
+                                <td>wayanad</td>
+
+                                <td>
+
+                                    <div class="badge badge-outline-warning" style="width: 125px;">
+                                        <i class="mdi mdi-playlist-remove"></i>&nbsp; Not Contacted
+                                    </div>
+
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>ram</td>
+                                <td>ram@gmail.com</td>
+                                <td>9988776655</td>
+                                <td>palakkad</td>
+
+                                <td>
+
+                                    <div class="badge badge-outline-info" style="width: 125px;">
+                                        <i class="mdi mdi-playlist-remove"></i>&nbsp; Not Intrested
+                                    </div>
+
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>jay</td>
+                                <td>jay@gmail.com</td>
+                                <td>9988776655</td>
+                                <td>wayanad</td>
+
+                                <td>
+
+                                    <div class="badge badge-outline-success" style="width: 125px;">
+                                        <i class="mdi mdi-playlist-remove"></i>&nbsp; Intrested
+                                    </div>
+
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>nikhil</td>
+                                <td>nikhil@gmail.com</td>
+                                <td>9988776655</td>
+                                <td>kannur</td>
+
+                                <td>
+
+                                    <div class="badge badge-outline-warning" style="width: 125px;">
+                                        <i class="mdi mdi-playlist-remove"></i>&nbsp; Not Contacted
+                                    </div>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>ajay</td>
+                                <td>ajay@gmail.com</td>
+                                <td>9988776655</td>
+                                <td>wayanad</td>
+
+                                <td>
+
+                                    <div class="badge badge-outline-info" style="width: 125px;">
+                                        <i class="mdi mdi-playlist-remove"></i>&nbsp; Not Intrested
+                                    </div>
+
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>ajay</td>
+                                <td>ajay@gmail.com</td>
+                                <td>9988776655</td>
+                                <td>wayanad</td>
+
+                                <td>
+
+                                    <div class="badge badge-outline-success" style="width: 125px;">
+                                        <i class="mdi mdi-playlist-remove"></i>&nbsp; Intrested
+                                    </div>
+
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>nikhil</td>
+                                <td>nikhil@gmail.com</td>
+                                <td>9988776655</td>
+                                <td>kannur</td>
+
+                                <td>
+
+                                    <div class="badge badge-outline-info" style="width: 125px;">
+                                        <i class="mdi mdi-playlist-remove"></i>&nbsp; Not Intrested
+                                    </div>
+
+
+                                </td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTables");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+ 
+{% endblock %}

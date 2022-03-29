@@ -1,0 +1,91 @@
+{% extends 'software_training/software/admin/Base_admin.html' %} {% load static %} {% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Team Leaders</h3>
+                    <div class="form-group">
+                        <!-- <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="color:white;"> -->
+                        <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="color:white;">
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table" id="myTable">
+                            <thead>
+                                <tr>
+
+                                    <th> Name </th>
+                                    <th> Employee ID </th>
+                                    <th> Mail </th>
+                                    <th> Contact </th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- {% for proj_det in user_det %}
+
+                                    <tr>
+
+                                        <td> {{proj_det.fullname}}</td>
+                                        <td> {{proj_det.employee_id}} </td>
+                                        <td> {{proj_det.email}}</td>
+                                        <td> {{proj_det.mobile}} </td>
+                                    </tr>
+
+
+                                    {% endfor %} -->
+
+                                <tr>
+                                    <td> Messsy Adam </td>
+                                    <td> 12345 </td>
+                                    <td> messyadam@gmail.com </td>
+                                    <td> 9072563276 </td>
+                                </tr>
+                                <tr>
+                                    <td> John Richards </td>
+                                    <td> 12345 </td>
+                                    <td> johnrichards@gmail.com </td>
+                                    <td> 9072563276 </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- <script>
+    $(document).ready(function() {
+        $('table tr').click(function() {
+            window.location = $(this).data('href');
+            return false;
+        });
+    });
+</script> -->
+
+{% endblock%}

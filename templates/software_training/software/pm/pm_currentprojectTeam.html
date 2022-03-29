@@ -1,0 +1,92 @@
+{% extends 'software_training/software/pm/base_pm.html'%} {% load static %} {% block content %}
+
+<style>   
+    td,
+    th {
+        text-align: center;
+    }
+    table tr[data-href] {
+        cursor: pointer;
+    }
+</style>
+
+
+<div class="row">
+    
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Project Team</h4>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <form>
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" class="form-control text-white" id="myInput" onkeyup="myFunction()" placeholder="Search . . ." style="border: green" />
+                        </div>
+                    </form>
+                </div>
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr data-href="#">
+                                <th class="text-white" style="padding-left:20px;">SNo</th>
+                                <th class="text-white"> Name </th>
+                                <th class="text-white"> Employee ID </th>
+                                <th class="text-white"> Mail </th>
+                                <th class="text-white"> Contact </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-href="/softwareapp/pm_currentprojectTeamList/">
+                                <td>1</td>
+                                <td>anandhu</td>
+                                <td>6789</td>
+                                <td>anandhu@gmail.com</td>
+                                <td>0000000000</td>
+                            </tr>
+                            <tr data-href="/softwareapp/pm_currentprojectTeamList/">
+                                <td>2</td>
+                                <td>anandhuss</td>
+                                <td>6789</td>
+                                <td>anandhusss@gmail.com</td>
+                                <td>55555555</td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+
+    <script>
+        function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+
+</script>
+<script>
+        $(document).ready(function () {
+        $('table tr').click(function () {
+            window.location = $(this).data('href');
+            return false;
+        });
+    });
+    </script>
+    {% endblock %}

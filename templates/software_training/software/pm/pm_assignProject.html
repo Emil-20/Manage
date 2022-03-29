@@ -1,0 +1,138 @@
+{% extends 'software_training/software/pm/base_pm.html'%} {% load static %} {% block content %}
+<style>
+    .dropdown-item:hover {
+        color: #f4f4f8;
+    }
+
+    #choose::file-selector-button {
+          background-color: rgb(37, 125, 207);
+          padding: 12px;
+          color: white;
+          width: 100px;
+    }
+</style>
+
+<div class="row mt-4">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+   <form action="/softwareapp/pm_assignProject/" method="post" autocomplete="off" enctype="multipart/form-data">
+    {%csrf_token%}
+    
+        <div class="card" style="height: auto">
+            <div class="card-body">
+          
+          
+          <div>
+              <center><h3>Assign Project</h3></center>
+          </div><br>
+          <div class="form-group row">
+            <label class="col-12 col-sm-4 col-md-4 col-lg-4 ml-3 " for="exampleInputUsername2" class="col-sm-3 col-form-label">Select Team Leader :</label>
+            <div class="col-sm-6">
+                <select class="form-control text-light" name="yyy" id="" style='color:white 'required>
+                    <option class="text-center" value="">
+                        --select--
+                    </option>
+       
+                    <option >Leader 1</option>
+                    <option >Leader 2</option>
+                    <option >Leader 3</option>
+                    <option >Leader 4</option>
+                    <option >Leader 5</option>
+      
+        
+                </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-12 col-sm-4 col-md-4 col-lg-4 ml-3 " for="exampleInputUsername2" class="col-sm-3 col-form-label">Project</label>
+            <div class="col-sm-6">
+                <select class="form-control text-light" name="yyy" id="" style='color:white 'required>
+                    <option class="text-center" value="">
+                        --select--
+                    </option>
+       
+                    <option >Project 1</option>
+                    <option >Project 2</option>
+                    <option >Project 3</option>
+                    <option >Project 4</option>
+                    <option >Project 5</option>
+      
+        
+                </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-12 col-sm-4 col-md-4 col-lg-4 ml-3 " for="exampleInputUsername2" class="col-sm-3 col-form-label"required >Task:</label
+            >
+            <div class="col-sm-6">
+              <input type="text"class="form-control text-light "id="exampleInputUsername2" name="email"required/>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-12 col-sm-4 col-md-4 col-lg-4 ml-3 " for="exampleInputUsername2" class="col-sm-3 col-form-label"required >Description :</label
+            >
+            <div class="col-sm-6">
+                <textarea
+                class="form-control text-light"
+                rows="10"
+                id=""
+                style="height: 140px" name="description"
+                Required
+              ></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-12 col-sm-4 col-md-4 col-lg-4 ml-3 " for="exampleInputUsername2" class="col-sm-3 col-form-label"required >Start Date :</label
+            >
+            <div class="col-sm-6">
+              <input type="date"class="form-control text-light " name="start" id="start" required/>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label class="col-12 col-sm-4 col-md-4 col-lg-4 ml-3 " for="exampleInputUsername2" class="col-sm-3 col-form-label"required >End Date :</label
+            >
+            <div class="col-sm-6">
+              <input type="date"class="form-control text-light " name="end" id="end" required/>
+            </div>
+          </div>
+          
+          <div class="form-group row">
+            <label for="exampleInputConfirmPassword2" class="col-12 col-sm-4 col-md-4 col-lg-4 ml-3 col-form-label">File Upload</label>
+            <div class="col-sm-6 ">
+              <input type="file" name="img" class="form-control text-light" id="choose" accept="image/*"/ required>
+            </div>
+          </div>
+
+
+
+          <br />
+          <div class="row">
+            
+              
+              <center><button type="Submit" class="btn btn-outline-primary btn-icon-text ">
+                <i class="mdi mdi-file-check btn-icon-prepend"></i>
+                Assign
+              </button></center>
+            
+          </div>
+        </div>
+      
+    </div>
+   
+   </form> 
+  </div>
+
+  <script>
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+  
+    today = yyyy + '-' + mm + '-' + dd;
+    $('#start').attr('min',today);
+    $('#end').attr('min',today);
+    </script>
+
+
+{%endblock%}

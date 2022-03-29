@@ -1,0 +1,130 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/accounting.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        color: white;
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                    Accounting, Financial Clause <br>and Tax Management
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Streamline reconciliation and consolidation<br> processes and enable compliant reporting.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+                Streamline reconciliation and consolidation processes and enable compliant reporting
+            </p>
+            <p style="color: black;font-size: 20px;">
+
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3">
+                    <h4>
+                        Richly detailed financial reports
+                    </h4>
+                    <ul>
+                        <li>
+                            Offers basic financial reports like income statements, balance sheets Etc.
+                        </li>
+                        <li>
+                            ERP offers many more varied types of reports
+                        </li>
+                        <li>
+                            Offers cash flow projections based on inventory management
+                        </li>
+                        <li>
+                            Automated, group-wide processes
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3">
+                    <h4>
+                        Automation
+                    </h4>
+                    <ul>
+                        <li>
+                            Easier to concentrate on improving the core business operation
+                        </li>
+                        <li>
+                            Simplifies the activities related to accounts payable and accounts receivable
+                        </li>
+                        <li>
+                            Collect and keep track of financial data from various department
+                        </li>
+                        <li>
+                            Removes cash flow issues, and improves cash management.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Fixed Asset Management
+                    </h4>
+                    <ul>
+                        <li>
+                            Tracks and manages all of your company’s tangible assets.
+                        </li>
+                        <li>
+                            Gives your organization better visibility in terms of utilization, costs and maintenance.
+                        </li>
+                        <li>
+                            Prevent you from paying taxes on items you have eliminated or replaced
+                        </li>
+                        <li>
+                            It will take into account depreciation calculations, compliance requirements and tax implications.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Reporting
+                    </h4>
+                    <ul>
+                        <li>
+                            Provide real-time access to financial data
+                        </li>
+                        <li>
+                            Predictions and decisions concerning your company’s finances
+                        </li>
+                        <li>
+                            Display your sales, expected sales, expenses and many other financial components.
+                        </li>
+                        <li>
+                            Data-driven predictions and decisions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

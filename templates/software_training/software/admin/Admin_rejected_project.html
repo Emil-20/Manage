@@ -1,0 +1,86 @@
+{% extends 'software_training/software/admin/Base_admin.html' %} {% block content %} {% load static %}
+
+<div class="row ">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Rejected projects</h4>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="color:white;">
+                </div>
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr class="header">
+
+                                <th> Name </th>
+                                <th> Start Date </th>
+                                <th> End Date </th>
+                                <th style="padding-left:30px;"> Status </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            <tr>
+                                <td>Infox project 12</td>
+                                <td> 05-03-2022</td>
+                                <td>09-03-2022</td>
+                                <td>
+                                    <div class="badge badge-outline-danger">Rejected</div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Backend project </td>
+                                <td> 05-03-2022</td>
+                                <td>09-03-2022</td>
+                                <td>
+                                    <div class="badge badge-outline-danger">Rejected</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>forntend project 12</td>
+                                <td> 05-03-2022</td>
+                                <td>09-03-2022</td>
+                                <td>
+                                    <div class="badge badge-outline-danger">Rejected</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>project 12</td>
+                                <td> 05-03-2022</td>
+                                <td>09-03-2022</td>
+                                <td>
+                                    <div class="badge badge-outline-danger">Rejected</div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+{% endblock %}

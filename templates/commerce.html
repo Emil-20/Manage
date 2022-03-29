@@ -1,0 +1,108 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/commerce.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        color: white;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                  Digital Commerce
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Enable commerce everywhere to deliver <br>the perfect-fit e-commerce solution <br>for your business.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Turn each customer engagement into a personal, shopping moment
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Whether you're selling business-to-business (B2B), direct-to-consumer (D2C),
+                business-to-consumer (B2C), or business-to-business-to-consumer (B2B2C), Facilezone Commerce
+                solutions offer the e-commerce platform and point-of-sale features to start, run, and grow your business.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3  ">
+                    <h4>
+                        Manage products
+                    </h4>
+                    <ul>
+                        <li>
+                            Updating available quantities automatically
+                        </li>
+                        <li>
+                            Ability to get a deep view of how products
+                        </li>
+                        <li>
+                            Forecasting your inventory
+                        </li>
+                        <li>
+                            Manage size,colour etc of products
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Built-in order management
+                    </h4>
+                    <ul>
+                        <li>
+                            Faster processing
+                        </li>
+                        <li>
+                            Client tracking of products
+                        </li>
+                        <li>
+                            Delivery management for customer
+                        </li>
+                        <li>
+                            Efficient order processing facilities
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                       Handles the details
+                    </h4>
+                    <ul>
+                        <li>
+                            Notifying customers of the order's status
+                        </li>
+                        <li>
+                            Calculate taxes
+                        </li>
+                        <li>
+                            handle all aspects of running
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

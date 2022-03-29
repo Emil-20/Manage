@@ -1,0 +1,231 @@
+{%extends 'software_training/software/tl/tlDashboard.html'%} {%load static%} {%block content%}
+
+<style>
+    * {
+        color: #6C7293;
+    }
+    
+    #head {
+        color: #6c7293;
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: auto;
+        padding: 0.2% 1% 1.5% 1%;
+        width: 79%;
+    }
+    
+    .card {
+        margin-top: 1%;
+    }
+    
+    #qwe {
+        font-size: 19px;
+        font-weight: 500;
+    }
+    
+    .card .card-body {
+        flex: 1 1 auto;
+        padding: 0.5rem 0.2rem;
+    }
+    
+    * {
+        color: #6C7293;
+    }
+    
+    .table1 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1vh;
+    }
+    
+    th,
+    td {
+        text-align: center;
+    }
+    
+     ::-webkit-scrollbar {
+        width: 10px;
+        height: 5px;
+    }
+    /* Track */
+    
+     ::-webkit-scrollbar-track {
+        background: #191c24;
+    }
+    /* Handle */
+    
+     ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    /* Handle on hover */
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+    
+    .card-title {
+        font-size: 20px;
+        font-weight: 900px;
+    }
+</style>
+
+<div><label id="head">TL Reported Issues</label></div>
+
+
+<div class="row">
+    <div class="col-12 grid-margin table1">
+        <div class="card p-3">
+            <div class="card-body">
+                <label style="font-size: 18px; font-weight: 400;color: #6C7293 !important;">Issues</label><br><br>
+                <input type="text" class="form-control text-light" id="myInput" onkeyup="myFunction()" name="search" autocomplete="off" placeholder="Search by Name">
+                <br>
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th> S.No </th>
+                                <th> Name </th>
+                                <th> Designation</th>
+                                <th> Date </th>
+                                <th>Issue</th>
+                                <th> Action</th>
+
+
+                            </tr>
+                        </thead>
+
+
+
+                        <tbody>
+
+
+
+                            <tr>
+                                <td style="color:white ;"> 1</td>
+
+                                <td style="color:white ;">anandhu</td>
+                                <td style="color:white ;"> programer </td>
+
+                                <td style="color:white ;">15/03/2022</td>
+                                <td style="color:white ;">error</td>
+
+                                <td>
+                                    <a href="" data-toggle="modal" data-target="#exampleModalCenter224" style="text-decoration: none;">
+                                        <div class="btn btn-outline-warning">
+                                            <i class=" text-warning mdi mdi-send btn-icon-prepend"></i>Reply
+                                        </div>
+                                </td>
+
+
+                            </tr>
+
+
+                            <tr>
+                                <td style="color:white ;"> 2</td>
+
+                                <td style="color:white ;">arjun</td>
+                                <td style="color:white ;"> programer </td>
+
+                                <td style="color:white ;">14/03/2022</td>
+                                <td style="color:white ;">error</td>
+
+                                <td>
+
+
+
+
+                                    <a href="#">
+                                        <div class="badge badge-outline-success" style="width: 105px;">
+                                            <i class="text-success mdi mdi-playlist-check"></i>&nbsp;Verified
+                                        </div>
+                                    </a>
+
+                                </td>
+                            </tr>
+
+
+
+                        </tbody>
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+
+<div class="rowmt-5 modal fade" id="exampleModalCenter224">
+    <div class="modal-dialog bd-example-modal-xl modal-dialog-centered" role="document" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-content modal-xl" style="background-color: #191c24;">
+            <div class="card ">
+                <div class="card-body">
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="" style="background-color: #191c24;border:none;float: right;font-size: 20px;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                    <div class="text-info" style="font-size: 20px;font-weight: 600;">Replay</div>
+
+                    <form action="#" method="post">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="">
+
+
+                        <div class="row pt-1">
+                            <div class="col-md-4">
+                                <div class="mr-2 ml-3 mt-2 text-light" style="color:white;">Reason</div>
+                            </div>
+                            <div class="col-md-8 ">
+                                <textarea class="form-control ml-3 mt-2 text-light" name="resn" rows="4" cols="50"></textarea>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="" style="float:right;">
+                            <button type="submit" class="btn btn-primary ">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    //js for submit button in new_team.html page
+    function redirect() {
+        window.location.href = "projectmanager_tlreported";
+    }
+
+    function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+<!-- modal js -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- endmodal -->
+
+{% endblock %}

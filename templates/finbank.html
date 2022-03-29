@@ -1,0 +1,126 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/finbank.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                 Banking
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Reach more customers and achieve new levels of<br> trust with a real-time intelligent
+                    enterprise <br>and integrated financial insight and risk<br> control using Facilezone solutions for<br> banking.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               In the experience economy, banks need to exceed expectations
+            </p>
+            <p style="color: black;font-size: 20px;">
+                With the Intelligent Enterprise framework, SAP provides integrated applications,
+                intelligent technologies, and a digital platform to enable banks to better serve
+                current customers and reach the under-banked to support financial inclusion.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Personal Finance Planning
+                    </h4>
+                    <ul>
+                        <li>
+                           Analyze investments
+                        </li>
+                        <li>
+                            Budgeting
+                        </li>
+                        <li>
+                            Forecasting
+                        </li>
+                        <li>
+                            Tax-preparation
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Mobile banking options
+                    </h4>
+                    <ul>
+                        <li>
+                            Remote Transactions
+                        </li>
+                        <li>
+                            24 hour basis
+                        </li>
+                        <li>
+                            Updated Services
+                        </li>
+                        <li>
+                            Quick deployment
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Unified Payment System(UPI)
+                    </h4>
+                    <ul>
+                        <li>
+                            Transfer money from one account to another with much ease.
+                        </li>
+                        <li>
+                            Digital transactions
+                        </li>
+                        <li>
+                            Real-time analytics to help improve efficiency
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class=" col-lg-3  ">
+                    <h4>
+                        Digital Banking Self-Services
+                    </h4>
+                    <ul>
+                        <li>
+                           Offer a better customer experience with a robust set of self-service banking features via a single, open platform for all channels.
+                        </li>
+                        <li>
+                            Manage your customers' experience across the entire engagement cycl
+                        </li>
+                        <li>
+                           Deliver an omnichannel customer service experience to exceed customers’ expectations.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

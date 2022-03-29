@@ -1,0 +1,266 @@
+{%extends 'software_training/training/trainer/base_trainer.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+  <div class="col-12 col-sm-12 col-md-12 col-lg-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <div class="row" style="margin-top: -16px">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt-3">
+            <h4>Trainees Task List</h4><br>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="form-group">
+              <input type="text" class="form-control" id="myInput" onkeyup="myFunction()"
+                placeholder="Search for names.." title="Type in a name" style="color:white;">
+            </div>
+
+          </div>
+        </div>
+        <!-- given task starts here -->
+        <div class="table-responsive">
+          <table class="table" id="myTable">
+            <thead>
+              <tr data-href="#">
+                <th> Trainee Name </th>
+                <th> Task</th>
+                <th> Attached File</th>
+                <th></th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="{% static 'softwareapp//assets/images/faces/face16.jpg' %}" alt="image" />
+                  &nbsp;Henry Klein</td>
+                <td> Calculator Using Javascript</td>
+                <td><a href="" class="btn btn-outline-primary"><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td class="text-danger">Not Submitted</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face1.jpg' %}" alt="image" />
+                  &nbsp;Estella Bryan</td>
+                <td> Kerala Tourism</td>
+                <td><a href="{% static 'softwareapp/assets/images/faces/face1.jpg' %}" class="btn btn-outline-primary" download><i
+                      class="mdi mdi-format-vertical-align-bottom" style="font-size: 15px;"></i>Download</a> </td>
+                <td><a class="btn text-success" data-toggle="modal" data-target="#myModal"
+                    style="background-color: #191c24;text-decoration: none;color:#6C7293;margin-left:-15px">
+                    Submitted</a></td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face3.jpg' %}" alt="image" />
+                  &nbsp;Lucy Abbott</td>
+                <td>Shopping Website </td>
+                <td><a href="" class="btn btn-outline-primary"><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td><a class="btn text-success" data-toggle="modal" data-target="#myModal"
+                    style="background-color: #191c24;text-decoration: none;color:#6C7293;margin-left:-15px">
+                    Submitted</a></td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face5.jpg' %}" alt="image" />
+                  &nbsp;Peter Gill</td>
+                <td> Tkinter Calculator </td>
+                <td><a href="" class="btn btn-outline-primary"><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td class="text-danger"> Not Submitted</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face15.jpg' %}" alt="image" />
+                  &nbsp;Sallie Reyes</td>
+                <td> SeachBar fitering</td>
+                <td><a href="" class="btn btn-outline-primary"><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td><a class="btn text-success" data-toggle="modal" data-target="#myModal"
+                    style="background-color: #191c24;text-decoration: none;color:#6C7293;margin-left:-15px">
+                    Submitted</a></td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face10.jpg' %}" alt="image" />
+                  &nbsp;Saloy Reyes</td>
+                <td>Simple Website using Html</td>
+                <td><a href="" class="btn btn-outline-primary"><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td class="text-danger"> Not Submitted</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face9.jpg' %}" alt="image" />
+                  &nbsp;Reyes John</td>
+                <td>Django Project</td>
+                <td><a href="" class="btn btn-outline-primary"><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td><a class="btn text-success" data-toggle="modal" data-target="#myModal"
+                    style="background-color: #191c24;text-decoration: none;color:#6C7293;margin-left:-15px">
+                    Submitted</a></td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face16.jpg' %}" alt="image" />
+                  &nbsp;Henry Klein</td>
+                <td> Calculator Using Javascript</td>
+                <td><a href="" class="btn btn-outline-primary" download><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td class="text-danger">Not Submitted</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face1.jpg' %}" alt="image" />
+                  &nbsp;Estella Bryan</td>
+                <td> Kerala Tourism</td>
+                <td><a href="" class="btn btn-outline-primary"><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td><a class="btn text-success" data-toggle="modal" data-target="#myModal"
+                    style="background-color: #191c24;text-decoration: none;color:#6C7293;margin-left:-15px">
+                    Submitted</a></td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face3.jpg' %}" alt="image" />
+                  &nbsp;Lucy Abbott</td>
+                <td>Shopping Website </td>
+                <td><a href="" class="btn btn-outline-primary"><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td><a class="btn text-success" data-toggle="modal" data-target="#myModal"
+                    style="background-color: #191c24;text-decoration: none;color:#6C7293;margin-left:-15px">
+                    Submitted</a></td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face5.jpg' %}" alt="image" />
+                  &nbsp;Peter Gill</td>
+                <td> Tkinter Calculator </td>
+                <td><a href="" class="btn btn-outline-primary"><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td class="text-danger"> Not Submitted</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face15.jpg' %}" alt="image" />
+                  &nbsp;Sallie Reyes</td>
+                <td> SeachBar fitering</td>
+                <td><a href="" class="btn btn-outline-primary"><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td><a class="btn text-success" data-toggle="modal" data-target="#myModal"
+                    style="background-color: #191c24;text-decoration: none;color:#6C7293;margin-left:-15px">
+                    Submitted</a></td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face10.jpg' %}" alt="image" />
+                  &nbsp;Saloy Reyes</td>
+                <td>Simple Website using Html</td>
+                <td><a href="" class="btn btn-outline-primary"><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td class="text-danger"> Not Submitted</td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face9.jpg' %}" alt="image" />
+                  &nbsp;Reyes John</td>
+                <td>Django Project</td>
+                <td><a href="" class="btn btn-outline-primary"><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td><a class="btn text-success" data-toggle="modal" data-target="#myModal"
+                    style="background-color: #191c24;text-decoration: none;color:#6C7293;margin-left:-15px">
+                    Submitted</a></td>
+              </tr>
+              <tr>
+                <td><img src="{% static 'softwareapp/assets/images/faces/face10.jpg' %}" alt="image" />
+                  &nbsp;Saloy Reyes</td>
+                <td>Simple Website using Html</td>
+                <td><a href="" class="btn btn-outline-primary"><i class="mdi mdi-format-vertical-align-bottom"
+                      style="font-size: 15px;"></i>Download</a> </td>
+                <td class="text-danger"> Not Submitted</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ends here -->
+
+<!-- Modal -->
+<div class="modal" id="myModal" style="margin-left: 2px;">
+  <div class="modal-dialog modal-sm">
+    <div class="col-12   grid-margin stretch-card bg-dark text-light modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"></h4>
+        <button type="button" style="color: white" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+
+      <!-- Modal body -->
+
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 grid-margin stretch-card">
+          <div class="card" style="height:auto">
+            <br>
+            <div class="card-body">
+              <div class="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel"
+                id="owl-carousel-basic">
+                <div class="item">
+
+                  <img src="/static/assets/images/dashboard/Rectangle.jpg">
+                  <div class="row">
+                    <div class="col-4 col-sm-3 col-md-4 col-lg-3"></div>
+                    <div class="col-8 col-sm-9 col-md-6 col-lg-8">
+                      <a href="/static/assets/images/dashboard/Rectangle.jpg" class="btn btn-primary mt-3"
+                        download>download</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="/static/assets/images/dashboard/Img_5.jpg">
+                  <div class="row">
+                    <div class="col-4 col-sm-3 col-md-4 col-lg-3"></div>
+                    <div class="col-8 col-sm-9 col-md-6 col-lg-8">
+                      <a href="/static/assets/images/dashboard/Rectangle.jpg" class="btn btn-primary mt-3"
+                        download>download</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="row mx-auto mt-5">
+                    <div class="col-5 col-sm-5 col-md-5 col-lg-6">
+                      <a href="{% static 'assets/images/dashboard/dummy.pdf' %}">VIEW PDF</a>
+                    </div>
+                    <div class="col-7 col-sm-7 col-md-7 col-lg-6">
+                      <a href="{% static 'assets/images/dashboard/dummy.pdf' %}" class="btn btn-primary"
+                      download>Download</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- modal end -->
+<script>
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script>
+
+{%endblock%}

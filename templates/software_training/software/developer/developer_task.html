@@ -1,0 +1,107 @@
+ {%extends 'software_training/software/developer/base_developer.html'%} {%block content%} {% load static %}
+
+<div class="row">
+    <div class="mt-1 ml-5 text-light ">
+        <h4 class="card-title ">Assigned Tasks</h4>
+    </div>
+    <div class="col-12 grid-margin table1">
+        <div class="card p-3">
+            <div class="card-body">
+                <h4 class="card-title ">Tasks</h4>
+                <input type="text" style="color: white;" onkeyup="myFunction()" class="form-control text-light" id="search" name="search" autocomplete="off" placeholder="Search...">
+                <br>
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+
+                                <th> S.No </th>
+                                <th> Task Name </th>
+                                <th> Due Date </th>
+                                <th> Submission Date </th>
+                                <th> Action</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+
+
+                                <td>1</td>
+                                <td>new project new task1 as</td>
+                                <td>24-03-2022</td>
+                                <td></td>
+
+                                <td>
+                                    <a href="/softwareapp/developer_task_form/">
+                                        <div class="badge badge-outline-primary">Pending</div>
+                                    </a>
+                                </td>
+
+                            </tr>
+                            <tr>
+
+
+                                <td>2</td>
+                                <td>new project new task2 as</td>
+                                <td>24-03-2022</td>
+                                <td></td>
+
+                                <td>
+                                    <a href="#">
+                                        <div class="badge badge-outline-success">Completed</div>
+                                    </a>
+                                </td>
+
+                            </tr>
+                            <tr>
+
+
+                                <td>3</td>
+                                <td>new project new task3 as</td>
+                                <td>24-03-2022</td>
+                                <td></td>
+
+                                <td>
+                                    <a href="/softwareapp/developer_task_form/">
+                                        <div class="badge badge-outline-primary">Pending</div>
+                                    </a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+{% endblock %}

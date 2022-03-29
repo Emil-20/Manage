@@ -1,0 +1,207 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load  static %}
+     <link rel="stylesheet" href="{% static 'build/css/intlTelInput.css' %}">
+    <link rel="stylesheet" href=" {% static 'build/css/demo.css' %}">
+  <style>
+      *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body{
+          background-image: url("{% static 'contact&enq/cover.png' %}");
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      nav ul li {
+          list-style-type: none;
+      }
+
+      form{
+           background: #FFFFFF;
+           border-radius: 30px;
+           margin-top: 2%;
+            width: 100%;
+          padding-right: 10%;
+
+      }
+       label{
+           margin-left: 5%;
+           font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 19px;
+          color: #323030;
+       }
+       input{
+
+           border: transparent;
+           height: 23px;
+           background: #F3F3F3;
+           width: 100%;
+       }
+
+      #submit{
+            border-color: transparent;
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          text-align: center;
+           width: 20%;
+          height: 20%;
+           position: relative;
+           margin-bottom: 25px;
+       }
+       #p1{
+           font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 36px;
+          line-height: 42px;
+          color: #FFFFFF;
+           text-align: left;
+       }
+       #p2{
+           font-family: Roboto;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 21px;
+          color: #FFFFFF;
+           text-align: left;
+       }
+
+  </style>
+  <body>
+
+
+ <div class="container" style="margin-top:10%">
+    <div class="row">
+        <div class="col-sm-6">
+            <p id="p1">Have any enquiries?</p>
+        </div>
+    </div><div class="row">
+        <div class="col-sm-6">
+            <p id="p2">
+                Feel free to connect with us
+            </p>
+        </div>
+</div>
+</div>
+  <div class="container" style="position: relative">
+    <div class="row" style="position: relative">
+        <div class="col-sm-8" style="position: relative">
+            <form action="Addenq" method="post">
+                {% csrf_token %}
+                <div class="row" style="padding-top: 10%;margin-left: 3%">
+                    <div class="col-sm-2">
+                        Name
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-group" name="name" >
+                    </div>
+                    <div class="col-lg-2">
+                        Designation
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-group" name="designation" >
+                    </div>
+                </div>
+
+                <div class="row" style="margin-left: 3%">
+                    <div class="col-lg-2">
+                        Country
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-group" name="country" >
+                    </div>
+                    <div class="col-lg-2">
+                        State
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-group" name="state" >
+                    </div>
+                </div>
+                <div class="row" style="margin-left: 3%">
+                    <div class="col-lg-2">
+                        City
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-group" name="city" >
+                    </div>
+                    <div class="col-lg-2">
+                        Pin
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-group" name="pin">
+                    </div>
+                </div>
+                <div class="row" style="margin-left: 3%">
+                    <div class="col-lg-2">
+                        Email
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-group" name="email">
+                    </div>
+                    <div class="col-lg-2">
+                        Phone
+                    </div>
+                    <div class="col-lg-4">
+
+                            <input style="width: 65%;float: right;padding-right: 10px;position: relative" type="text" name="ccode" id="ccode">
+                            <input  style="float: left" id="phone" name="phone" type="tel">
+                   </div>
+                </div>
+                <div class="row" style="margin-left: 3%">
+                    <div class="col-lg-2">
+                        Message
+                    </div>
+                </div>
+                <div class="row" style="margin-left: 3%">
+                    <div class="col-lg-12">
+                        <textarea class="form-group" style=" background: #F3F3F3;border:none;width: 97%;height: 20vh" name="message" ></textarea>
+                    </div>
+                    <input type="submit" id="submit" value="Send" style="background-color: #00B4E3;color: #FFFFFF;margin-left: 70%">
+                </div>
+            </form>
+        </div>
+         </div>
+    </div>
+</div>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="{% static 'build/js/intlTelInput.js' %}"></script>
+ <script>
+      var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      // allowDropdown: false,
+      // autoHideDialCode: false,
+      // autoPlaceholder: "off",
+      // dropdownContainer: document.body,
+      // excludeCountries: ["us"],
+      // formatOnDisplay: false,
+      // geoIpLookup: function(callback) {
+      //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+      //     var countryCode = (resp && resp.country) ? resp.country : "";
+      //     callback(countryCode);
+      //   });
+      // },
+      // hiddenInput: "full_number",
+      // initialCountry: "auto",
+      // localizedCountries: { 'de': 'Deutschland' },
+      // nationalMode: false,
+      // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+      // placeholderNumberType: "MOBILE",
+      // preferredCountries: ['cn', 'jp'],
+      // separateDialCode: true,
+      utilsScript: "build/js/utils.js",
+    });
+ </script>
+  </body>
+{% endblock %}

@@ -1,0 +1,73 @@
+{%extends 'software_training/software/tl/tlDashboard.html'%} {%load static%} {%block content%}
+
+<style>
+    * {
+        color: #6C7293;
+    }
+    
+    .Search {
+        margin-top: 4%;
+        float: right;
+        margin-right: 5%;
+        padding-left: 3%;
+        padding-right: 3%;
+        line-height: 2;
+        border: 1px solid #6c7293;
+        ;
+        color: #6c7293;
+        background: #191c24;
+    }
+    
+    .table1 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1vh;
+    }
+    
+    .col-form-label {
+        color: white;
+    }
+</style>
+<h2 style="color: white;">PROJECTS</h2>
+<form action="" method="post">
+
+    <div class="col-12 grid-margin stretch-card table1">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group row">
+                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:#6C7293;">TASK</label>
+                    <div class="col-sm-9">
+                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:white ;" required>Develop Module</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:#6C7293;">DATE</label>
+                    <div class="col-sm-9">
+                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:white ;" required>15/03/2022</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:#6C7293;">DESCRIPTION</label>
+                    <div class="col-sm-9">
+                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:white ;" required>developer module</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:#6C7293;">SUBMIT DATE</label>
+                    <div class="col-sm-9">
+                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:white ;" required>15/03/2022</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label" style="color:#6C7293;">SCREENSHOT</label>
+                    <div class="col-sm-9">
+                        <img src="{{tas.employee_files.url}}" style="height: 100px; width: 100px;">
+                    </div>
+                </div>
+
+</form>
+</div>
+</div>
+</div>
+
+{% endblock %}

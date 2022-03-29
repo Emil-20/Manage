@@ -1,0 +1,103 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/retail.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                    Retail
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                   Pivot to the future – and transform shopping experiences <br>on every channel – with cloud
+                    retail solutions from Facilezone.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Retail digital transformation
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Retailers face new challenges in the way goods are marketed, bought, fulfilled,
+                delivered, and sold in a highly competitive post-COVID marketplace, but emerging
+                technology innovations are ushering in new opportunities as well. Retailers can
+                leverage technologies, such as cloud, AI, robotics, IoT, and VR/AR, to provide the
+                shopping experiences that delight customers.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Data Analytics and Reporting
+                    </h4>
+                    <ul>
+                        <li>
+                            Data from supply chain to post-purchase
+                        </li>
+                        <li>
+                            Sophisticated data collection, analytics, and reporting
+                        </li>
+                        <li>
+                            Track profit margins on products and customer buying patterns
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3">
+                    <h4>
+                        CRM/Targeted Marketing
+                    </h4>
+                    <ul>
+                        <li>
+                            Identifying and cultivating a base of ideal shoppers
+                        </li>
+                        <li>
+                            Data capture and reporting capabilities proactively
+                        </li>
+                        <li>
+                            Craft and deliver targeted messages to the right people
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Reliability and Network Tolerant
+                    </h4>
+                    <ul>
+                        <li>
+                            Integrate omnichannel sales
+                        </li>
+                        <li>
+                            Capture and analyze data critical to operations, and grow customer experiences
+                        </li>
+                        <li>
+                            Delivering to customer needs
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

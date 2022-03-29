@@ -1,0 +1,99 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/shop.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                  Marketing
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Drive revenue and customer lifetime value through <br>intelligent engagement.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div >
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               Deliver personalised experiences and profitable growth
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Scale personalised engagements and accelerate business outcomes with
+                integrated customer engagement and marketing automation solutions from Facilezone.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Customer Relationship Management
+                    </h4>
+                    <ul>
+                        <li>
+                            Keeping a track on each of your customer
+                        </li>
+                        <li>
+                            Track every interaction with your customer
+                        </li>
+                        <li>
+                            Identifying customer needs
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Analytics
+                    </h4>
+                    <ul>
+                        <li>
+                            Visualize the effectiveness of sales campaigns
+                        </li>
+                        <li>
+                            Identifying effectiveness of your campaigns
+                        </li>
+                        <li>
+                            Filtering useful data
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>
+                        Sales intelligence
+                    </h4>
+                    <ul>
+                        <li>
+                            Activity tracking
+                        </li>
+                        <li>
+                            Call recording
+                        </li>
+                        <li>
+                            Contact database and history
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}

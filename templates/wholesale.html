@@ -1,0 +1,129 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/wholesale.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                    Wholesale Distribution
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                   Expand beyond traditional industry boundaries <br>and become a proactive, insight-driven distributor.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               New business models and services are needed to compete in a new economy
+            </p>
+            <p style="color: black;font-size: 20px;">
+               Facilezone enables wholesale distributors to drive new revenue sources, reduce costs, and differentiate
+                your business by simplifying digital transformation and supporting new business models and
+                customer-specific services.
+
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3">
+                    <h4>
+                        Purchase Optimization
+                    </h4>
+                    <ul>
+                        <li>
+                            Provides proper stocking levels
+                        </li>
+                        <li>
+                            360-degree view of the purchase cycle
+                        </li>
+                        <li>
+                            Lower administrative/ accounting costs
+                        </li>
+                        <li>
+                            Detailed purchase-sales information
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Logistics Management
+                    </h4>
+                    <ul>
+                        <li>
+                            Provides top logistics visibility
+                        </li>
+                        <li>
+                            Improving the accuracy and efficiency of the processes
+                        </li>
+                        <li>
+                            Ensuring on-time deliveries
+                        </li>
+                        <li>
+                            Work quickly to control the costs
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Order Fulfillment
+                    </h4>
+                    <ul>
+                        <li>
+                            Selecting desired order management
+                        </li>
+                        <li>
+                            Packing to customer instructions
+                        </li>
+                        <li>
+                            Ensure sending to a relevant distribution
+                        </li>
+                        <li>
+                            Adequate fulfillment functions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Robust Inventory Tracking
+                    </h4>
+                    <ul>
+                        <li>
+                            Effective inventory tracking system
+                        </li>
+                        <li>
+                            Top inventory management practices
+                        </li>
+                        <li>
+                            Greater flexibility to adjust corrections
+                        </li>
+                        <li>
+                            Reduce inventory holding costs
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

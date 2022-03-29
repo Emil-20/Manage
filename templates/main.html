@@ -1,0 +1,1357 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <style>
+
+
+    #first{
+        background-image: url({% static 'main/Group3Maincover.png' %});
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+    #second{
+        position: relative;
+        margin-top: 15%;
+        margin-left: 5%;
+        text-align: left;
+    }
+    #third{
+        text-align: left;
+        font-family: Roboto, sans-serif;
+        font-size: 36px;
+        color: white;
+    }
+    #fourth{
+        text-align: left;
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        color: white;
+    }
+    #fifth{
+        width: 150px;
+        background-color: #00B4E3;
+        border-radius: 10px;
+        text-align: center;
+    }
+    #sixth{
+        text-align: center;
+        position: relative;
+        margin-top: 2%;
+        z-index:-1;
+    }
+    #seventh{
+        width: 149px;
+        height: 149px;
+    }
+     #customer .item{
+         position: relative;
+         padding-left: 90px;
+        opacity:0.5;
+        transform:scale3d(0.6,0.6,1) ;
+        transition: all 0.3s ease-in-out;
+    }
+    #customer .owl-item.active.center .item{
+        opacity: 1;
+        transform: scale3d(1.0,1.0,1) translateZ(50px);
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        border-radius: 50%;
+    }
+    #eighth{
+        background-image: url({% static 'main/unsplash_Hcfwew744z4everythingonurfingtip.png' %});
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 75vh;
+    }
+    #ninth{
+        font-family: Roboto, sans-serif;
+        font-size: 36px;
+        color: white;
+        text-align: left;
+        position: relative;
+        margin-top: 15%;
+        margin-left: 10%;
+    }
+    #tenth{
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        color: white;
+        text-align: left;
+        position: relative;
+        margin-left: 10%;
+        margin-top: 2%;
+    }
+    #eleventh{
+        text-align: center;
+    }
+    #twelfth{
+        background-repeat: no-repeat;
+        background-image: url({% static "main/Group6featuresbg.png" %});
+        height: 400px;
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding-top:15%;
+        margin-top: 1%;
+    }
+    #thirteenth{
+        position:relative;
+        background-color: #323030;
+        text-align: center;
+        padding: 10px;
+        margin-left: 45%;
+        border-radius: 10px;
+        color: white;
+    }
+    #fourteenth{
+        background-image: url({% static 'main/unsplash_5U_28ojjgmsimg2.png' %});
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 75vh;
+    }
+
+    #hp15{
+        position:relative;
+        background-color: #00B4E3;
+        text-align: center;
+        margin-top: 50px;
+        padding: 10px;
+        left: 45%;
+        border-radius: 10px;
+        color: white;
+    }
+     #fifteen{
+        background-color: #323030;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+     }
+
+    </style>
+
+    <div class="container-fluid" id="first">
+        <div class="row">
+            <div class="col-md-6 col-lg-6" id="second">
+                <h4 id="third">
+                     Need a quality Management Software for a fair price ? Then you are on the right place
+                </h4>
+                <p id="fourth">
+                    Entire business process of your company can be management with this single software.
+                    This system will ensure continuous improvement and completion of the business goals of your organization.
+                    Help companies to maintain quality of goods and services above the expectation of customers.
+                </p>
+                 <a id="fifth" class="nav-link text-white"  href="enquiry">Contact us</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="sixth">
+                <h4>
+                    Benefits of Facilezone
+                </h4>
+                <p>
+                    Facilezone brings collaboration among team members and helps to automate the daily business <br>activates in an efficient manner.
+                    Supports employee Task assignment and tracking facilities. <br>Evaluate performance of employees and enhance the productivity.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div id="customer" class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img loading="lazy" src="{% static "main/one.jpg" %}" id="seventh" class="rounded-circle" alt="Error 404!!!" >
+                        <h5 style="color: black;position: relative;margin-left: 10%">WorkSmart</h5>
+                    </div>
+                    <div class="item">
+                        <img loading="lazy" src="{% static "main/two.jpg" %}"  id="seventh" class="rounded-circle" alt="Error 404!!!">
+                        <h5 style="color: black;position: relative;margin-left: 10%">Coordinate</h5>
+                    </div>
+                    <div class="item">
+                        <img loading="lazy" src="{% static "main/three.jpg" %}"  id="seventh" class="rounded-circle" alt="Error 404!!!">
+                        <h5 style="color: black;position: relative;margin-left: 10%">Schedule</h5>
+                    </div>
+                    <div class="item">
+                        <img loading="lazy" src="{% static "main/four.jpg" %}"  id="seventh" class="rounded-circle" alt="Error 404!!!">
+                        <h5 style="color: black;position: relative;margin-left: 10%"> Communicate</h5>
+                    </div>
+                    <div class="item">
+                        <img loading="lazy" src="{% static "main/five.jpg" %}" id="seventh" class="rounded-circle" alt="Error 404!!!">
+                        <h5 style="color: black;position: relative;margin-left: 10%">Authorize</h5>
+                    </div>
+                    <div class="item">
+                        <img loading="lazy" src="{% static "main/six.jpg" %}"  id="seventh" class="rounded-circle" alt="Error 404!!!">
+                        <h5 style="color: black;position: relative;margin-left: 10%">Business Administration</h5>
+                    </div>
+                    <div class="item">
+                        <img loading="lazy" src="{% static "main/seven.jpg" %}" id="seventh" class="rounded-circle" alt="Error 404!!!">
+                        <h5 style="color: black;position: relative;margin-left: 20%">&nbsp;Focus</h5>
+                    </div>
+                    <div class="item">
+                        <img loading="lazy" src="{% static "main/eight.jpg" %}"  id="seventh" class="rounded-circle" alt="Error 404!!!">
+                        <h5 style="color: black;position: relative;margin-left: 20%">Manage</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12"  id="eighth" >
+                <h4 id="ninth">
+                    Everything on your finger tip
+                </h4>
+                <p id="tenth">
+                    A business tool to manage your whole company operations from anywhere.<br>
+                    Allows always Stays connected with your team. Take advantage of remote<br>
+                    features to grow your business without constant interference. It’s highly<br>
+                    useful for emerging companies to start with less resource and limited office environment.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="sixth">
+                <h4>
+                   Features of Facilezone
+                </h4>
+                <p>
+                    Facilezone incorporated a complete features to handle the daily business activities<br> in a systematic
+                    and autonomous way. Here you can view some of information’s the defines the usage of this product.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="eleventh">
+        <video controls autoplay muted  height='40%' width='50%' style="min-width: 330px;min-height:300px">
+            <source src="{% static 'main/video.mp4 '%}" type="video/mp4">
+        </video>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" col-lg-4 col-xl-4" id="twelfth">
+                <h3>
+                    Give Task
+                </h3>
+                <p>
+                    An efficient tool for automating the task scheduling process based on the priority and timeline.
+                    It will help you to achieve your project goals at the right time.
+                    Manage your workforce, Limit the procrastination and bottleneck.
+                </p>
+            </div>
+            <div class="col-lg-4 col-xl-4" id="twelfth">
+                <h3>
+                    Manage Attendence
+                </h3>
+                <p>
+                    A system to document the actual working hours of your employees.
+                    Time is money; utilize each milli-second in a productive way. Allows integration with all attendance
+                    devices such as biometrics, smart card and facial detection devices etc.
+                </p>
+            </div>
+            <div class="col-lg-4 col-xl-4" id="twelfth">
+                <h3>
+                    Manage Salary
+                </h3>
+                <p>
+                    Assist your company in timely payment of staff salary and wages. Manage all financial reports
+                    such as bonus, deduction, increment and regular updating of financial records.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-xl-4" id="twelfth">
+                <h3>
+                    Assign Works
+                </h3>
+                <p>
+                    Help you to assign the work to appropriate candidates without any delay. Saves project manager time,
+                    allow employees to update their updates regularly. This will also enable the live monitoring
+                    and rescheduling of Tasks.
+                </p>
+            </div>
+            <div class="col-lg-4 col-xl-4" id="twelfth">
+                <h3>
+                    Performance Chart
+                </h3>
+                <p>
+                    Performance chart provide us a brief overview about overall performance of your staffs based
+                    on their contribution and working hours. It’s an graphical representation that wills shows accurate
+                    results of rise and downfall of total performance of employees.
+                </p>
+            </div>
+            <div class=" col-lg-4 col-xl-4" id="twelfth">
+                <h3>
+                    Messsage
+                </h3>
+                <p>
+                    A solution to improve customer relationship and keep touch with Target audience is proper
+                    communication channel. This message system can process the request and queries of your clients
+                    and also responds in your absence.
+                </p>
+            </div>
+        </div>
+        <div id="collapse1" style="display: none">
+            <div class="row">
+                <div class=" col-lg-4 col-xl-4" id="twelfth">
+                    <h3>
+                        Task Progress
+                    </h3>
+                    <p>
+                        You can create and monitor the progress of on-going tasks. The main feature of this system
+                        is that you can handle individual members and also as a team. This will eliminate redundancies
+                        of task allocation and helps to predict the finishing time of each tasks.
+                    </p>
+                </div>
+                <div class=" col-lg-4 col-xl-4" id="twelfth">
+                    <h3>
+                        Improved Collaboration
+                    </h3>
+                    <p>
+                       This tool make easier to see the various projects that allocated for everyone. Allows
+                        proper communication among team mates and with project manager at same time. There is
+                        no chance of collision of communication.it will formulate the maximum results.
+                    </p>
+                </div>
+                <div class=" col-lg-4 col-xl-4" id="twelfth">
+                    <h3>
+                        Stay on Schedule
+                    </h3>
+                    <p>
+                        Keeps your team keep on track from project allocated stage to completion.
+                        This will saves time and produced more organized results from team members.
+                    </p>
+                </div>
+            </div>
+            <div  class="row">
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Easy Communication
+                    </h3>
+                    <p>
+                        Allow the flow of transparent communication between team members. Let the managers and
+                        decision making leads to less bother about reach of their ideas to members.it helps to transfer
+                        the information to everyone in that exact format without any change.
+                    </p>
+                </div>
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Prioritization
+                    </h3>
+                    <p>
+                        This prioritization tool will manage and schedule the tasks based on the deadlines.
+                        Proper organisation and prioritization of tasks will create a smooth workflow.
+                        It’s an effective way to reduce the workload and last minute rush.
+                    </p>
+                </div>
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Easy Estimation
+                    </h3>
+                    <p>
+                        Helps to estimate the cost and time to complete the project accurately. This whole
+                        process requires sophisticated calculation and true knowledge otherwise final result may
+                        turn unfavourable. With this tool you can easily estimate the real outcome of your project.
+                    </p>
+                </div>
+            </div>
+            <div  class="row">
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Flexible Planning
+                    </h3>
+                    <p>
+                        Using this tool you can aggregate the information the necessary for project development phase.
+                        The allocation and planning of tasks can be efficiently managed. Each development stage can be
+                        monitored with real-time controls.
+                    </p>
+                </div>
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Set Milestones
+                    </h3>
+                    <p>
+                        Support to determine the important parts of project or milestone by divide the project into
+                        several tasks. These parts are the important units to attain the entire project goal.
+                    </p>
+                </div>
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Work Reports
+                    </h3>
+                    <p>
+                        Access the work report status of your employees from any platforms. A method to manage
+                        your complete project task and reports.
+                    </p>
+                </div>
+            </div>
+             <div  class="row">
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Easy File Sharing
+                    </h3>
+                    <p>
+                        Can share large and confidential files with in organisation. Intrusion or unauthorized
+                        access can be preventing completely.Tranfer in encrypted format is also supported.
+                    </p>
+                </div>
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Track WorkTime
+                    </h3>
+                    <p>
+                        Work time can be easily tracked atumatically.which will help you to minimize project time,
+                        improve productivity and team performance.
+                    </p>
+                </div>
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Manage Tasks
+                    </h3>
+                    <p>
+                        Tracks the complete tasks and subtasks from beginning stage to completion. Helps to analyse
+                        the project development phase. Shows real-time reports.
+                    </p>
+                </div>
+             </div>
+             <div  class="row">
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Chat with team
+                    </h3>
+                    <p>
+                        Helps to connect with teammates without interruption. Secure the confidentiality of
+                        information within space of organization.
+                    </p>
+                </div>
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Export Time sheet
+                    </h3>
+                    <p>
+                        You can see timesheet records of your employees. Could be eliminate paper works by export
+                        into pdf, excel and other formats. Easy to integrate with payroll and attendance.
+                    </p>
+                </div>
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Safe Storage
+                    </h3>
+                    <p>
+                        Can be protect your business data’s with encrypted form. Easy manageable and rearranged.
+                        Retrieve it as often you like.
+                    </p>
+                </div>
+             </div>
+             <div  class="row">
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Access from Anywhere
+                    </h3>
+                    <p>
+                        You can operate your major business operations with your fingertips. Allows remote
+                        database access of your organization. Constitute with simple and customizable interface.
+                        Provide virtual support and supervision to employees.
+                    </p>
+                </div>
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Realtime Dashboard
+                    </h3>
+                    <p>
+                        Collects and update new data’s automatically. Store and synchronize data’s of users in
+                        real-time. Live reports can access early as possible. Can be create meaningful visualization.
+                    </p>
+                </div>
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Efficient Management
+                    </h3>
+                    <p>
+                        Provides efficient management of daily work activities. Collect complete and accurate work
+                        reports with timely based. Evaluate performance of employees improve productivity.
+                    </p>
+                </div>
+            </div>
+             <div class="row">
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Schedule Events
+                    </h3>
+                    <p>
+                        A proper solution for your all business events management. This tool can simplify the hectic
+                        registration process. Deliver the detailed reports about peoples that are attended your event.
+                    </p>
+                </div>
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Multiuser Management
+                    </h3>
+                    <p>
+                        Supports multiple user accesses at same time. It’s beneficial for collaborate with
+                        teammates on same project or tasks. Allows active communication and user-friendly interactions
+                        between users.
+                    </p>
+                </div>
+                <div id="twelfth" class="col-lg-4 col-xl-4">
+                    <h3>
+                        Resource Planning
+                    </h3>
+                    <p>
+                        Ensures the attainment of maximum profit through minimum resource utilization and time.
+                        Improve your business operation with proper scheduling of work and time.
+                    </p>
+                </div>
+             </div>
+        </div>
+    </div>
+    <div>
+        <a id="thirteenth" href="#collapse1" class="nav1-toggle">See more features</a>
+    </div>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12"  id="fourteenth" >
+                <h4 id="ninth">
+                    Everything on your finger tip
+                </h4>
+                <p id="tenth">
+                    A business tool to manage your whole company operations from anywhere.<br>
+                    Allows always Stays connected with your team. Take advantage of remote<br>
+                    features to grow your business without constant interference. It’s highly<br>
+                    useful for emerging companies to start with less resource and limited office environment.
+                </p>
+            </div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="sixth">
+                <h4>
+                    Facilezone can be used in All most all sectors
+                </h4>
+                <p>
+                    Facilezone is a practical business management solution that applicable for every business sectors.<br>
+                    We can customize it based on the requirement and organization size. Mange Zone is a work product<br>
+                    of strong research process. One of advantage of our software is its operations can <br>
+                    benefit both multinational companies and medium size companies. <br>Try a free trail now.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="background-image: url({% static 'main/a.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+        <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+            <div class="row">
+                <div class="col-lg-5 col-md-5 ">
+                    <img loading="lazy" src="{% static 'main/unsplash_mcSDtbWXUZUsectorss.png'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                </div>
+                <div class="col-lg-7 col-md-7 ">
+                    <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                        Software industries
+                    </p>
+                    <p style="position:relative;text-align: left;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                        Facilezone is excellent solution for software firms that works on multiple projects at a time.
+                        it supports auto task assignment, track monitoring and generate accurate live reports on regular intervals.
+                        For complete project on estimated time and budget an efficient coordination is necessary.
+                    </p>
+                    <a style="float: left" href="Sector_SoftwareIndustries"><b>Learn more</b></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid" style="background-image: url({% static 'main/b.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+        <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+            <div class="row">
+                <div class="col-lg-5 col-md-5">
+                    <img loading="lazy" src="{% static 'main/unsplash_nMyM7fxpokEsectorss.png'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                </div>
+                <div class="col-lg-7 col-md-7">
+                    <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                        Hospitals
+                    </p>
+                    <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                        A software system to manage all departments and functioning of hospital within a framework.
+                        Maintain all information such as patient registration and discharge and visitor’s list etc.it helps to prioritize the consultation
+                        and handle the emergencies cases through advance notifications.
+                    </p>
+                    <a style="float: left" href="Sector_Hospitals"><b>Learn more</b></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid" style="background-image: url({% static 'main/c.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+        <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+            <div class="row">
+                <div class="col-lg-5 col-md-5">
+                    <img loading="lazy" src="{% static 'main/unsplash_eBWzFKahEaUsectorss.png'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                </div>
+                <div class="col-lg-7 col-md-7">
+                    <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                        Banks
+                    </p>
+                    <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                        Fully integrated solution for banks and financial organization to manage cash flow, customer relationship
+                        and risk analysis. It provides a secure storage space to keep all confidential records.
+                        The Performance chart lets the Administrators to make suitable decision that favourable to expansion of organization.
+                    </p>
+                    <a style="float: left" href="Sector_Banks"><b>Learn more</b></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid" style="background-image: url({% static 'main/d.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+        <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+            <div class="row">
+                <div class="col-lg-5 col-md-5">
+                    <img loading="lazy" src="{% static 'main/hotel.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                </div>
+                <div class="col-lg-7 col-md-7">
+                    <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                        Restaurants and Hotels
+                    </p>
+                    <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                       Use Facilezone the solve booking related issues and register the guest arrivals in
+                        an autonomous way. This system can reduce the expense related to unnecessary staffs.
+                        Imagine a hotel without any front office registration process.
+                    </p>
+                    <a style="float: left" href="Sector_Restaurants&Hotels"><b>Learn more</b></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="collapse" style="display: none">
+
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/a.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/showroom.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Auto Dealer showroom
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            The software is completely created to store and record the financial transactions in your showroom.
+                            The proper asset and liability checking is helps to maintain a flexibility in your business.
+                        </p>
+                        <a style="float: left" href="Sector_Autodealers"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/b.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/training.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Training Institutes
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            Facilezone is a best software solution for the training institutes to store the student’s data,
+                            management of admission, student attendance, accounts management, employee attendance etc.
+                        </p>
+                        <a style="float: left" href="Sector_Training"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/c.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/bike.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Motor cycle showroom
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                           Facilezone has found a way a way to help computerization of Indian vehicle.
+                            In the main form we have fused the whole components which would cook the requirement
+                            for each limited scale to enormous scale automobile showroom.
+                        </p>
+                        <a style="float: left" href="Sector_Motorshowroom"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/d.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/rentel.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Rental and leashing
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                           At Facilezone, our rent and lease management can assist you
+                            with recording all basic rental lease arrangements in a single spot. Coordinating
+                            a powerful renting arrangement with your current offices can assist with
+                            further developing the correspondence hole and tasks viability.
+                        </p>
+                        <a style="float: left" href="Sector_Rental&Leashing"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/a.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/pexels-david-sing-7935363(1).jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Malls and Shopping
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            With Facilezone you can include complete information about your mall
+                            and shops that your customers need. The software enables better sales and
+                            marketing at your fingertips. The software helps to manage offers, orders,
+                            raw materials, costing, inventory management etc.
+                        </p>
+                        <a style="float: left" href="Sector_Malls&Shopping"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/b.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img  loading="lazy" src="{% static 'main/services.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Service Stations
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            Facilezone is an efficient management software for automating your service business.
+                            You can boost your automobile services and earns customer satisfaction easily
+                            by implementing this management software.
+                        </p>
+                        <a style="float: left" href="Sector_ServiceStations"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/c.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/consultancy.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Consultancies
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                           Faacilezone is the best managing software for consultancies to manage the overall activities.
+                            The consulting companies needs capable, efficient, intelligent, flexible and collaborating
+                            software and Facilezone suits the best.
+                        </p>
+                        <a style="float: left" href="Sector_Consultancies"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/d.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/employment.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Employment Agencies
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                           Facilezone effective in employment agencies for application tracking, resume tracking,
+                            applicant tracking and recruitment applications throughout the overall recruitment process.
+                            It helps to boost recruitment and improve agency efficiency.
+                        </p>
+                        <a style="float: left" href="Sector_EmploymentAgency"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/a.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/marketing.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Marketing Agencies
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                           Facilezone assists marketing agencies with getting every one of their
+                            information into one place with automated customer dashboards and reports.
+                            The Facilezone is great for marketing agencies for effortless agency report
+                            generation.
+                        </p>
+                        <a style="float: left" href="Sector_MarketingAgency"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/b.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/catering.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Catering Supplies
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                           Would you like to make your catering accurate and productive?
+                            Then, at that point, here the most ideal choice for dealing with every one of the
+                            exercises from stock to clients. Utilizing Facilezone you can more readily
+                            maintain your catering business
+                        </p>
+                        <a style="float: left" href="Sector_CateringSupply"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/c.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/manufacturing.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Manufacturing companies
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                           We have developed one of the finest management software to make your company
+                            more proficient. Our software can help you to manage your company’s milestone
+                            components like finance, operations, and marketing.
+                        </p>
+                        <a style="float: left" href="Sector_ManufacturingCompanies"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/d.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/educational.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Educational Institutions
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            Keeping track of day-to-day activities of your educational Institution
+                            is not an easy job. We are here to present you the best management software
+                            for you to make your job easier and more effective with less effort and time.
+                        </p>
+                        <a style="float: left" href="Sector_EducationalInstitutions"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/a.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/realestate.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Real estate agencies
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            Real estate requires well management system to keep you close to your business
+                            and keeping every record of business transactions, profit, and expenses.
+                            We are here to make your business more straightforward and make you more effective.
+
+                        </p>
+                        <a style="float: left" href="Sector_Realestate"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/b.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/grocery.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Grocery Stores
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            In your business you have a lot of components to take care about such as your
+                            profit and incomes, employee details, customer reviews and much more.
+                            You can get everything you need to know about your business in just one click.
+
+                        </p>
+                        <a style="float: left" href="Sector_GroceryStores"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/c.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/supermarket.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Super Markets
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            Facilezone is the best solution for a supermarket to combine all of their
+                            features into a single book like space. This software will help you to manage
+                            the employee attendance  in a single website.
+                        </p>
+                        <a style="float: left" href="Sector_Supermarket"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/d.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/financial.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Financial Institutions
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            By using Facilezone in financial Institution will result in easy storing of
+                            data about  deposit , Lending, and Investment products  to individuals ,
+                            business or both in an autonomous way.
+                        </p>
+                        <a style="float: left" href="Sector_FinancialInstitutions"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/a.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/media.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Telecommunications and Media
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            Facilezone can used in telecommunication media to provide better
+                            customer service to your users.it also ensure that your customers paid their
+                            prepaid or post-paid  plans in a correct date before
+                            expiring their current plans.
+                        </p>
+                        <a style="float: left" href="Sector_Telecommunications&Media"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/b.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/construction.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Construction companies
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                           Basically putting together your development works in a solitary
+                            programming. They serves to organizing all developments works in which work
+                            progress of each venture . Facilezone assists with working on your exercises
+                        </p>
+                        <a style="float: left" href="Sector_ConstructionCompany"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/c.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/architecture.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Architectural companies
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            Facilezone is one of the most outstanding programming to helps in
+                            further develop organization exercises . Facilezone will serves to
+                            give work to his representatives ,the executives
+                            can undoubtedly talk with his groups
+                        </p>
+                        <a style="float: left" href="Sector_ArchitecturalCompany"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/d.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/electricalproduct.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Electrical product companies
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            The utilization of Facilezone helps in safe store subtleties of
+                            electric things and his market costs. So laborers are effectively
+                            distinguish item rate to helps in charging time.
+                        </p>
+                        <a style="float: left" href="Sector_ElectricalProductCompany"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/a.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/entertainment.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Entertainment Sections
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            Our software is the best in overseeing and broadcasting entertainment
+                            sections at the perfect time. It can give appropriate time booking
+                            for each entertainment shows with the goal that the one can't influence
+                            different areas of your sections.
+                        </p>
+                        <a style="float: left" href="Sector_EntertainmentSections"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/b.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/event.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Event planning
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            Facilezone is only tool that need you to coordinate a complete events.
+                            It has complete features to simplify the event registration process,
+                            program planning, and attendance record in autonomous way.
+                        </p>
+                        <a style="float: left" href="Sector_EventPlanning"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/c.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/transportation.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Transportation companies
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            Use our software to deliver a comfortable service to your customers.
+                            Facilezone embed with vehicle tracking system, it will ensure a safe
+                            ride from origin to destination. Route planning time and travel expenditure
+                            can reduce with this tool.
+                        </p>
+                        <a style="float: left" href="Sector_TransportationCompany"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/d.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/storage.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Storage Shops
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            Facilezone highly applicable for warehouse and packing industries.
+                            it provides a detail about the complete storage spaces with includes
+                            the item names. The order details and status of delivery can be store
+                            and track automatically.
+                        </p>
+                        <a style="float: left" href="Sector_Storage"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/a.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/tourism.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Travel and tourism planning
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            Using Facilezone one organization can easily  Schedule their
+                            operation regarding Tour of their client and can keep track
+                            of all the information they give by storing them at a single
+                            frame work.
+                        </p>
+                        <a style="float: left" href="Sector_Travel&TourismPlanning"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid" style="background-image: url({% static 'main/b.png' %});background-size: cover;background-repeat:no-repeat;max-width: 1920px; max-height:1080px;padding-top: 30px;padding-bottom: 30px">
+            <div class="container-fluid" style="background-color: white;width: 80%;padding-top: 30px;padding-bottom: 30px"  >
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <img loading="lazy" src="{% static 'main/jewelery.jpg'%}" style="margin-left: 7%;height: 80%;width: 80%;margin-top: 7%;position: relative">
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <p style="position:relative;text-align: left;;margin-top:3%;font-family: Roboto;font-style: normal;font-weight: normal;font-size: 30px;line-height: 35px;color: #545050;">
+                            Jewelleries
+                        </p>
+                        <p style="position:relative;text-align: left;;margin-top:1%;font-family: Roboto;font-style: normal;font-weight: 300;font-size: 15px;line-height: 18px;color: #545050;">
+                            Mange Zone is an efficient platform to aggregate the daily operations and
+                            workflow of jewellery business. This feature is designed especially for
+                            the manufacturers and dealers of jewellery and ornaments.
+                        </p>
+                        <a style="float:left" href="Sector_Jewelleries"><b>Learn more</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <a id="hp15"  href="#collapse" class="nav-toggle">See more sectors</a>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="sixth">
+                <h4>
+                   User feedback
+                </h4>
+                <p>
+                    Our customers are real force behind our success.
+                    Check feedback of our loyal customers to know how Facilezone creates an impact on their
+                    business growth.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-5 col-md-5 col-lg-5">
+                <img loading="lazy" src="{% static 'main/unsplash_lDlU1zbjGQAclientrec.png' %}" style="width: 100%" alt="Error404!!!">
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2"></div>
+            <div class="col-sm-5 col-md-5 col-lg-5">
+                <div id="demo" style="width: 100%"  class="carousel slide" data-ride="carousel">
+                <ul style="list-style-type: none" class="carousel-indicator">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="demo" data-slide-to="1"></li>
+                    <li data-target="demo" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner" style="text-align: left;position: relative">
+                    <div class="carousel-item active">
+                        <img loading="lazy" class="rounded-circle" style="width: 65px;height: 75px;"  src="{% static 'main/img.png' %}">
+                        <h3 style="color:black;position:relative;margin-left: 100px;top: -50px">Jewel Maria</h3>
+                        <br>
+                        <p style="text-align:left;position:relative;margin-left: 100px;top: -50px;width: 250px">I highly recommend this product to every emerging company.
+                            The main advantage of Facilezone is its customization feature.
+                            </p>
+                    </div>
+                    <div class="carousel-item">
+                        <img loading="lazy"  src="{% static 'main/Ellipse12clientdp.png' %}">
+                        <h3 style="color: black;position:relative;margin-left: 100px;top: -50px">Divya George</h3>
+                        <br>
+                        <p style="text-align: left;position:relative;width: 250px;margin-left: 100px;top: -50px">Great Software to manage and analyse. Highly recommended.  If you want to grow your own business brand with limited investment and resources then this software is right choice for you.  </p>
+                    </div>
+                </div>
+                 <a class="carousel-control-prev" data-slide="prev" href="#demo"><span class="carousel-control-prev-icon"></span></a>
+                 <a class="carousel-control-next" data-slide="next" href="#demo"><span class="carousel-control-next-icon"></span></a>
+            </div>
+
+            </div>
+        </div>
+    </div>
+     <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="sixth">
+                <h4>
+                   Contact Us
+                </h4>
+                <p>
+                    Are you looking for reliable business management software?
+                    Sent an Enquiry now, we will get back to you as soon as possible.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+
+
+
+
+
+
+
+
+        var owl = $('#customer');
+        owl.owlCarousel({
+            loop:true,
+            center: true,
+            autoplay:true,
+            autoplayTimeout: 2520,
+            nav:true,
+            margin:0,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                960:{
+                    items:3
+                },
+                1200:{
+                    items:5
+                }
+            }
+        });
+        owl.on('mousewheel', '.owl-stage', function (e) {
+            if (e.deltaY>0) {
+                owl.trigger('next.owl');
+            }
+            else {
+                owl.trigger('prev.owl');
+            }
+            e.preventDefault();
+        });
+
+        $(document).ready(function(){
+            $('.nav1-toggle').click(function(){
+                var collapse_content_selector = $(this).attr('href');
+                var toggle_switch = $(this);
+                $(collapse_content_selector).toggle(function(){
+                    if($(this).css('display')== 'none'){
+                        toggle_switch.html('See more features');
+                    }else{
+                        toggle_switch.html('See less features')
+                    }
+                });
+            });
+        });
+
+        $(document).ready(function(){
+            $('.nav2-toggle').click(function(){
+                var collapse_content_selector = $(this).attr('href');
+                var toggle_switch = $(this);
+                $(collapse_content_selector).toggle(function(){
+                    if($(this).css('display')== 'none'){
+                        toggle_switch.html('Chat');
+                    }else{
+                        toggle_switch.html('Chat')
+                    }
+                });
+            });
+        });
+
+
+        $(document).ready(function(){
+        $('.nav-toggle').click(function(){
+            var collapse_content_selector = $(this).attr('href');
+            var toggle_switch = $(this);
+            $(collapse_content_selector).toggle(function(){
+                if($(this).css('display')== 'none'){
+                    toggle_switch.html('See more sector');
+                }else{
+                    toggle_switch.html('See less sectors')
+                }
+            });
+        });
+    });
+    </script>
+
+{% endblock %}

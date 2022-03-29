@@ -1,0 +1,109 @@
+{% extends 'base1.html' %}
+{% block content %}
+    {% load static %}
+    <style>
+    #first{
+        background-image: url({% static 'nav1/insurance.jpg' %});
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+    }
+    #second{
+        color: white;
+        font-family: Roboto, sans-serif;
+        position: relative;
+        margin-top: 15%;
+        margin-left: 7%;
+    }
+    </style>
+    <div id="first" class="container-fluid">
+        <div class="row">
+            <div id="second">
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 40px;text-align: left">
+                 Insurance
+                </p>
+                <p style="color: white;font-family: Roboto, sans-serif;font-size: 25px;text-align: left">
+                    Pursue new digital business models and <br>improve and protect your customers’ health,<br>
+                    property, and business with insurance <br>solutions from Facilezone.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 80%">
+            <br>
+            <br>
+            <p style="color: black;font-size: 46px">
+               The new network economy will coalesce around fewer ecosystems
+            </p>
+            <p style="color: black;font-size: 20px;">
+                Insurance is a prime digital network example, as it touches life, health,
+                property, and travel. By 2025, many insurers will be engaging with cross-industry
+                ecosystem providers and defining opportunities, beyond managing risk.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="container-fluid" style="margin-left: 13%">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <h4>
+                        Increase business agility
+                    </h4>
+                    <ul>
+                        <li>
+                            Industry-specific capabilities and best practices
+                        </li>
+                        <li>
+                            Machine learning-enabled processes
+                        </li>
+                        <li>
+                            Real-time, embedded analytics
+                        </li>
+                        <li>
+                            Automated, group-wide processes
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-lg-3">
+                    <h4>
+                        Gain control and insights
+                    </h4>
+                    <ul>
+                        <li>
+                            On-premise or cloud deployment
+                        </li>
+                        <li>
+                            Integrated business intelligence
+                        </li>
+                        <li>
+                            Integration with the SAP HANA platform
+                        </li>
+                        <li>
+                            Quick deployment
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 ">
+                    <h4>
+                        Support business growth
+                    </h4>
+                    <ul>
+                        <li>
+                            Streamlined end-to-end processes
+                        </li>
+                        <li>
+                            Agility to quickly adapt for new opportunities
+                        </li>
+                        <li>
+                            Real-time analytics to help improve profits and efficiency
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+{% endblock %}
