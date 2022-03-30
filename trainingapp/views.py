@@ -243,9 +243,6 @@ def Manager_attendance(request):
             m_id = "dummy"
         mem = user_registration.objects.all()
         
-        # des = designation.objects.get(designation_name='trainee')
-        # vars = user_registration.objects.filter(designation_id=des.id)
-    
         return render(request, 'software_training/training/manager/manager_attendance.html',{'mem':mem})
     else:
         return redirect('/')
@@ -423,27 +420,355 @@ def manager_trainers_leavelist(request):
     else:
         return redirect('/')
 
+def approvedstatus(request,id):
+    a=leave.objects.get(id=id)
+    a.leave_leaveapproved_status=1
+    a.save()
+    return redirect('manager_trainers_leavelist')
+
+def Leave_rejected(request,id):
+    if 'm_id' in request.session:
+        if request.session.has_key('m_id'):
+            m_id = request.session['m_id']
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        
+        else:
+            m_fullname = "dummy"
+    
+        # mem = user_registration.objects.filter(
+        #     designation_id=m_id) .filter(fullname=m_fullname)
+        # id = request.GET.get(id=id)
+        vars = leave.objects.get(id=id) 
+        if request.method == 'POST':
+                  
+            
+            vars.leave_rejected_reason = request.POST['review']
+            
+            vars.leave_leaveapproved_status = 2
+           
+            
+            vars.save()
+        return redirect('manager_trainers_leavelist')
+    else:
+        return redirect('/')
    
 def manager_trainer_leavestatus(request):
-    return render(request,'software_training/training/manager/manager_trainer_leavestatus.html')
+    if 'm_id' in request.session:
+        if request.session.has_key('m_id'):
+            m_id = request.session['m_id']
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        mem = user_registration.objects.filter(
+            designation_id=m_id) .filter(fullname=m_fullname)
+    
+        des = designation.objects.get(designation_name='trainer')
+        n = leave.objects.filter(leave_designation_id=des.id).order_by('-id')
+        
+    
+        return render(request, 'software_training/training/manager/manager_trainer_leavestatus.html', {'mem': mem ,'n': n})
+    else:
+        return redirect('/')
+
+    
 
 def manager_trainee_leave(request):
-    return render(request,'software_training/training/manager/manager_trainee_leave.html')
+    if 'm_id' in request.session:
+        if request.session.has_key('m_id'):
+            m_id = request.session['m_id']
+        else:
+            m_id = "dummy"
+        mem = user_registration.objects.all()
+        
+    
+        return render(request, 'software_training/training/manager/manager_trainee_leave.html',{'mem':mem})
+    else:
+        return redirect('/')
+    
 
 def manager_trainee_leavelist(request):
-    return render(request,'software_training/training/manager/manager_trainee_leavelist.html')
+    if 'm_id' in request.session:
+        if request.session.has_key('m_id'):
+            m_id = request.session['m_id']
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        else:
+            m_fullname = "dummy"
+    
+        mem = user_registration.objects.filter(
+            designation_id=m_id) .filter(fullname=m_fullname)
+        # .objects.filter(reported_to_id=usernametm2)
+        des = designation.objects.get(designation_name='trainee')
+       
+        cut = leave.objects.filter(leave_designation_id=des.id).filter(leave_leaveapproved_status=0).order_by('-id')
+        context = {'cut': cut, 'vars': vars, 'mem': mem}
+        return render(request,'software_training/training/manager/manager_trainee_leavelist.html', context)
+
+    else:
+        return redirect('/')
+    
+def approvedstatus_trainee(request,id):
+    a=leave.objects.get(id=id)
+    a.leave_leaveapproved_status=1
+    a.save()
+    return redirect('manager_trainee_leavelist')
+
+def Leave_rejected_trainee(request,id):
+    if 'm_id' in request.session:
+        if request.session.has_key('m_id'):
+            m_id = request.session['m_id']
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        
+        else:
+            m_fullname = "dummy"
+    
+        # mem = user_registration.objects.filter(
+        #     designation_id=m_id) .filter(fullname=m_fullname)
+        # id = request.GET.get(id=id)
+        vars = leave.objects.get(id=id) 
+        if request.method == 'POST':
+                  
+            
+            vars.leave_rejected_reason = request.POST['review']
+            
+            vars.leave_leaveapproved_status = 2
+           
+            
+            vars.save()
+        return redirect('manager_trainee_leavelist')
+    else:
+        return redirect('/')
+    
 
 def manager_trainee_leavestatus(request):
-    return render(request,'software_training/training/manager/manager_trainee_leavestatus.html')
+    if 'm_id' in request.session:
+        if request.session.has_key('m_id'):
+            m_id = request.session['m_id']
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        mem = user_registration.objects.filter(
+            designation_id=m_id) .filter(fullname=m_fullname)
+    
+        des = designation.objects.get(designation_name='trainer')
+        n = leave.objects.filter(leave_designation_id=des.id).order_by('-id')
+        
+    
+        return render(request, 'software_training/training/manager/manager_trainee_leavestatus.html', {'mem': mem ,'n': n})
+    else:
+        return redirect('/')
+
 
 def manager_new_team(request):
-    return render(request,'software_training/training/manager/manager_new_team.html')
-
+    if 'm_id' in request.session:
+        if request.session.has_key('m_id'):
+            m_id = request.session['m_id']
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        else:
+            m_id = "dummy"
+        mem = user_registration.objects.filter(designation_id=m_designation_id) .filter(fullname=m_fullname)
+        var = create_team.objects.all().order_by('-id')
+        des = designation.objects.get(designation_name='trainer')
+        var1 = user_registration.objects.filter(designation_id=des.id)
+        return render(request, 'software_training/training/manager/manager_new_team.html', {'mem': mem, 'var': var, 'var1': var1})
+    else:
+        return redirect('/')
+    
 def manager_new_teamcreate(request):
-    return render(request,'software_training/training/manager/manager_new_teamcreate.html')
+    if 'm_id' in request.session:
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        else:
+            m_fullname = "dummy"
+        mem = user_registration.objects.filter(designation_id=m_designation_id) .filter(fullname=m_fullname)
+        des = designation.objects.get(designation_name='trainer')
+        var = user_registration.objects.filter(designation_id=des.id)
+        return render(request, 'software_training/training/manager/manager_new_teamcreate.html', {'mem': mem, 'var': var})
+    else:
+        return redirect('/')
+def manager_newteamadd(request):
+    if 'm_id' in request.session:
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        else:
+            m_fullname = "dummy"
+    if request.method == 'POST':
+        team = request.POST['team']
+        trainer = request.POST.get('trainer')
+        try:
+            des = designation.objects.get(designation_name='trainer')
+            var = user_registration.objects.filter(designation_id=des.id)
+            user= create_team.objects.get(create_team_name=team)
+            mem = user_registration.objects.filter(designation_id=m_designation_id) .filter(fullname=m_fullname)
+            context = {'msg': 'Team already exists!!!....  Try another name','mem':mem,'var': var}
+            return render(request, 'software_training/training/manager/manager_new_teamcreate.html',context)
+        except :
+            user= create_team(create_team_name=team, create_team_trainer=trainer, create_team_progress=0)
+            user.save()
+            return redirect('manager_new_team')
 
+def manager_teamupdate(request,id):
+    if 'm_id' in request.session:
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        else:
+            m_fullname = "dummy"
+    if request.method == 'POST':
+        # tid = request.GET.get('tid')
+        abc = create_team.objects.get(id=id)
+        abc.create_team_name = request.POST.get('teams')
+        abc.create_team_trainer = request.POST.get('trainer')
+        abc.save()
+        return redirect('manager_new_team')
+    else:
+        pass
+
+
+def manager_teamdelete(request,id):
+    if 'm_id' in request.session:
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        else:
+            m_fullname = "dummy"
+
+    # tid = request.GET.get('tid')
+    var = create_team.objects.get(id=id)
+    
+    var.delete()
+    return redirect("manager_new_team")
+
+
+
+def manager_submit(request,id):
+    if 'm_id' in request.session:
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        else:
+            m_fullname = "dummy"
+   
+    if request.method == 'POST':
+        var1 = create_team.objects.get(id=id)
+        var1.create_team_status = 1        
+        var1.save()
+    return redirect("manager_new_team")
+    
 def manager_newtrainees(request):
-    return render(request,'software_training/training/manager/manager_newtrainees.html')
+    if 'm_id' in request.session:
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        else:
+            m_fullname = "dummy"
+        mem = user_registration.objects.filter(
+            designation_id=m_designation_id).filter(fullname=m_fullname)
+        des = course.objects.all()
+        
+        team = create_team.objects.all()
+        mem1 = designation.objects.get(designation_name="trainee")
+        memm = user_registration.objects.filter(designation_id=mem1).order_by('-id')
+        return render(request, 'software_training/training/manager/manager_newtrainees.html', {'mem': mem, 'memm': memm, 'des': des,  'team': team})
+    else:
+        return redirect('/')
+
+def manager_newtraineeesteam(request,id):
+    if 'm_id' in request.session:
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        else:
+            m_fullname = "dummy"
+        mem = user_registration.objects.filter(
+            designation_id=m_designation_id).filter(fullname=m_fullname)
+        # tid = request.GET.get('tid')
+        register = user_registration()
+        des = designation.objects.all()        
+        team = create_team.objects.all()
+        mem1 = designation.objects.get(designation_name="trainee")
+        memm = user_registration.objects.filter(designation_id=mem1)
+        
+        if request.method == 'POST':
+            register = user_registration.objects.get(id=id)
+            
+            register.team =create_team.objects.get(id=int(request.POST['team']))
+            register.course =course.objects.get(id=int(request.POST['cou']))
+            register.save()
+            return redirect('manager_newtrainees')
+        return render(request, 'software_training/training/manager/manager_newtrainees.html', {'memm': memm, 'des': des, 'team': team, })
+    else:
+        return redirect('/')
+
+def manager_changepassword(request):
+    if 'm_id' in request.session:
+        if request.session.has_key('m_id'):
+            m_id = request.session['m_id']
+       
+        mem = user_registration.objects.filter(id=m_id)
+    
+        if request.method == 'POST':
+            abc = user_registration.objects.get(id=m_id)
+    
+            oldps = request.POST['currentPassword']
+            newps = request.POST['newPassword']
+            cmps = request.POST.get('confirmPassword')
+            if oldps != newps:
+                if newps == cmps:
+                    abc.password = request.POST.get('confirmPassword')
+                    abc.save()
+                    return render(request, 'software_training/training/manager/manager_Dashboard.html', {'mem': mem})
+            elif oldps == newps:
+                messages.add_message(request, messages.INFO, 'Current and New password same')
+            else:
+                messages.info(request, 'Incorrect password same')
+    
+            return render(request, 'software_training/training/manager/manager_changepassword.html', {'mem': mem})
+    
+        return render(request, 'software_training/training/manager/manager_changepassword.html', {'mem': mem})
+
+    else:
+        return redirect('/')
+
+def manager_accountedit(request):
+    if 'm_id' in request.session:
+        
+        if request.session.has_key('m_id'):
+            m_id = request.session['m_id']
+        
+        mem = user_registration.objects.filter(id=m_id)
+    
+    
+        return render(request, 'software_training/training/manager/manager_accountedit.html', {'mem': mem})
+    else:
+        return redirect('/')
+def manager_imagechange(request,id):
+  
+    if request.method == 'POST':
+        abc = user_registration.objects.get(id=id)
+        abc.photo = request.FILES['filename']
+        
+        abc.save()
+        return redirect('manager_accountedit')
+    return render(request, 'software_training/training/manager/manager_accountedit.html')
 
     
 #******************Trainer*****************************

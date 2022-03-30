@@ -35,34 +35,35 @@
                         <thead>
 
                             <tr data-href="">
-                                <th> Name </th>
+                                <th> SlNo </th>
+                                <th > Name </th>
                                 <th> Date from</th>
                                 <th> Date To </th>
                                 <th> Reason </th>
                                 <th> Leave </th>
-                                <th> Status </th>
+                                <th class="text-wrap text-justify text-center"> Status </th>
 
 
                             </tr>
                         </thead>
                         <tbody>
-                            {% comment %} {% if cut %} {%for t in cut %}
+                            {% if cut %} {%for t in cut %}
                             <tr>
-                                <td>
-
-                                    
-                                    <span class="ps-2">{{t.user.fullname}}</span></a>
+                                <td>{{ forloop.counter }}</td>
+                                <td>  
+                                    <img src="{{media_url}}{{ t.leave_user.photo.url }}">                                   
+                                    <span class="ps-2">{{t.leave_user.fullname}}</span></a>
                                 </td>
 
-                                <td> {{t.from_date|date:"d-m-Y"}}</td>
-                                <td> {{t.to_date|date:"d-m-Y"}} </td>
-                                <td> {{t.reason}} </td>
+                                <td> {{t.leave_from_date|date:"d-m-Y"}}</td>
+                                <td> {{t.leave_to_date|date:"d-m-Y"}} </td>
+                                <td> {{t.leave_reason}} </td>
                                 <td> {{t.leave_status}} </td>
 
-                                <td>
+                                <td class="text-wrap text-justify text-center">
 
 
-                                    <a href="/approvedstatus_trainee/{{t.id}}" class="btn btn-outline-success btn-icon-text">
+                                    <a href="{%url 'approvedstatus_trainee' t.id%}" class="btn btn-outline-success btn-icon-text">
                                         <i class="mdi mdi-file-check btn-icon-prepend"></i> Approved
                                     </a>
                                     <button type="submit" class="btn btn-outline-danger" data-toggle="modal" data-target="#myModal{{t.id}}" style="background-color: #191c24">
@@ -75,34 +76,8 @@
                             </tr>
                             {% endfor %}{% else %}
                             <h5>Nothing to display...</h5>
-                            {% endif %} {% endcomment %}
-                            <tr>
-                                <td>
-
-                                    
-                                    <span class="ps-2">{{t.user.fullname}}Leya</span></a>
-                                </td>
-
-                                <td> {{t.from_date|date:"d-m-Y"}}23/03/2020</td>
-                                <td> {{t.to_date|date:"d-m-Y"}}25/03/2020</td> 
-                                <td> {{t.reason}} xxxxxxxxxxxx</td>
-                                <td> {{t.leave_status}}fullday </td>
-
-                                <td>
-
-
-                                    <a href="/approvedstatus_trainee/{{t.id}}" class="btn btn-outline-success btn-icon-text">
-                                        <i class="mdi mdi-file-check btn-icon-prepend"></i> Approved
-                                    </a>
-                                    <button type="submit" class="btn btn-outline-danger" data-toggle="modal" data-target="#myModal{{t.id}}" style="background-color: #191c24">
-                                        <i class="mdi mdi-message-reply-text text-warning" style="font-size: 18px" Required></i>
-                                        Rejected
-                                    </button>
-
-
-                                </td>
-                            </tr>
-
+                            {% endif %}
+                            
 
 
                         </tbody>
@@ -112,7 +87,7 @@
         </div>
     </div>
 </div>
-{% comment %} {%for t in cut%} {% endcomment %}
+{%for t in cut%}
 <!-- Modal -->
 
 <div class="modal" id="myModal{{t.id}}">
@@ -129,7 +104,7 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <form method="post" action="/Trainee_Leave_rejected/?id={{t.id}}">
+                <form method="post" action="{% url 'Leave_rejected_trainee' t.id %}">
                     {% csrf_token %}
                     <textarea class="col-12 grid-margin stretch-card text-light" style="background-color: rgba(66, 65, 65, 0.267)" rows="6" name="review"></textarea>
             </div>
@@ -146,7 +121,7 @@
         </div>
     </div>
 </div>
-{% comment %} {%endfor%} {% endcomment %}
+{%endfor%}
 <!-- js -->
 <script>
     function myFunction() {

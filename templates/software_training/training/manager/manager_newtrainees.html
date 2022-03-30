@@ -29,7 +29,6 @@
                 <th>End Date</th>
                 <th>Select Team</th>
 
-                <th>Department</th>
                 <th>Course</th>
                 <th>Allocate</th>
               </tr>
@@ -37,10 +36,10 @@
             
             
               <tbody>
-                {% comment %} {%if memm%}
+               {%if memm%}
                 {%for memm in memm%}
                 <tr>
-                  <form method="post" action="/newtraineeesteam/?tid={{memm.id}}" enctype="multipart/form-data">
+                  <form method="post" action="{%url 'manager_newtraineeesteam' memm.id %}" enctype="multipart/form-data">
                     {%csrf_token%}
                   <td>
                     <img src="{{memm.photo.url}}" alt="image" />
@@ -60,22 +59,12 @@
                       
                      
 
-                      <option value="{{i.id}}">{{i.name}}</option>
+                      <option value="{{i.id}}">{{i.create_team_name}}</option>
                       {%endfor%} 
                     </select>
                     
                   </td>
-                  <td>
-                    <select
-                      class="badge badge-outline-primary bg-dark text-light"
-                      name="dept"
-                    ><option style="display: none">Department</option>
-                      {%for i in dept%}
-
-                      <option value="{{i.id}}">{{i.department}}</option>
-                      {%endfor%}
-                    </select>
-                  </td>
+                  
                   <td>
                     <select
                       class="badge badge-outline-primary bg-dark text-light"
@@ -83,7 +72,7 @@
                     ><option style="display: none">Course</option>
                       {%for i in des%}
 
-                      <option value="{{i.id}}">{{i.name}}</option>
+                      <option value="{{i.id}}">{{i.course_name}}</option>
                       {%endfor%}
                     </select>
                   </td>
@@ -100,60 +89,8 @@
                 {%endfor%}
                 {%else%}
                 <h5 style="text-align:center">Nothing to display!</h5>
-                {%endif%} {% endcomment %}
-                <tr>
-                    <form method="post" action="/newtraineeesteam/?tid={{memm.id}}" enctype="multipart/form-data">
-                      {%csrf_token%}
-                    <td>
-                      <img src="{{memm.photo.url}}{% static 'softwareapp//assets/images/faces/face5.jpg' %}" alt="image" />
-                      <span class="ps-2">{{memm.fullname}}Jishnu</span>
-                    </td>
-                    <td>{{memm.startdate}}23/03/2020</td>
-                    <td>{{memm.enddate}}25/03/2020</td>
-                    <td>
-                      
-                      <select
-                        class="badge badge-outline-primary bg-dark text-light"
-                        name="team"
-                      >
-                      {% comment %} {%for i in team%}  {% endcomment %}
-                      <option style="display: none">Teams</option>
-                        <option value="{{i.id}}">{{i.name}}</option>
-                        {% comment %} {%endfor%}  {% endcomment %}
-                      </select>
-                      
-                    </td>
-                    <td>
-                      <select
-                        class="badge badge-outline-primary bg-dark text-light"
-                        name="dept"
-                      ><option style="display: none">Department</option>
-                        {% comment %} {%for i in dept%} {% endcomment %}
-  
-                        <option value="{{i.id}}">{{i.department}}</option>
-                        {% comment %} {%endfor%} {% endcomment %}
-                      </select>
-                    </td>
-                    <td>
-                      <select
-                        class="badge badge-outline-primary bg-dark text-light"name="cou">
-                        <option style="display: none">Course</option>
-                        {% comment %} {%for i in des%} {% endcomment %}
-                        <option value="{{i.id}}">{{i.name}}Python</option>
-                        <option value="{{i.id}}">{{i.name}}</option>
-                        {% comment %} {%endfor%} {% endcomment %}
-                      </select>
-                    </td>
-                    <td>
-                      <button
-                        type="submit"
-                        class="btn btn-outline-primary btn-icon-text"
-                      >
-                        <i class="mdi mdi-file-check btn-icon-prepend"></i>Submit
-                      </button>
-                    </td>
-                  </form>
-                  </tr>
+                {%endif%}
+                
               </tbody>
                           
           </table>

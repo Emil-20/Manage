@@ -61,8 +61,7 @@
         <li class="nav-item profile">
             <div class="profile-desc">
                 <div class="profile-pic">
-                    <div class="count-indicator">
-                    
+                    <div class="count-indicator">                    
                       {% for mem in mem %}
                         <img class="img-xs rounded-circle " src="{{mem.photo.url}}" alt="">
                         <span class="count bg-success"></span>
@@ -76,7 +75,7 @@
                 </div>
                 <a href="" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
                 <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
-                    {% comment %} <a href="{% url 'account_tr_mg' %}" class="dropdown-item preview-item"> {% endcomment %}
+                    <a href="{% url 'manager_accountedit' %}" class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
                             
                             <div class="preview-icon bg-dark rounded-circle">
@@ -89,7 +88,7 @@
                         </div>
                     </a>
                     <div class="dropdown-divider"></div>
-                    {% comment %} <a href="{% url 'changepassword_tr_mg' %}" class="dropdown-item preview-item"> {% endcomment %}
+                   <a href="{% url 'manager_changepassword' %}" class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
                             <div class="preview-icon bg-dark rounded-circle">
                                 <i class="mdi mdi-onepassword  text-info"></i>
@@ -98,9 +97,7 @@
                         <div class="preview-item-content">
                             <p class="preview-subject ellipsis mb-1 text-small">Change Password</p>
                         </div>
-                    </a>
-
-                    
+                    </a>                    
                 </div>
             </div>
         </li>
@@ -147,6 +144,14 @@
                 <span class="menu-title">Attendance</span>
             </a>
         </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="#">
+               <span class="menu-icon">
+       <i class="mdi mdi-cash-usd"></i>
+     </span>
+               <span class="menu-title">Payment</span>
+           </a>
+       </li>
         
         <li class="nav-item menu-items">
             <a class="nav-link" href="{% url 'manager_applyleave' %}">

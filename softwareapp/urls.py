@@ -9,6 +9,7 @@ from trainingapp import views as training_views
 
 
 urlpatterns = [
+
     path('Tlogin', training_views.Tlogin, name='Tlogin'),
     path('manager_logout', training_views.manager_logout, name='manager_logout'),
     path('Admin_logout', training_views.Admin_logout, name='Admin_logout'),
@@ -331,15 +332,39 @@ urlpatterns = [
     path('manager_applyleavsub/', training_views.manager_applyleavsub,name='manager_applyleavsub'),
     path('manager_requestedleave/', training_views.manager_requestedleave,name='manager_requestedleave'),
     path('manager_trainer_leave/', training_views.manager_trainer_leave,name='manager_trainer_leave'),
+
+
+
     path('manager_trainers_leavelist/', training_views.manager_trainers_leavelist,name='manager_trainers_leavelist'),
+    path('approvedstatus/<int:id>/', training_views.approvedstatus,name='approvedstatus'),
+    path('Leave_rejected/<int:id>/', training_views.Leave_rejected,name='Leave_rejected'),
+
+
+
+
+
+
     path('manager_trainer_leavestatus/', training_views.manager_trainer_leavestatus,name='manager_trainer_leavestatus'),
     path('manager_trainee_leave/', training_views.manager_trainee_leave,name='manager_trainee_leave'),
     path('manager_trainee_leavelist/', training_views.manager_trainee_leavelist,name='manager_trainee_leavelist'),
+    path('approvedstatus_trainee/<int:id>/', training_views.approvedstatus_trainee,name='approvedstatus_trainee'),
+    path('Leave_rejected_trainee/<int:id>/', training_views.Leave_rejected_trainee,name='Leave_rejected_trainee'),
     path('manager_trainee_leavestatus/', training_views.manager_trainee_leavestatus,name='manager_trainee_leavestatus'),
 
     path('manager_new_team/', training_views.manager_new_team,name='manager_new_team'),
     path('manager_new_teamcreate/', training_views.manager_new_teamcreate,name='manager_new_teamcreate'),
+
+    path('manager_newteamadd/', training_views.manager_newteamadd,name='manager_newteamadd'),
+    path('manager_teamupdate/<int:id>/', training_views.manager_teamupdate,name='manager_teamupdate'),
+    path('manager_teamdelete/<int:id>/', training_views.manager_teamdelete,name='manager_teamdelete'),
+    path('manager_submit/<int:id>/', training_views.manager_submit,name='manager_submit'),
+
     path('manager_newtrainees/', training_views.manager_newtrainees,name='manager_newtrainees'),
+
+    path('manager_newtraineeesteam/<int:id>/', training_views.manager_newtraineeesteam,name='manager_newtraineeesteam'),
+    path('manager_changepassword/', training_views.manager_changepassword,name='manager_changepassword'),
+    path('manager_accountedit/', training_views.manager_accountedit,name='manager_accountedit'),
+    path('manager_imagechange/<int:id>/', training_views.manager_imagechange,name='manager_imagechange'),
    
 
 

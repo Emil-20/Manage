@@ -57,15 +57,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% comment %} {% if var %} {%for i in var%}
+                            {% if var %} {%for i in var%}
                             <tr>
-                                <form action="/teamdelete/?tid={{i.id}}" method="post">
+                                <form action="{% url 'manager_teamdelete' i.id %}" method="post">
                                 {% csrf_token %}
                                     <td>
-                                        <a href="#" style="text-decoration: none; color: #6c7293">{{i.name}}</a>
+                                        <a href="#" style="text-decoration: none; color: #6c7293">{{i.create_team_name}}</a>
                                     </td>
                                     <td>
-                                        <a href="#" style="text-decoration: none; color: #6c7293">{{i.trainer}}</a>
+                                        <a href="#" style="text-decoration: none; color: #6c7293">{{i.create_team_trainer}}</a>
                                     </td>
                                     <td>
                                         <button type="button" data-toggle="modal" data-target="#myModal{{i.id}}" class="btn btn-social-icon-text btn-outline-primary"><i class="mdi mdi-tooltip-edit"></i>Update</button>
@@ -78,7 +78,7 @@
                                             <div class="progress-bar" style="height:20px;width:{{i.progress}}%">{{i.progress}}%</div>
                                         </div>
                                     </td>
-                                    <form action="/submit/?tid={{i.id}}" method="post">
+                                    <form action="{%url 'manager_submit' i.id %}" method="post">
                                         {%csrf_token%}
 
                                         <td>
@@ -90,38 +90,9 @@
                             </tr>
                             {% endfor %}{% else %}
                             <h5 style="text-align:center">Nothing to display...</h5>
-                            {% endif %} {% endcomment %}
+                            {% endif %}
 
-                            <tr>
-                                <form action="/teamdelete/?tid={{i.id}}" method="post">
-                                {% csrf_token %}
-                                    <td>
-                                        <a href="#" style="text-decoration: none; color: #6c7293">{{i.name}}Java</a>
-                                    </td>
-                                    <td>
-                                        <a href="#" style="text-decoration: none; color: #6c7293">{{i.trainer}}Kripa</a>
-                                    </td>
-                                    <td>
-                                        <button type="button" data-toggle="modal" data-target="#myModal{{i.id}}" class="btn btn-social-icon-text btn-outline-primary"><i class="mdi mdi-tooltip-edit"></i>Update</button>
-                                        <button type="submit" class="btn btn-social-icon-text btn-outline-danger" onclick="confirmation()"><i class="mdi mdi-delete-forever"></i>Delete</button>
-
-                                    </td>
-                                </form>
-                                    <td>
-                                        <div class="progress" style="height:20px;">
-                                            <div class="progress-bar" style="height:20px;width:55{{i.progress}}%">55{{i.progress}}%</div>
-                                        </div>
-                                    </td>
-                                    <form action="/submit/?tid={{i.id}}" method="post">
-                                        {%csrf_token%}
-
-                                        <td>
-                                            <button type="submit" class="btn btn-social-icon-text btn-outline-primary"><i class="mdi mdi-tooltip-edit"></i>Complete</button>
-                                        </td>
-
-
-                                    </form>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -130,13 +101,13 @@
     </div>
 </div>
 
-{% comment %} {%for i in var%} {% endcomment %}
+{%for i in var%}
 <!-- Modal -->
 <div class="modal" id="myModal{{i.id}}">
     <div class="modal-dialog">
         <div class="col-12 grid-margin stretch-card bg-dark text-light modal-content">
         <!-- Modal Header -->
-            <form action="/teamupdate/?tid={{i.id}}" method="post" enctype="multipart/form-data" autocomplete="off">
+            <form action="{% url 'manager_teamupdate' i.id %}" method="post" enctype="multipart/form-data" autocomplete="off">
                 {%csrf_token%}
                     <div class="modal-header">
                         <h4 class="modal-title">UPDATE</h4>
@@ -178,7 +149,7 @@
             </div>
         </div>
     </div>
-    {% comment %} {%endfor%} {% endcomment %}
+{%endfor%}
     <!-- modal end -->
 
     <script>
