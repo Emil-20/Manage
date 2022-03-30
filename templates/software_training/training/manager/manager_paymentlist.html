@@ -1,0 +1,111 @@
+{% extends 'software_training/training/manager/base_manager.html' %}
+ {% load static %} {% block content %}
+
+<style>
+    table tr {
+        cursor: pointer;
+    }
+</style>
+
+
+
+<div class="row" style="padding-top: 20px;">
+    <div class="col-12 col-sm-8 col-md-8 col-lg-10 grid-margin stretch-card mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h4>Payment List</h4>
+                        <br>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <form>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type="text" class="form-control text-light" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- table start hear -->
+
+                <div class="table-responsive" style="overflow-x: hidden;">
+                    <table class="table " id="myTable">
+                        <thead>
+
+                            <tr>
+                                <th> SLNo </th>
+                                <th> Name </th>
+                                <th> Employee Id</th>
+                                <th> Contact No</th>
+                                <th>Salary Date</th>
+                                <th>Slip</th>
+                                
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in acc %}
+                            <tr>
+
+                                <td>{{forloop.counter}}</td>
+
+                                <td><img src="{{i.acntspayslip_user_id.photo.url}}" alt="image" /> {{i.acntspayslip_user_id.fullname}}{{i.acntspayslip_user_id.id}}</td>
+                                <td>{{i.acntspayslip_user_id.employee_id}}</td>
+                                <td>{{i.acntspayslip_user_id.mobile}}</td>
+                                <td> {{i.acntspayslip_fromdate|date:"d-m-Y"}}</td>
+                                <td> 
+                                    <a href="{% url 'manager_payment_viewslip' i.id i.acntspayslip_user_id.id%} " class="btn btn-outline-success">View slip</a>
+                                    {% comment %} <a href="#" class="btn btn-outline-success">View slip</a>{{i.id}}/{{i.acntspayslip_user_id.id}}/ {% endcomment %}
+                                </td>   
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+    //js for submit button in new_team.html page
+    function redirect() {
+        window.location.href = "/trainer_reportedissue_table";
+    }
+
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+
+    /* $(document).ready(function(){
+      $('table tr').click(function(){
+          window.location = $(this).data('href');
+          return false;
+      });
+  }); */
+</script>
+
+{% endblock %}

@@ -770,6 +770,65 @@ def manager_imagechange(request,id):
         return redirect('manager_accountedit')
     return render(request, 'software_training/training/manager/manager_accountedit.html')
 
+def manager_paymentlist(request):
+    if 'm_id' in request.session:
+        if request.session.has_key('m_id'):
+            m_id = request.session['m_id']
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        else:
+            m_id = "dummy"
+        mem = user_registration.objects.filter(designation_id=m_designation_id).filter(fullname=m_fullname).filter(id=m_id)
+        acc=acntspayslip.objects.filter(acntspayslip_user_id=m_id).all().order_by('-id')
+        
+        return render(request, 'software_training/training/manager/manager_paymentlist.html', {'acc': acc,'mem':mem})
+    else:
+        return redirect('/')
+
+def manager_payment_viewslip(request,id,tid):
+    if 'm_id' in request.session:
+        if request.session.has_key('m_id'):
+            m_id = request.session['m_id']
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        else:
+            m_id = "dummy"
+        # tid = request.GET.get('tid')
+        # id = request.GET.get('id')
+        mem= user_registration.objects.filter(designation_id=m_designation_id).filter(fullname=m_fullname).filter(id=m_id)
+        user = user_registration.objects.get(id=tid)
+        acc = acntspayslip.objects.get(id=id)
+        names = acntspayslip.objects.all()
+        
+        
+        return render(request, 'software_training/training/manager/manager_payment_viewslip.html', {'mem': mem,'user':user,'acc':acc})
+    else:
+        return redirect('/')
+
+def manager_payment_print(request,id,tid):
+    if 'm_id' in request.session:
+        if request.session.has_key('m_id'):
+            m_id = request.session['m_id']
+        if request.session.has_key('m_fullname'):
+            m_fullname = request.session['m_fullname']
+        if request.session.has_key('m_designation_id'):
+            m_designation_id = request.session['m_designation_id']
+        else:
+            m_id = "dummy"
+        mem = user_registration.objects.filter(designation_id=m_designation_id).filter(fullname=m_fullname).filter(id=m_id)
+        z = user_registration.objects.filter(id=m_id)   
+        user = user_registration.objects.get(id=tid)
+        acc = acntspayslip.objects.get(id=id)
+        
+        
+        return render(request, 'software_training/training/manager/manager_payment_print.html', {'z': z,'user':user,'acc':acc,'mem': mem})
+    else:
+        return redirect('/')
+
     
 #******************Trainer*****************************
 

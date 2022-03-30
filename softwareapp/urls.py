@@ -366,6 +366,10 @@ urlpatterns = [
     path('manager_accountedit/', training_views.manager_accountedit,name='manager_accountedit'),
     path('manager_imagechange/<int:id>/', training_views.manager_imagechange,name='manager_imagechange'),
    
+    path('manager_paymentlist/',training_views.manager_paymentlist,name='manager_paymentlist'),
+    path('manager_payment_viewslip/<int:id>/<int:tid>/', training_views.manager_payment_viewslip,name='manager_payment_viewslip'),
+    path('manager_payment_print/<int:id>/<int:tid>/', training_views.manager_payment_print,name='manager_payment_print'),
+
 
 
 

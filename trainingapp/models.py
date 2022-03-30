@@ -255,6 +255,8 @@ class acntspayslip(models.Model):
     acntspayslip_instype = models.CharField(max_length=255,default='')
     acntspayslip_deltype = models.CharField(max_length=255,default='')
     acntspayslip_leatype = models.CharField(max_length=255,default='')
+    acntspayslip_pftype = models.CharField(max_length=255,default='')
+    acntspayslip_esitype = models.CharField(max_length=255,default='')
     
 
 
