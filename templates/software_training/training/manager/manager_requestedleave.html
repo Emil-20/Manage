@@ -34,41 +34,24 @@
                         <tbody>
                             {% if cut %} {%for t in cut %}
                             <tr>
-
-
                                 <td>{{t.leave_from_date|date:"d-m-Y"}}</td>
                                 <td> {{t.leave_to_date|date:"d-m-Y"}}</td>
                                 <td class="text-wrap text-justify" style="width: 550px"> {{t.leave_reason}}</td>
-
-
                                 <td>
-
-
                                     {% if t.leave_status == 'half Day' %}
-
-
                                     <a href="#">
                                         <div class="badge text-success">Half Day</div>
                                     </a>
-
-
                                     {%else%}
-
                                     <a href="#">
                                         <div class="badge text-danger">Full Day</div>
                                     </a>
-
                                     {%endif%}
-
-
                                 </td>
                             </tr>
                             {% endfor %}{% else %}
                             <h5>Nothing to display...</h5>
-                            {% endif %}
-
-
-                            
+                            {% endif %}                            
                         </tbody>
                     </table>
                 </div>

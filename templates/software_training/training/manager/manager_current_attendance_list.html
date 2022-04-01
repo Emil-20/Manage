@@ -34,9 +34,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% comment %} {% if atten %} {% for i in atten %}
+                            {% if atten %} {% for i in atten %}
                             <tr data-href="#">
-                                <td> {{i.date|date:"d-m-Y"}}</td>
+                                <td> {{i.attendance_date|date:"d-m-Y"}}</td>
                                 <td></td>
                                 <td></td>
                                 <td>
@@ -49,33 +49,7 @@
                             </tr>
                             {% endfor %}{% else %}
                             <h5>Nothing to display...</h5>
-                            {% endif %} {% endcomment %}
-                            <tr data-href="#">
-                                <td> {{i.date|date:"d-m-Y"}}20/03/2020</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>
-                                    
-                                    <div class="badge badge-outline-success">Present</div>
-                                   
-                                   
-                                    
-                                </td>
-                            </tr>
-                            <tr data-href="#">
-                                <td> {{i.date|date:"d-m-Y"}}22/03/2020</td>
-                                <td>---</td>
-                                <td>---</td>
-                                <td>
-                                    
-                                    
-                                   
-                                    <div class="badge badge-outline-danger">Absent</div>
-                                    
-                                </td>
-                            </tr>
-
-
+                            {% endif %} 
                         </tbody>
                     </table>
                 </div>
@@ -83,8 +57,6 @@
         </div>
     </div>
 </div>
-
-
 <script>
     function myFunction() {
         var input, filter, table, tr, td, i, txtValue;

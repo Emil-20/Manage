@@ -28,47 +28,32 @@
                         <thead>
                             <tr>
                                 <th> Name </th>
-                                <th> Department </th>
+                                <th> Designation </th>
                                 <th> Problem </th>
                                 <th> Reply </th>
                                 <th> Status </th>
                             </tr>
                         </thead>
                         <tbody>
-                            {% comment %} {% if cut %} {%for t in cut%}
+                            {% if cut %} {% for t in cut %}
                             <tr>
                                 <td>
 
                                    
-                                    <img src="{{media_url}}{{ t.reporter.photo.url }}">
-                                    <span class="ps-2">{{t.reporter.fullname}}</span></a>
+                                    <img src="{{media_url}}{{ t.reported_issue_reporter.photo.url }}">
+                                    <span class="ps-2">{{t.reported_issue_reporter.fullname}}</span></a>
                                 </td>
-                                <td> {{t.reporter.department.department}} </td>
-                                <td class="text-wrap text-justify" style="width:300px">{{t.issue}}</td>
-                                <td class="text-wrap text-justify" style="width:300px">{{t.reply}}</td>
+                                <td> {{t.reported_issue_reporter.designation.designation_name}}</td> 
+                                <td class="text-wrap text-justify" style="width:300px">{{t.reported_issue_issue}}</td>
+                                <td class="text-wrap text-justify" style="width:300px">{{t.reported_issue_reply}}</td>
                                 <td>
-                                    <div style="color: rgb(94, 194, 94);font-size: medium;">Solved
-                                    </div>
+                                    <div style="color: rgb(94, 194, 94);font-size: medium;">Solved</div>
                                 </td>
                             </tr>
                             {% endfor %}{% else %}
                             <h5>Nothing to display...</h5>
-                            {% endif %} {% endcomment %}
-                            <tr>
-                                <td>
-
-                                   
-                                    <img src="{{media_url}}{{ t.reporter.photo.url }}{% static 'softwareapp//assets/images/faces/face5.jpg' %}">
-                                    <span class="ps-2">{{t.reporter.fullname}}Kripa</span></a>
-                                </td>
-                                <td> {{t.reporter.department.department}}Software </td>
-                                <td class="text-wrap text-justify" style="width:300px">{{t.issue}}xxxx</td>
-                                <td class="text-wrap text-justify" style="width:300px">{{t.reply}}aaaaaaaaaaa</td>
-                                <td>
-                                    <div style="color: rgb(94, 194, 94);font-size: medium;">Solved
-                                    </div>
-                                </td>
-                            </tr>
+                            {% endif %} 
+                            
                         </tbody>
                     </table>
                 </div>

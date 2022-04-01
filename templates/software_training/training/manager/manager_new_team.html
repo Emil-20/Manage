@@ -121,7 +121,8 @@
                                     <div class="dropdown">
                                         <label style="font: size 14px; margin-top: 50px">Select Trainer</label>&nbsp;&nbsp;&nbsp;&nbsp;
                                         <select class="badge badge-outline-primary bg-dark text-light" name="trainer">
-                                            <option style="display: none">Trainer</option>
+                                            
+                                            <option style="display: none">{{i.create_team_trainer}}</option>
                                             {%for var in var1%}
                                             <option value="{{var.fullname}}">{{var.fullname}}</option>
                                             {%endfor%}
@@ -131,7 +132,7 @@
                                     <div class="form-group row">
                                         <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Team Name</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control text-light" name="teams"required /></div>
+                                            <input type="text" class="form-control text-light" name="teams"required  value="{{i.create_team_name}}"></div>
                                         </div>
                                         <br />
                                         <div class="row">

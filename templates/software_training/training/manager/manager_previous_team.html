@@ -1,11 +1,7 @@
 {% extends 'software_training/training/manager/base_manager.html' %}
  {% load static %} {% block content %}
 
-<style>
-    table tr[data-href] {
-        cursor: pointer;
-    }
-    
+ <style>
     table tr[data-href] {
         cursor: pointer;
     }
@@ -39,13 +35,12 @@
     }
 </style>
 
-
 <div class="col-lg-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                    <h3>Current Team</h3>
+                    <h3>Previous Team</h3>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <form>
@@ -55,7 +50,6 @@
                     </form>
                 </div>
             </div>
-
             <div class="table-responsive">
                 <table class="table table" id="myTable">
                     <thead>
@@ -66,44 +60,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% comment %} {% if tm %} {% for t in tm %}
-                        <tr data-href="/task/{{t.id}}">
+                        {% if tm %} {% for t in tm %}
+                        <tr data-href="{% url 'Manager_previous_task' t.id %}">
                             <td>
-                                {{t.name}}
+                                {{t.create_team_name}}
                             </td>
-
-                            <td style="padding-left:80px;">{{t.team_count}}</td>
+                            <td style="padding-left:80px;">{{t.create_team_count}}</td>
                             <td>
                                 <div class="progress">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: {{t.progress}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{t.progress}}%</div>
+                                    <div class="progress-bar " role="progressbar" style="width: {{t.create_team_progress}}% " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{t.create_team_progress}}% </div>
                                 </div>
                             </td>
                         </tr>
-
                         {% endfor %}{% else %}
                         <h5>Nothing to display...</h5>
-                        {% endif %} {% endcomment %}
-                        <tr data-href="{%url 'Manager_previous_task'%}">
-                            <td>
-                                {{t.name}}python
-                            </td>
-
-                            <td style="padding-left:80px;">{{t.team_count}} 10</td>
-                            <td>
-                                <div class="progress">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 80{{t.progress}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80{{t.progress}}%</div>
-                                </div>
-                            </td>
-                        </tr>
-
+                        {% endif %} 
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
-
-
 <script>
     function myFunction() {
         var input, filter, table, tr, td, i, txtValue;
@@ -124,7 +101,7 @@
         }
     }
 
-    progressBar = document.querySelectorAll('progress-bar');
+    progressBar = document.querySelectorAll('.progress-bar');
     progressBar.forEach(function(onebyone) {
         console.log(onebyone.style.width)
 
@@ -147,7 +124,6 @@
         }
 
     })
-
     $(document).ready(function() {
         $('table tr').click(function() {
             window.location = $(this).data('href');
@@ -155,7 +131,4 @@
         });
     });
 </script>
-
-
-
 {%endblock%}

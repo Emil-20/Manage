@@ -10,7 +10,7 @@
                         <h4 class="card-description"> Personal Information </h4>
                     </div>
                     <div class="col-4 col-md-2">
-                        <img src="{{media_url}}{{vars.photo.url}}{% static 'softwareapp//assets/images/faces/face5.jpg' %}" class="img-fluid rounded-circle mb-3 " alt="image">
+                        <img src="{{media_url}}{{vars.photo.url}}" class="img-fluid rounded-circle mb-3 " alt="image">
                     </div>
                 </div>
                 <div class="row">
@@ -18,7 +18,7 @@
                         <div class="form-group row">
                             <label class="col-6 col-form-label">Full Name:</label>
                             <div class="col-6">
-                                <p class="mt-2">{{vars.fullname}}Fuad</p>
+                                <p class="mt-2">{{vars.fullname}}</p>
                             </div>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                         <div class="form-group row">
                             <label class="col-6 col-form-label">Addresss:</label>
                             <div class="col-6">
-                                <p class="mt-2">{{vars.presentaddress1}}xxxxxxxxxxxxxxxx</p>
+                                <p class="mt-2">{{vars.presentaddress1}}</p>
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                         <div class="form-group row">
                             <label class="col-6 col-form-label">Date of Birth:</label>
                             <div class="col-6">
-                                <p class="mt-2">{{vars.dateofbirth}}xxxxxxxxxxxxxx</p>
+                                <p class="mt-2">{{vars.dateofbirth}}</p>
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                         <div class="form-group row">
                             <label class="col-6 col-form-label">Mail Id:</label>
                             <div class="col-6">
-                                <p class="mt-2">{{vars.email}}xxxxxxxxxxxxxxxxxxxxx</p>
+                                <p class="mt-2">{{vars.email}}</p>
                             </div>
                         </div>
                     </div>
@@ -54,15 +54,15 @@
                         <div class="form-group row">
                             <label class="col-6 col-form-label">Contact No:</label>
                             <div class="col-6 ">
-                                <p class="mt-2">{{vars.mobile}}xxxxxxxxxxxxxxxxx</p>
+                                <p class="mt-2">{{vars.mobile}}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group row">
-                            <label class="col-6 col-form-label">Department:</label>
+                            <label class="col-6 col-form-label">Designation:</label>
                             <div class="col-6">
-                                <p class="mt-2">{{vars.department.department}}xxxxxxxxxxxx</p>
+                                <p class="mt-2">{{vars.designation.designation_name}}</p>
                             </div>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                         <div class="form-group row">
                             <label class="col-6 col-form-label">Trainer Name:</label>
                             <div class="col-6">
-                                <p class="mt-2">{{tre.trainer}}xxxxxxxxxxxxxxxxxxxx</p>
+                                <p class="mt-2">{{tre.create_team_trainer}}</p>
                             </div>
                         </div>
                     </div>
@@ -78,8 +78,6 @@
             </div>
         </div>
     </div>
-    <!--details ends here -->
-
     <!-- pie chart and bar chart starts here -->
     <div class="page-header">
         <h3 class="page-title"> Chart </h3>
@@ -114,7 +112,7 @@
                             <h4 class="card-title text-center">Attendance</h4>
                         </div>
                     </div>
-                    <form class="forms-sample" action="{% url 'Manager_trainees_attendance'%}" method="post">
+                    <form class="forms-sample" action="{% url 'Manager_trainees_attendance' vars.id %}" method="post">
                         {% csrf_token %}
                         <div class="form-group row">
                             <label for="exampleInputEmail2" class="col-3 col-sm-3 col-md-3 col-lg-3 col-form-label">Start Date</label>
@@ -152,13 +150,9 @@
               day = '0' + day.toString();
           var maxDate = year + '-' + month + '-' + day;
           document.getElementById("txtDate").setAttribute("max", maxDate);
-          document.getElementById("txtDate1").setAttribute("max", maxDate);
-          
-                  
-                  
+          document.getElementById("txtDate1").setAttribute("max", maxDate);   
     </script>
     <script>
-
         var config = {
           type: 'pie',
           data: {
@@ -183,7 +177,6 @@
         };
   
       </script>
-
 <script>
 
         
@@ -211,7 +204,5 @@
         }
        }
     });
-    
-          </script>
-
-    {% endblock %}
+</script>
+{% endblock %}

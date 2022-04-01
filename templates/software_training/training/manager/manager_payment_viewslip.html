@@ -5,6 +5,7 @@
     <div class="card mt-3 mb-5">
         <div class="card-body">
             <form class="form-sample" action="{% url 'manager_payment_print' acc.id user.id %}">
+                {% comment %} <form class="form-sample" action="{% url 'manager_payment_pdf' acc.id user.id %}"> {% endcomment %}
                 <div class="row">
                    
                     <center>
@@ -12,8 +13,7 @@
                             <h4 class="card-title " style="text-align:center; font-weight: 500;"> PAYSLIP FOR &nbsp; {{acc.fromdate}}</h4>
                             <h6 class="card-description" style="text-align:center; font-weight: 600;"> {{user.fullname}}</h6>
                         </div>
-                    </center>
-                    
+                    </center>                   
 
                 </div>
                 <div class="row mt-4">
@@ -257,13 +257,13 @@
 
                 <div class="row mt-4">
                     <div class="col-12 col-sm-5 col-md-5 col-lg-8"></div>
-                    <!-- <div class="text-center pull-right"> -->
+                    
                     <div class="col-12 col-sm-7 col-md- 7 col-lg-4">
                         <button type="submit" class="btn btn-outline-primary btn-icon-text" style="width: 100px; margin-left: 50px;" >
     
                         save
                </button></div>
-                    <!-- </div> -->
+                  
                 </div>
 
             </form>

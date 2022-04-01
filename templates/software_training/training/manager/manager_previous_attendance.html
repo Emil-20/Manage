@@ -10,11 +10,7 @@
 
 <div class="row" style="padding-top:20px; ">
   <div class="col-12 col-sm-3 col-md-3 col-lg-3"></div>
-  
-
-
-
-<div class="col-12 col-sm-6 col-md-6 col-lg-6 grid-margin stretch-card">
+  <div class="col-12 col-sm-6 col-md-6 col-lg-6 grid-margin stretch-card">
     <div class="card"  >
       <div class="card-body" style="height:auto;padding-top:20px; ">
         <br>
@@ -22,8 +18,7 @@
         <h3 class="card-title">View Attendance</h3>
         </center>
       <br><br>
-        
-        <form class="forms-sample" action="{% url 'manager_previous_attendance_list'%}" method="post">
+        <form class="forms-sample" action="{% url 'manager_previous_attendance_list' vars.id %}" method="post">
             {% csrf_token   %}
             <div class="form-group row">
               <label for="exampleInputEmail2" class="col-4 col-sm-4 col-md-4 col-lg-4 col-form-label">Start Date</label>
@@ -37,8 +32,6 @@
                   <input type="date" id="txtDate1" name="enddate" class="form-control text-light" id="exampleInputEnddate" required>
               </div>
           </div><br><br>
-
-
           <div class="row mb-5">
               <center>
                   <button type="Submit" class="btn btn-outline-primary btn-icon-text"><i class="mdi mdi-file-check btn-icon-prepend"></i>
@@ -46,7 +39,6 @@
               </center>
           </div>
   </div>
-        
         </form>
         </div>      
       </div>
@@ -66,10 +58,6 @@
         day = '0' + day.toString();
     var maxDate = year + '-' + month + '-' + day;
     document.getElementById("txtDate").setAttribute("max", maxDate);
-    document.getElementById("txtDate1").setAttribute("max", maxDate);
-    
-            
-            
+    document.getElementById("txtDate1").setAttribute("max", maxDate);   
 </script>
-
 {%endblock%}

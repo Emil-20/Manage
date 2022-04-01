@@ -35,36 +35,27 @@
 
                                 <tr data-href="#">
                                     <th> Name </th>
-                                    <th> Department</th>
+                                    <th> Designation</th>
                                     <th> Phone No. </th>
                                     <th> Joining Date </th>
 
                                 </tr>
                             </thead>
                             <tbody>
-                                {% comment %} {% if vars %} {% for t in vars %}
-                                <tr data-href="/team1/{{t.id}}">
+                                {% if vars %} {% for t in vars %}
+                                <tr data-href="{% url 'manager_team' t.id %}">
                                     <td>
                                         <img src="{{t.photo.url}}" alt="image" />
                                         <span class="ps-2">{{t.fullname}}</span>
                                     </td>
-                                    <td> {{t.department.department}}</td>
+                                    <td> {{t.designation.designation_name}}</td>
                                     <td> {{t.mobile}}</td>
                                     <td> {{t.joiningdate|date:"d-m-Y"}}</td>
                                 </tr>
 
                                 {% endfor %}{% else %}
                                 <h5>Nothing to display...</h5>
-                                {% endif %} {% endcomment %}
-                                <tr data-href="{% url 'manager_team'%}">
-                                    <td>
-                                        <img src="{{t.photo.url}}{% static 'softwareapp//assets/images/faces/face5.jpg' %}" alt="image" />
-                                        <span class="ps-2">{{t.fullname}}Emil</span>
-                                    </td>
-                                    <td> {{t.department.department}}software</td>
-                                    <td> {{t.mobile}}9847601111</td>
-                                    <td> {{t.joiningdate|date:"d-m-Y"}}23/03/2020</td>
-                                </tr>
+                                {% endif %}
                             </tbody>
                         </table>
                     </div>

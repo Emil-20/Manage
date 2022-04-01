@@ -35,8 +35,8 @@
                             {% if vars %} {% for i in vars %}
                             <tr>
                                 <td>{{i.attendance_date|date:"d-m-Y"}}</td>
-                                <td></td>
-                                <td></td>
+                                <td>--</td>
+                                <td>--</td>
 
                                 <td>
                                     {% if i.attendance_status == '1' %}
@@ -49,11 +49,7 @@
                             </tr>
                             {% endfor %}{% else %}
                             <h5>Nothing to display...</h5>
-                            {% endif %}
-
-                            
-
-
+                            {% endif %} 
                         </tbody>
                     </table>
                 </div>
@@ -61,7 +57,7 @@
         </div>
     </div>
 </div>
-</div>
+
 <script>
     function myFunction() {
         var input, filter, table, tr, td, i, txtValue;

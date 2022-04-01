@@ -12,7 +12,7 @@
                         <label for="exampleInputUsername1"><h4>REPORT ISSUE</h4></label>
                         <div><br></div>    
                         <textarea class="col-12 form-control  text-light"
-                            style="height: 200px; background-color: #2A3038; " rows="4" name="issue"></textarea>
+                            style="height: 200px; background-color: #2A3038; " rows="4" name="issue" required></textarea>
                     </div>
                     <br>
                     <div class="row">
@@ -31,15 +31,11 @@
  </div>
 </div>
 </form>
-
-
 <!-- button calling script (line 16-17)-->
 <script>
     function redirect() {
         window.location.href = "/reportedissue"
     }
 </script>
-
 <!-- Report Issue end here -->
-
 {% endblock %}

@@ -6,12 +6,10 @@
         cursor: pointer;
     }
 </style>
-
 <div class="row ">
     <div class="col-12 grid-margin">
         <div class="card">
             <div class="card-body">
-
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                         <h4>Assigned Topic </h4>
@@ -35,27 +33,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% comment %} {% if vars %} {% for t in vars %}
+                            {% if vars %} {% for t in vars %}
                             <tr data-href="#">
-
-                                <td> {{t.topic}}</td>
-                                <td> {{t.startdate|date:"d-m-Y"}}</td>
-                                <td> {{t.enddate|date:"d-m-Y"}}</td>
-
+                                <td> {{t.topic_topic}}</td>
+                                <td> {{t.topic_startdate|date:"d-m-Y"}}</td>
+                                <td> {{t.topic_enddate|date:"d-m-Y"}}</td>
                             </tr>
-
                             {% endfor %}
                             {% else %}
                             <h5>Nothing to display...</h5>
-                            {% endif %} {% endcomment %}
-                            <tr data-href="#">
-
-                                <td> {{t.topic}}core</td>
-                                <td> {{t.startdate|date:"d-m-Y"}}20/03/2020</td>
-                                <td> {{t.enddate|date:"d-m-Y"}}25/03/2020</td>
-
-                            </tr>
-
+                            {% endif %}
                         </tbody>
                     </table>
                 </div>
@@ -63,8 +50,6 @@
         </div>
     </div>
 </div>
-
-
 <script>
     function myFunction() {
         var input, filter, table, tr, td, i, txtValue;
@@ -84,8 +69,6 @@
             }
         }
     }
-
-
     $(document).ready(function() {
         $('table tr').click(function() {
             window.location = $(this).data('href');
@@ -93,7 +76,4 @@
         });
     });
 </script>
-
-
-
 {%endblock%}

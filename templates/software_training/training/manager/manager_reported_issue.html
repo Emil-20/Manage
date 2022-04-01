@@ -1,6 +1,5 @@
 {% extends 'software_training/training/manager/base_manager.html' %}
  {% load static %} {% block content %}
-
 <div class="row">
     <div class="col-12 grid-margin">
         <div class="card">
@@ -19,7 +18,6 @@
                         </form>
                     </div>
                 </div>
-
                 <div class="table-responsive">
                     <table class="table" id="myTable">
                         <thead>
@@ -39,27 +37,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% comment %} {% if cut %} {%for t in cut%}
+                            {% if cut %} {% for t in cut %}
                             <tr>
                                 <td>
-
-                                    <span class="ps-2">{{t.reporter.fullname}}</span>
+                                    <span class="ps-2">{{t.reported_issue_reporter.fullname}}</span>
                                 </td>
-                                <td>{{t.issue}}</td>
-
-                                <td>{{t.reply}}</td>
-
+                                <td>{{t.reported_issue_issue}}</td>
+                                <td>{{t.reported_issue_reply}}</td>
                                 <td>
-
-                                    {% if t.issuestatus == '0' %}
-
+                                    {% if t.reported_issue_issuestatus == '0' %}
                                     <div class="badge badge-outline-danger" style="width: 95px;">
                                         <i class="mdi mdi-playlist-remove"></i>&nbsp; Un-Solve
                                     </div>
-
-
-                                    {%else %}
-
+                                    {% else %}
                                     <div class="badge badge-outline-success" style="width: 95px;">
                                         <i class="mdi mdi-playlist-check"></i>&nbsp; Solved
                                     </div>
@@ -68,56 +58,7 @@
                             </tr>
                             {% endfor %}{% else %}
                             <h5>Nothing to display...</h5>
-                            {% endif %} {% endcomment %}
-
-                            <tr>
-                                <td>
-
-                                    <span class="ps-2">{{t.reporter.fullname}}Kripa</span>
-                                </td>
-                                <td>{{t.issue}}xxxxxxxxxxxxxxxxx</td>
-
-                                <td>{{t.reply}}aaaaaaaaaaaaaaa</td>
-
-                                <td>
-
-                                    
-
-                                   
-
-                                   
-
-                                    <div class="badge badge-outline-success" style="width: 95px;">
-                                        <i class="mdi mdi-playlist-check"></i>&nbsp; Solved
-                                    </div>
-                                  
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-
-                                    <span class="ps-2">{{t.reporter.fullname}}Kripa</span>
-                                </td>
-                                <td>{{t.issue}}xxxxxxxxxxxxxxxxx</td>
-
-                                <td>{{t.reply}}aaaaaaaaaaaaaaa</td>
-
-                                <td>
-
-                                    
-
-                                    <div class="badge badge-outline-danger" style="width: 95px;">
-                                        <i class="mdi mdi-playlist-remove"></i>&nbsp; Un-Solve
-                                    </div>
-
-
-                                   
-
-                                   
-                                  
-                                </td>
-                            </tr>
-
+                            {% endif %}
                         </tbody>
                     </table>
                 </div>
@@ -146,7 +87,4 @@
         }
     }
 </script>
-
-<!-- end here -->
-
 {% endblock %}

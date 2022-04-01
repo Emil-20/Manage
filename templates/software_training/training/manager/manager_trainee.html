@@ -21,28 +21,19 @@
                         <thead>
                             <tr data-href="#">
                                 <th> Name </th>
-                                <th> Department</th>
+                                <th> Designation</th>
                                 <th> Start Date </th>
                                 <th> End Date </th>
                             </tr>
                         </thead>
-                        {% comment %} <tbody>{% if tre %} {% for t in tre %}
-                            <tr data-href="{% url 'traineedetails' t.id %}">
-                                <td><img src=" {{t.photo.url}} " alt="image " /> &nbsp;{{t.fullname}}</td>
-                                <td> {{t.department.department}} </td>
+                            {% for t in tre %}
+                            <tr data-href="{% url 'Manager_trainees_details' t.id %}">
+                                <td><img src="{{t.photo.url}}" alt="image" />&nbsp;{{t.fullname}}</td>
+                                <td> {{t.designation.designation_name}} </td>
                                 <td>{{t.startdate|date:"d-m-Y"}}</td>
                                 <td>{{t.enddate|date:"d-m-Y"}}</td>
                             </tr>
-                            {% endfor %}{% else %}
-                            <h5>Nothing to display...</h5>
-                            {% endif %} {% endcomment %}
-
-                            <tr data-href="{% url 'Manager_trainees_details'%}">
-                                <td><img src=" {{t.photo.url}}{% static 'softwareapp//assets/images/faces/face5.jpg' %} " alt="image " /> &nbsp;{{t.fullname}}</td>
-                                <td> {{t.department.department}}Software </td>
-                                <td>{{t.startdate|date:"d-m-Y"}}25/03/2020</td>
-                                <td>{{t.enddate|date:"d-m-Y"}}30/03/2020</td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>

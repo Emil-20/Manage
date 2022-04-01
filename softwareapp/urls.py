@@ -290,76 +290,69 @@ urlpatterns = [
 
     path('Manager_Dashboard/', training_views.Manager_Dashboard, name='Manager_Dashboard'),
     path('Manager_trainer/', training_views.Manager_trainer, name='Manager_trainer'),
-    path('manager_team/', training_views.manager_team, name='manager_team'),
-    path('manager_current_team/', training_views.manager_current_team, name='manager_current_team'),
-    path('Manager_current_task/', training_views.Manager_current_task,name='Manager_current_task'),
-    path('manager_current_assigned/', training_views.manager_current_assigned, name='manager_current_assigned'),
-    path('manager_current_trainees/', training_views.manager_current_trainees, name='manager_current_trainees'),
-    path('manager_current_empdetails/', training_views.manager_current_empdetails, name='manager_current_empdetails'),
-    path('manager_current_attendance/', training_views.manager_current_attendance, name='manager_current_attendance'),
-    path('manager_current_attendance_list/', training_views.manager_current_attendance_list, name='manager_current_attendance_list'),
-    path('manager_current_task_list/', training_views.manager_current_task_list, name='manager_current_task_list'),
-    path('manager_current_task_details/', training_views.manager_current_task_details, name='manager_current_task_details'),
-    path('manager_previous_team/', training_views.manager_previous_team, name='manager_previous_team'),
-    path('Manager_previous_task/', training_views.Manager_previous_task,name='Manager_previous_task'),
-    path('manager_previous_assigned/', training_views.manager_previous_assigned, name='manager_previous_assigned'),
-    path('manager_previous_trainees/', training_views.manager_previous_trainees, name='manager_previous_trainees'),
-    path('manager_previous_empdetails/', training_views.manager_previous_empdetails, name='manager_previous_empdetails'),
-    path('manager_previous_attendance/', training_views.manager_previous_attendance, name='manager_previous_attendance'),
-    path('manager_previous_attendance_list/', training_views.manager_previous_attendance_list, name='manager_previous_attendance_list'),
-    path('manager_previous_task_list/', training_views.manager_previous_task_list, name='manager_previous_task_list'),
-    path('manager_previous_task_details/', training_views.manager_previous_task_details, name='manager_previous_task_details'),
+    path('manager_team/<int:id>', training_views.manager_team, name='manager_team'),
+    path('manager_current_team/<int:id>', training_views.manager_current_team, name='manager_current_team'),
+    path('Manager_current_task/<int:id>', training_views.Manager_current_task,name='Manager_current_task'),
+    path('manager_current_assigned/<int:id>', training_views.manager_current_assigned, name='manager_current_assigned'),
+    path('manager_current_trainees/<int:id>', training_views.manager_current_trainees, name='manager_current_trainees'),
+    path('manager_current_empdetails/<int:id>', training_views.manager_current_empdetails, name='manager_current_empdetails'),
+    path('manager_current_attendance/<int:id>', training_views.manager_current_attendance, name='manager_current_attendance'),
+    path('manager_current_attendance_list/<int:id>', training_views.manager_current_attendance_list, name='manager_current_attendance_list'),
+    path('manager_current_task_list/<int:id>', training_views.manager_current_task_list, name='manager_current_task_list'),
+    path('manager_current_task_details/<int:id>', training_views.manager_current_task_details, name='manager_current_task_details'),
+    path('manager_previous_team/<int:id>', training_views.manager_previous_team, name='manager_previous_team'),
+    path('Manager_previous_task/<int:id>', training_views.Manager_previous_task,name='Manager_previous_task'),
+    path('manager_previous_assigned/<int:id>', training_views.manager_previous_assigned, name='manager_previous_assigned'),
+    path('manager_previous_trainees/<int:id>', training_views.manager_previous_trainees, name='manager_previous_trainees'),
+    path('manager_previous_empdetails/<int:id>', training_views.manager_previous_empdetails, name='manager_previous_empdetails'),
+    path('manager_previous_attendance/<int:id>', training_views.manager_previous_attendance, name='manager_previous_attendance'),
+    path('manager_previous_attendance_list/<int:id>', training_views.manager_previous_attendance_list, name='manager_previous_attendance_list'),
+    path('manager_previous_task_list/<int:id>', training_views.manager_previous_task_list, name='manager_previous_task_list'),
+    path('manager_previous_task_details/<int:id>', training_views.manager_previous_task_details, name='manager_previous_task_details'),
     path('manager_trainee/', training_views.manager_trainee, name='manager_trainee'),
-    path('Manager_trainees_details/', training_views.Manager_trainees_details, name='Manager_trainees_details'),
-    path('Manager_trainees_attendance/', training_views.Manager_trainees_attendance, name='Manager_trainees_attendance'),
+    path('Manager_trainees_details/<int:id>', training_views.Manager_trainees_details, name='Manager_trainees_details'),
+    path('Manager_trainees_attendance/<int:id>', training_views.Manager_trainees_attendance, name='Manager_trainees_attendance'),
     path('Manager_reported_issues/', training_views.Manager_reported_issues,name='Manager_reported_issues'),
     path('manager_trainerreportissue/', training_views.manager_trainerreportissue, name='manager_trainerreportissue'),
     path('manager_trainer_unsolvedissue/', training_views.manager_trainer_unsolvedissue, name='manager_trainer_unsolvedissue'),
+    path('savetmreplaytrnr/<int:id>', training_views.savetmreplaytrnr, name='savetmreplaytrnr'),
     path('manager_trainer_solvedissue/', training_views.manager_trainer_solvedissue, name='manager_trainer_solvedissue'),
     path('manager_traineereportissue/', training_views.manager_traineereportissue, name='manager_traineereportissue'),
     path('manager_trainee_unsolvedissue/', training_views.manager_trainee_unsolvedissue, name='manager_trainee_unsolvedissue'),
+    path('savetmreplytrns/<int:id>', training_views.savetmreplytrns, name='savetmreplytrns'),
     path('manager_trainee_solvedissue/', training_views.manager_trainee_solvedissue, name='manager_trainee_solvedissue'),
     path('manager_report_issue/', training_views.manager_report_issue, name='manager_report_issue'),
     path('manager_reported_issue/', training_views.manager_reported_issue, name='manager_reported_issue'),
+
+
+
+
     path('Manager_attendance/', training_views.Manager_attendance,name='Manager_attendance'),
     path('manager_trainee_attendance/', training_views.manager_trainee_attendance,name='manager_trainee_attendance'),
     path('manager_trainer_attendance/', training_views.manager_trainer_attendance,name='manager_trainer_attendance'),
     path('manager_trainer_attendance_table/', training_views.manager_trainer_attendance_table,name='manager_trainer_attendance_table'),
     path('manager_trainee_attendance_table/', training_views.manager_trainee_attendance_table,name='manager_trainee_attendance_table'),
-
-
     path('manager_applyleave/', training_views.manager_applyleave,name='manager_applyleave'),
     path('manager_applyleavsub/', training_views.manager_applyleavsub,name='manager_applyleavsub'),
     path('manager_requestedleave/', training_views.manager_requestedleave,name='manager_requestedleave'),
     path('manager_trainer_leave/', training_views.manager_trainer_leave,name='manager_trainer_leave'),
-
-
-
     path('manager_trainers_leavelist/', training_views.manager_trainers_leavelist,name='manager_trainers_leavelist'),
     path('approvedstatus/<int:id>/', training_views.approvedstatus,name='approvedstatus'),
     path('Leave_rejected/<int:id>/', training_views.Leave_rejected,name='Leave_rejected'),
-
-
-
-
-
-
     path('manager_trainer_leavestatus/', training_views.manager_trainer_leavestatus,name='manager_trainer_leavestatus'),
     path('manager_trainee_leave/', training_views.manager_trainee_leave,name='manager_trainee_leave'),
     path('manager_trainee_leavelist/', training_views.manager_trainee_leavelist,name='manager_trainee_leavelist'),
     path('approvedstatus_trainee/<int:id>/', training_views.approvedstatus_trainee,name='approvedstatus_trainee'),
     path('Leave_rejected_trainee/<int:id>/', training_views.Leave_rejected_trainee,name='Leave_rejected_trainee'),
     path('manager_trainee_leavestatus/', training_views.manager_trainee_leavestatus,name='manager_trainee_leavestatus'),
-
     path('manager_new_team/', training_views.manager_new_team,name='manager_new_team'),
     path('manager_new_teamcreate/', training_views.manager_new_teamcreate,name='manager_new_teamcreate'),
-
     path('manager_newteamadd/', training_views.manager_newteamadd,name='manager_newteamadd'),
     path('manager_teamupdate/<int:id>/', training_views.manager_teamupdate,name='manager_teamupdate'),
     path('manager_teamdelete/<int:id>/', training_views.manager_teamdelete,name='manager_teamdelete'),
     path('manager_submit/<int:id>/', training_views.manager_submit,name='manager_submit'),
-
     path('manager_newtrainees/', training_views.manager_newtrainees,name='manager_newtrainees'),
+    path('manager_newtrainees_categ/', training_views.manager_newtrainees_categ,name='manager_newtrainees_categ'),
 
     path('manager_newtraineeesteam/<int:id>/', training_views.manager_newtraineeesteam,name='manager_newtraineeesteam'),
     path('manager_changepassword/', training_views.manager_changepassword,name='manager_changepassword'),
@@ -368,6 +361,10 @@ urlpatterns = [
    
     path('manager_paymentlist/',training_views.manager_paymentlist,name='manager_paymentlist'),
     path('manager_payment_viewslip/<int:id>/<int:tid>/', training_views.manager_payment_viewslip,name='manager_payment_viewslip'),
+
+    path('manager_payment_pdf/<int:id>/<int:tid>',training_views.manager_payment_pdf, name='manager_payment_pdf'),
+
+
     path('manager_payment_print/<int:id>/<int:tid>/', training_views.manager_payment_print,name='manager_payment_print'),
 
 

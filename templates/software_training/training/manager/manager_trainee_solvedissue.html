@@ -1,9 +1,5 @@
 {% extends 'software_training/training/manager/base_manager.html' %}
  {% load static %} {% block content %}
-
-<!-- Trainees Solved Issue Table -->
-
-
 <div class="row">
     <div class="col-12 grid-margin">
         <div class="card">
@@ -35,46 +31,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% comment %} {% if cut %} {%for t in cut%}
+                            {% if cut %} {% for t in cut %}
                             <tr>
                                 <td>
-
-                                    
-                                    <img src="{{media_url}}{{ t.reporter.photo.url }}"> 
-                                    <span class="ps-2">{{t.reporter.fullname}}</span></a>
+                                    <img src="{{media_url}}{{ t.reported_issue_reporter.photo.url }}"> 
+                                    <span class="ps-2">{{t.reported_issue_reporter.fullname}}</span></a>
                                 </td>
-                                <td> {{t.reporter.department.department}}</td>
-                                <td> {{t.issue}}</td>
-                                <td> {{t.reply}}</td>
-
-                                
+                                <td> {{t.reported_issue_reporter.designation.designation_name}}</td>
+                                <td> {{t.reported_issue_issue}}</td>
+                                <td> {{t.reported_issue_reply}}</td>
                                 <td>
-                                    <div class="badge" style="color: rgb(94, 194, 94);font-size: medium;">Solved
-                                    </div>
+                                    <div class="badge" style="color: rgb(94, 194, 94);font-size: medium;">Solved</div>
                                 </td>
                             </tr>
                             {% endfor %}{% else %}
                             <h5>Nothing to display...</h5>
-                            {% endif %} {% endcomment %}
-
-                            <tr>
-                                <td>
-
-                                    
-                                    <img src="{{media_url}}{{ t.reporter.photo.url }}{% static 'softwareapp//assets/images/faces/face5.jpg' %}"> 
-                                    <span class="ps-2">{{t.reporter.fullname}}Leya</span></a>
-                                </td>
-                                <td> {{t.reporter.department.department}}software</td>
-                                <td> {{t.issue}}xxxxxxxxxxx</td>
-                                <td> {{t.reply}}aaaaaaaaaaaaaaaa</td>
-
-                                
-                                <td>
-                                    <div class="badge" style="color: rgb(94, 194, 94);font-size: medium;">Solved
-                                    </div>
-                                </td>
-                            </tr>
-
+                            {% endif %} 
                         </tbody>
                     </table>
                 </div>
@@ -82,8 +54,6 @@
         </div>
     </div>
 </div>
-
-
 <!-- end here -->
 
 <script>

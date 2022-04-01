@@ -28,70 +28,64 @@
                 <th>Start Date</th>
                 <th>End Date</th>
                 <th>Select Team</th>
-
+                <th>Category</th>
                 <th>Course</th>
                 <th>Allocate</th>
               </tr>
             </thead>
             
-            
-              <tbody>
-               {%if memm%}
+            {%if memm%}
                 {%for memm in memm%}
-                <tr>
-                  <form method="post" action="{%url 'manager_newtraineeesteam' memm.id %}" enctype="multipart/form-data">
+              <tbody>               
+                  <form method="post" action="{%url 'manager_newtraineeesteam' memm.id %}" ">
                     {%csrf_token%}
-                  <td>
-                    <img src="{{memm.photo.url}}" alt="image" />
-                    <span class="ps-2">{{memm.fullname}}</span>
-                  </td>
-                  <td>{{memm.startdate}}</td>
-                  <td>{{memm.enddate}}</td>
-                  <td>
-                    
-                    <select
-                      class="badge badge-outline-primary bg-dark text-light"
-                      name="team"
-                    >
-                    {%for i in team%} 
-                    <option style="display: none">Teams</option>
+                    <tr>
                       
+                        <td>
+                          <img src="{{memm.photo.url}}" alt="image" />
+                          <span class="ps-2">{{memm.fullname}}</span>
+                        </td>
+                        <td>{{memm.startdate}}</td>
+                        <td>{{memm.enddate}}</td>
+                        <td>                        
+                          <select class="badge badge-outline-primary bg-dark text-light"name="team">
+                            <option style="display: none">{{memm.team.create_team_name}}</option>
+                            {%for i in team%}                           
+                              <option value="{{i.id}}">{{i.create_team_name}}</option>
+                            {%endfor%} 
+                          </select>                      
+                        </td>
+
+                        <td>
+                          <select class="badge badge-outline-primary bg-dark text-light"name="categ" id="cat">
+                            <option style="display: none">{{memm.category.category_name}}</option>
+                            {%for i in categ%}
+                            <option value="{{i.id}}">{{i.category_name}}</option>
+                            {%endfor%}
+                          </select>
+                        </td>
+
                       
-                     
-
-                      <option value="{{i.id}}">{{i.create_team_name}}</option>
-                      {%endfor%} 
-                    </select>
-                    
-                  </td>
-                  
-                  <td>
-                    <select
-                      class="badge badge-outline-primary bg-dark text-light"
-                      name="cou"
-                    ><option style="display: none">Course</option>
-                      {%for i in des%}
-
-                      <option value="{{i.id}}">{{i.course_name}}</option>
-                      {%endfor%}
-                    </select>
-                  </td>
-                  <td>
-                    <button
-                      type="submit"
-                      class="btn btn-outline-primary btn-icon-text"
-                    >
-                      <i class="mdi mdi-file-check btn-icon-prepend"></i>Submit
-                    </button>
-                  </td>
-                </form>
-                </tr>
-                {%endfor%}
+                        <td>
+                          <select class="badge badge-outline-primary bg-dark text-light" name="cou" id="cour" >
+                            <option style="display: none">{{memm.course.course_name}}</option>
+                          </select>
+                        </td>
+                        <td>
+                          <button type="submit" class="btn btn-outline-primary btn-icon-text">
+                            <i class="mdi mdi-file-check btn-icon-prepend"></i>Submit
+                          </button>
+                        </td>
+                      
+                    </tr>
+                  </form>
+                
+                
+              </tbody>
+              {%endfor%}
                 {%else%}
                 <h5 style="text-align:center">Nothing to display!</h5>
                 {%endif%}
-                
-              </tbody>
                           
           </table>
         </div>
@@ -118,6 +112,28 @@
       }
     }
   }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+  $("#cat").change(function () {
+       // <!-- const url = $("#personForm").attr("data-cities-url"); -->
+       const cou = $(this).val();
+      console.log(cou,'hai');
+      $.ajax({
+        type: 'get',
+          url: '{% url "manager_newtrainees_categ" %}',
+          //url: 'manager_newtrainees_categ',
+           data: {
+               'cou': cou
+           },
+           success: function (data) {
+               $("#cour").html(data);
+               console.log(data);
+           }
+       });
+
+   });
+  
 </script>
 
 {%endblock%}

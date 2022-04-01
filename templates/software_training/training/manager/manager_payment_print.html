@@ -6,7 +6,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>INFOX CORE</title>
+  
   <!--searchbar link-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -24,7 +24,7 @@
   <!-- endinject -->
   <!-- Layout styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-  {% comment %} <link rel="stylesheet" href="{% static 'softwareapp/assets/css/style.css' %}"> {% endcomment %}
+  <!--{% comment %} <link rel="stylesheet" href="{% static 'softwareapp/assets/css/style.css' %}"> {% endcomment %}-->
   <!-- End layout styles -->
   <link rel="shortcut icon" href="{% static 'softwareapp/assets/images/favicon.png' %}" />
   <script src="{% static 'softwareapp/assets/vendors/js/vendor.bundle.base.js'%}"></script>
@@ -46,283 +46,275 @@
 <body>
 
  <div class="main-panel text-dark">
-    <div class="content-wrapper">
-      
-   
-<div class="card mt-3 mb-5">
-<div class="card-body">
-    <form class="form-sample" action="{% url 'manager_payment_print' acc.id user.id %}">
-       
-           
-            <center>
-                <div class="col-8 col-md-10 mt-3">
-                    <h4 class="card-title text-center" style="text-align:center; font-weight: 500;"> PAYSLIP FOR &nbsp; {{acc.acntspayslip_fromdate}}</h4>
-                    <H5 class="card-description" style="text-align:center; font-weight: 600;"> {{user.fullname}}</h5>
-                </div>
-            </center>
-            
+    <div class="content-wrapper"> 
+        <div class="card mt-3 mb-5">
+            <div class="card-body">
+                <form class="form-sample" action="{% url 'manager_payment_print' acc.id user.id %}">               
+                    
+                    <center>
+                        <div class="col-8 col-md-10 mt-3">
+                            <h4 class="card-title text-center" style="text-align:center; font-weight: 500;"> PAYSLIP FOR &nbsp; {{acc.acntspayslip_fromdate}}</h4>
+                            <H5 class="card-description" style="text-align:center; font-weight: 600;"> {{user.fullname}}</h5>
+                        </div>
+                    </center>                   
 
-        
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Employee number</label>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <p class="mt-2">{{acc.acntspayslip_user_id.employee_id}}</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Employee number</label>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <p class="mt-2">{{acc.acntspayslip_user_id.employee_id}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Tax engine: </label>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <p class="mt-2">{{acc.acntspayslip_taxengine}}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Tax engine: </label>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <p class="mt-2">{{acc.acntspayslip_taxengine}}</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Designation</label>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <p class="mt-2">{{user.designation.designation_name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Income tax number: </label>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <p class="mt-2">{{acc.acntspayslip_incometax}}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Designation</label>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <p class="mt-2">{{user.designation.designation_name}}</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Account Number</label>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <p class="mt-2">{{user.account_no}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Universal account number: </label>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <p class="mt-2">{{acc.acntspayslip_uan}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Location</label>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <p class="mt-2">{{user.district}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">PF account number: </label>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <p class="mt-2">{{acc.acntspayslip_pf}}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Income tax number: </label>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <p class="mt-2">{{acc.acntspayslip_incometax}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Account Number</label>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <p class="mt-2">{{user.account_no}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Universal account number: </label>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <p class="mt-2">{{acc.acntspayslip_uan}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Location</label>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <p class="mt-2">{{user.district}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="form-group row">
-                    <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">PF account number: </label>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <p class="mt-2">{{acc.acntspayslip_pf}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Bank Name</label>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <p class="mt-2">{{user.bank_name}}</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Bank Name</label>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <p class="mt-2">{{user.bank_name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">ESI Number </label>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <p class="mt-2">{{acc.acntspayslip_esi}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Date Of Joining </label>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <p class="mt-2">{{user.joiningdate}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">PR account number</label>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <p class="mt-2">{{acc.pro}}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">ESI Number </label>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <p class="mt-2">{{acc.acntspayslip_esi}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">Date Of Joining </label>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <p class="mt-2">{{user.joiningdate}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group row">
-                    <label class="col-12 col-sm-6 col-md-6 col-lg-6 col-form-label">PR account number</label>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <p class="mt-2">{{acc.pro}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="table-responsive">
-            <table class="table table-bordered mt-4 text-dark">
-                <tr>
-                    <th>Particulars</th>
-                    <th colspan="2">Earnings</th>
-                    <th colspan="2">Deductions </th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>Gross</th>
-                    <th>Payable</th>
-                    <th>Gross</th>
-                    <th>payable</th>
-                </tr>
-                <tbody>
-                    <tr>
-                        <td>Basic salary</td>
-                        <td>
-                            {% if acc.acntspayslip_basictype == 'Earning for Employee' %} {{ acc.acntspayslip_basic_salary }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_basictype == 'Earning for Employee' %} {{ acc.acntspayslip_basic_salary }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_basictype == 'Deduction for Employee' %} {{ acc.acntspayslip_basic_salary }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_basictype == 'Deduction for Employee' %} {{ acc.acntspayslip_basic_salary }} {% else %} 0000.00 {% endif %}</td>
-                    </tr>
-                    <tr>
-                        <td>Hra</td>
-                        <td>
-                            {% if acc.acntspayslip_hratype == 'Earning for Employee' %} {{ acc.acntspayslip_hra }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_hratype == 'Earning for Employee' %} {{ acc.acntspayslip_hra }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_hratype == 'Deduction for Employee' %} {{ acc.acntspayslip_hra }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_hratype == 'Deduction for Employee' %} {{ acc.acntspayslip_hra }} {% else %} 0000.00 {% endif %}</td>
-                    </tr>
-                    <tr>
-                        <td>Conveyence allowance</td>
-                        <td>{% if acc.acntspayslip_contype == 'Earning for Employee' %} {{ acc.acntspayslip_conveyns }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_contype == 'Earning for Employee' %} {{ acc.acntspayslip_conveyns }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_contype == 'Deduction for Employee' %} {{ acc.acntspayslip_conveyns }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_contype == 'Deduction for Employee' %} {{ acc.acntspayslip_conveyns }} {% else %} 0000.00 {% endif %}</td>
-                    </tr>
-                    <tr>
-                        <td>Profesional tax</td>
-                        <td>{% if acc.acntspayslip_protype == 'Earning for Employee' %} {{ acc.acntspayslip_pf_tax }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_protype == 'Earning for Employee' %} {{ acc.acntspayslip_pf_tax }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_protype == 'Deduction for Employee' %} {{ acc.acntspayslip_pf_tax }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_protype == 'Deduction for Employee' %} {{ acc.acntspayslip_pf_tax }} {% else %} 0000.00 {% endif %}</td>
-                    </tr>
+                    <div class="table-responsive">
+                        <table class="table table-bordered mt-4 text-dark">
+                            <tr>
+                                <th>Particulars</th>
+                                <th colspan="2">Earnings</th>
+                                <th colspan="2">Deductions </th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>Gross</th>
+                                <th>Payable</th>
+                                <th>Gross</th>
+                                <th>payable</th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>Basic salary</td>
+                                    <td>
+                                        {% if acc.acntspayslip_basictype == 'Earning for Employee' %} {{ acc.acntspayslip_basic_salary }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_basictype == 'Earning for Employee' %} {{ acc.acntspayslip_basic_salary }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_basictype == 'Deduction for Employee' %} {{ acc.acntspayslip_basic_salary }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_basictype == 'Deduction for Employee' %} {{ acc.acntspayslip_basic_salary }} {% else %} 0000.00 {% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <td>Hra</td>
+                                    <td>
+                                        {% if acc.acntspayslip_hratype == 'Earning for Employee' %} {{ acc.acntspayslip_hra }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_hratype == 'Earning for Employee' %} {{ acc.acntspayslip_hra }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_hratype == 'Deduction for Employee' %} {{ acc.acntspayslip_hra }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_hratype == 'Deduction for Employee' %} {{ acc.acntspayslip_hra }} {% else %} 0000.00 {% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <td>Conveyence allowance</td>
+                                    <td>{% if acc.acntspayslip_contype == 'Earning for Employee' %} {{ acc.acntspayslip_conveyns }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_contype == 'Earning for Employee' %} {{ acc.acntspayslip_conveyns }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_contype == 'Deduction for Employee' %} {{ acc.acntspayslip_conveyns }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_contype == 'Deduction for Employee' %} {{ acc.acntspayslip_conveyns }} {% else %} 0000.00 {% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <td>Profesional tax</td>
+                                    <td>{% if acc.acntspayslip_protype == 'Earning for Employee' %} {{ acc.acntspayslip_pf_tax }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_protype == 'Earning for Employee' %} {{ acc.acntspayslip_pf_tax }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_protype == 'Deduction for Employee' %} {{ acc.acntspayslip_pf_tax }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_protype == 'Deduction for Employee' %} {{ acc.acntspayslip_pf_tax }} {% else %} 0000.00 {% endif %}</td>
+                                </tr>
 
 
 
-                    <tr>
-                        <td>PF</td>
-                        <td>{% if acc.acntspayslip_pftype == 'Earning for Employee' %} {{ acc.acntspayslip_pf}} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_pftype == 'Earning for Employee' %} {{ acc.acntspayslip_pf }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_pftype == 'Deduction for Employee' %} {{ acc.acntspayslip_pf }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_pftype == 'Deduction for Employee' %} {{ acc.acntspayslip_pf }} {% else %} 0000.00 {% endif %}</td>
-                    </tr>
-                    <tr>
-                        <td>ESI</td>
-                        <td>{% if acc.acntspayslip_esitype == 'Earning for Employee' %} {{ acc.acntspayslip_esi }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_esitype == 'Earning for Employee' %} {{ acc.acntspayslip_esi }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_esitype == 'Deduction for Employee' %} {{ acc.acntspayslip_esi }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_esitype == 'Deduction for Employee' %} {{ acc.acntspayslip_esi }} {% else %} 0000.00 {% endif %}</td>
-                    </tr>
+                                <tr>
+                                    <td>PF</td>
+                                    <td>{% if acc.acntspayslip_pftype == 'Earning for Employee' %} {{ acc.acntspayslip_pf}} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_pftype == 'Earning for Employee' %} {{ acc.acntspayslip_pf }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_pftype == 'Deduction for Employee' %} {{ acc.acntspayslip_pf }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_pftype == 'Deduction for Employee' %} {{ acc.acntspayslip_pf }} {% else %} 0000.00 {% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <td>ESI</td>
+                                    <td>{% if acc.acntspayslip_esitype == 'Earning for Employee' %} {{ acc.acntspayslip_esi }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_esitype == 'Earning for Employee' %} {{ acc.acntspayslip_esi }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_esitype == 'Deduction for Employee' %} {{ acc.acntspayslip_esi }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_esitype == 'Deduction for Employee' %} {{ acc.acntspayslip_esi }} {% else %} 0000.00 {% endif %}</td>
+                                </tr>
 
 
 
 
 
-                    <tr>
-                        <td>Delay</td>
-                        <td>{% if acc.acntspayslip_deltype == 'Earning for Employee' %} {{ acc.acntspayslip_delay }} {% else %} 0000.00 {% endif %}
-                        </td>
-                        <td>
-                            {% if acc.acntspayslip_deltype == 'Earning for Employee' %} {{ acc.acntspayslip_delay }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_deltype == 'Deduction for Employee' %} {{ acc.acntspayslip_delay }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_deltype == 'Deduction for Employee' %} {{ acc.acntspayslip_delay }} {% else %} 0000.00 {% endif %}</td>
-                    </tr>
-                    <tr>
-                        <td>leave</td>
-                        <td>{% if acc.acntspayslip_leatype == 'Earning for Employee' %} {{ acc.acntspayslip_leavesno }} {% else %} 0000.00 {% endif %}
-                        </td>
-                        <td>
-                            {% if acc.acntspayslip_leatype == 'Earning for Employee' %} {{ acc.acntspayslip_leavesno }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_leatype == 'Deduction for Employee' %} {{ acc.acntspayslip_leavesno }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_leatype == 'Deduction for Employee' %} {{ acc.acntspayslip_leavesno }} {% else %} 0000.00 {% endif %}</td>
-                    </tr>
-                    <tr>
-                        <td>Incentives</td>
-                        <td>{% if acc.acntspayslip_instype == 'Earning for Employee' %} {{ acc.acntspayslip_incentives }} {% else %} 0000.00 {% endif %}
-                        </td>
-                        <td>
-                            {% if acc.acntspayslip_instype == 'Earning for Employee' %} {{ acc.acntspayslip_incentives }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_instype == 'Deduction for Employee' %} {{ acc.acntspayslip_incentives }} {% else %} 0000.00 {% endif %}</td>
-                        <td>
-                            {% if acc.acntspayslip_instype == 'Deduction for Employee' %} {{ acc.acntspayslip_incentives }} {% else %} 0000.00 {% endif %}</td>
-                    </tr>
-                    <tr>
-                        <th>Total</th>
-                        <th id="totalsalary7" colspan="2 "></th>
-                        <th id="totalsalary8" colspan="2"></th>
-                    </tr>
-                    <tr>
-                        <th colspan="4">Net Amount</th>
-                        <th id="totalsalary" class="subjects" hidden></th>
-                        <th id="totalsalary5" class="subjects" hidden></th>
-                        <th id="TotMarks" class="subjects" name="netamt"></th>
-                    </tr>
+                                <tr>
+                                    <td>Delay</td>
+                                    <td>{% if acc.acntspayslip_deltype == 'Earning for Employee' %} {{ acc.acntspayslip_delay }} {% else %} 0000.00 {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if acc.acntspayslip_deltype == 'Earning for Employee' %} {{ acc.acntspayslip_delay }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_deltype == 'Deduction for Employee' %} {{ acc.acntspayslip_delay }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_deltype == 'Deduction for Employee' %} {{ acc.acntspayslip_delay }} {% else %} 0000.00 {% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <td>leave</td>
+                                    <td>{% if acc.acntspayslip_leatype == 'Earning for Employee' %} {{ acc.acntspayslip_leavesno }} {% else %} 0000.00 {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if acc.acntspayslip_leatype == 'Earning for Employee' %} {{ acc.acntspayslip_leavesno }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_leatype == 'Deduction for Employee' %} {{ acc.acntspayslip_leavesno }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_leatype == 'Deduction for Employee' %} {{ acc.acntspayslip_leavesno }} {% else %} 0000.00 {% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <td>Incentives</td>
+                                    <td>{% if acc.acntspayslip_instype == 'Earning for Employee' %} {{ acc.acntspayslip_incentives }} {% else %} 0000.00 {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if acc.acntspayslip_instype == 'Earning for Employee' %} {{ acc.acntspayslip_incentives }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_instype == 'Deduction for Employee' %} {{ acc.acntspayslip_incentives }} {% else %} 0000.00 {% endif %}</td>
+                                    <td>
+                                        {% if acc.acntspayslip_instype == 'Deduction for Employee' %} {{ acc.acntspayslip_incentives }} {% else %} 0000.00 {% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <th>Total</th>
+                                    <th id="totalsalary7" colspan="2 "></th>
+                                    <th id="totalsalary8" colspan="2"></th>
+                                </tr>
+                                <tr>
+                                    <th colspan="4">Net Amount</th>
+                                    <th id="totalsalary" class="subjects" hidden></th>
+                                    <th id="totalsalary5" class="subjects" hidden></th>
+                                    <th id="TotMarks" class="subjects" name="netamt"></th>
+                                </tr>
 
-                </tbody>
-            </table>
-        </div>
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="row mt-4 ">
-                        <div class="col-12 col-sm-5 col-md-5 col-lg-6 "></div>
-                        <!-- <div class="text-center pull-right "> -->
+                        <div class="col-12 col-sm-5 col-md-5 col-lg-6 "></div>                                    
                         <div class="col-12 col-sm-7 col-md- 7 col-lg-6 ">
-                            <button type="submit " class="btn btn-outline-primary btn-icon-text" onclick="window.print()" style="width: 100px; margin-left: 50px; ">
-        
-                Print
-                   </button></div>
-                        <!-- </div> -->
+                            <button type="submit " class="btn btn-outline-primary btn-icon-text" onclick="window.print()" style="width: 100px; margin-left: 50px; ">Print</button>
+                        </div>
+                        
                     </div>
 
+                            
+
+
+                        
                 </form>
-
-
+                <!-- main-panel ends -->
             </div>
+            <!-- page-body-wrapper ends -->
         </div>
     </div>
-    <!-- main-panel ends -->
-</div>
-<!-- page-body-wrapper ends -->
-</div>
-</div>
 </div>
     <script>
         $(document).ready(function() {

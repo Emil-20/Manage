@@ -51,20 +51,16 @@
 
                             <tr>
                                 <td>{{ forloop.counter }}</td>
-                                <td>
-
-                                    
+                                <td>                                   
                                     <img src="{{media_url}}{{ t.leave_user.photo.url }}"> 
                                     <span class="ps-2">{{t.leave_user.fullname}}</span></a>
                                 </td>
-
                                 <td> {{t.leave_from_date|date:"d-m-Y"}}</td>
                                 <td> {{t.leave_to_date|date:"d-m-Y"}} </td>
                                 <td> {{t.leave_reason}} </td>
                                 <td> {{t.leave_status}} </td>
 
-                                <td class="text-wrap text-justify text-center">
-                                    
+                                <td class="text-wrap text-justify text-center">                                   
 
                                             <a href="{% url 'approvedstatus' t.id%}" class="btn btn-outline-success btn-icon-text" >
                                                 <i class="mdi mdi-file-check btn-icon-prepend"></i> Approved
@@ -73,16 +69,12 @@
                                                 <i class="mdi mdi-message-reply-text text-warning" style="font-size: 18px" Required></i>
                                                 Rejected
                                             </button>
-
                                 </td>
-
                             </tr>
 
                             {% endfor %}{% else %}
                             <h5>Nothing to display...</h5>
-                            {% endif %}
-
-                            
+                            {% endif %}                          
 
 
 

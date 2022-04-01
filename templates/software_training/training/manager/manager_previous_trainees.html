@@ -67,9 +67,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% comment %} {% if vars %} {% for t in vars %}
-                            <tr data-href="/Empdetails/{{t.id}}">
-
+                            {% if vars %} {% for t in vars %}
+                            <tr data-href="{% url 'manager_previous_empdetails' t.id %}">
                                 <td>
                                     <img src="{{media_url}}{{t.photo.url}}" />
                                     <span class="ps-2">{{t.fullname}}</span>
@@ -81,35 +80,13 @@
                                         <div class="progress-bar bg-success" role="progressbar" style="width: {{t.avg}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{t.avg}}%</div>
                                     </div>
                                 </td>
-
                                 <td>
                                     <div class="badge badge-outline-success" style="width:110px;">Start</div>
                                 </td>
                             </tr>
-
                             {% endfor %}{% else %}
                             <h5>Nothing to display...</h5>
-                            {% endif %} {% endcomment %}
-
-                            <tr data-href="{%url 'manager_previous_empdetails'%}">
-
-                                <td>
-                                    <img src="{{media_url}}{{t.photo.url}}{% static 'softwareapp//assets/images/faces/face5.jpg' %}" />
-                                    <span class="ps-2">{{t.fullname}}Fuad</span>
-                                </td>
-                                <td>{{t.startdate|date:"d-m-Y"}} 20/03/2020</td>
-                                <td> {{t.enddate|date:"d-m-Y"}}25/03/2020</td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 25{{t.avg}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25{{t.avg}}%</div>
-                                    </div>
-                                </td>
-
-                                <td>
-                                    <div class="badge badge-outline-success" style="width:110px;">Start</div>
-                                </td>
-                            </tr>
-
+                            {% endif %}
                         </tbody>
                     </table>
                 </div>
@@ -117,9 +94,6 @@
         </div>
     </div>
 </div>
-
-
-
 <script>
     function myFunction() {
         var input, filter, table, tr, td, i, txtValue;
@@ -171,6 +145,4 @@
         });
     });
 </script>
-
-
 {%endblock%}

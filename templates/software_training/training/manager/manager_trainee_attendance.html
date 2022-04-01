@@ -9,9 +9,6 @@
 <div class="row" style="padding-top:50px; ">
     <div class="col-sm-2"></div>
     <div class="col-sm-10" class="pull-right">
-
-
-
         <div class="col-sm-9 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body" style="height:450px;padding-top:20px; ">
@@ -19,7 +16,6 @@
                     <center>
                         <h3 class="card-title">Attendance</h3>
                     </center>
-
                     <form class="forms-sample" action="{%url 'manager_trainee_attendance_table'%}" method="post">
                         {% csrf_token %}
                         <div class="row pt-3">
@@ -29,17 +25,12 @@
                             <div class="col-12 col-sm-8 col-md-8 col-lg-8">
                                 <div class="dropdown">
                                     <select name="trainee" id="" class=" badge  badge-outline bg-dark text-light" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
-                          <option style="display: none; ">
-                            <i class="mdi mdi-account-multiple-plus p-2" ></i>
-                            Select Trainee 
-                          </option>
-                          {% for i in vars %}
-                          <option value="{{i.id}}">{{i.fullname}}</option>
-                          
-                          
-                          {% endfor %}
-                          
-                      </select>
+                                        <option style="display: none; "><i class="mdi mdi-account-multiple-plus p-2" ></i>
+                                            Select Trainee 
+                                        </option>
+                                            {% for i in vars %}
+                                            <option value="{{i.id}}">{{i.fullname}}</option>{% endfor %}                                        
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -60,22 +51,17 @@
                         <div class="row">
                             <div class="col-sm-5"></div>
                             <div class="col-sm-7" class="pull-right">
-                                <button type="Submit" class="btn btn-outline-primary btn-icon-text">
-                
-                Submit
-              </button>
+                                <button type="Submit" class="btn btn-outline-primary btn-icon-text">Submit
+                                </button>
                             </div>
                         </div>
-                </div>
-                </form>
+                    </form>
+                </div>                
             </div>
-
         </div>
     </div>
 </div>
 
-</div>
-</div>
 <script>
     var dtToday = new Date();
     var dtToday = new Date();

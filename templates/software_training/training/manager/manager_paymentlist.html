@@ -32,33 +32,26 @@
                 <div class="table-responsive" style="overflow-x: hidden;">
                     <table class="table " id="myTable">
                         <thead>
-
                             <tr>
                                 <th> SLNo </th>
                                 <th> Name </th>
                                 <th> Employee Id</th>
                                 <th> Contact No</th>
                                 <th>Salary Date</th>
-                                <th>Slip</th>
-                                
-
-
+                                <th>Slip</th> 
                             </tr>
                         </thead>
                         <tbody>
                             {% for i in acc %}
                             <tr>
-
                                 <td>{{forloop.counter}}</td>
-
                                 <td><img src="{{i.acntspayslip_user_id.photo.url}}" alt="image" /> {{i.acntspayslip_user_id.fullname}}{{i.acntspayslip_user_id.id}}</td>
                                 <td>{{i.acntspayslip_user_id.employee_id}}</td>
                                 <td>{{i.acntspayslip_user_id.mobile}}</td>
                                 <td> {{i.acntspayslip_fromdate|date:"d-m-Y"}}</td>
                                 <td> 
-                                    <a href="{% url 'manager_payment_viewslip' i.id i.acntspayslip_user_id.id%} " class="btn btn-outline-success">View slip</a>
-                                    {% comment %} <a href="#" class="btn btn-outline-success">View slip</a>{{i.id}}/{{i.acntspayslip_user_id.id}}/ {% endcomment %}
-                                </td>   
+                                    <a href="{% url 'manager_payment_viewslip' i.id i.acntspayslip_user_id.id%} " class="btn btn-outline-success">View slip</a>  
+                                </td>                                  
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -76,9 +69,7 @@
 
 <script>
     //js for submit button in new_team.html page
-    function redirect() {
-        window.location.href = "/trainer_reportedissue_table";
-    }
+   
 
     function myFunction() {
         var input, filter, table, tr, td, i, txtValue;
@@ -100,12 +91,7 @@
     }
 
 
-    /* $(document).ready(function(){
-      $('table tr').click(function(){
-          window.location = $(this).data('href');
-          return false;
-      });
-  }); */
+
 </script>
 
 {% endblock %}
